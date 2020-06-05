@@ -3,4 +3,8 @@
 ## MileStones
 - [ ] Learn Spring Boot
 - [ ] Finish DOM
-test
+- [ ] bookmark classes
+- [ ] bookmark reviews
+- [ ] suggetions on classes
+- [ ] related course
+
