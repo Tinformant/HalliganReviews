@@ -2,6 +2,7 @@ body{
 	background: url(https://source.unsplash.com/ewGMqs2tmJI);
 	background-repeat: no-repeat;
 	background-size: cover;
+	height: 100vh;
 	background-position: top;
 }
 
