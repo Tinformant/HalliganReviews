@@ -11,3 +11,6 @@ __pycache__/
 
 # Windows
 Thumbs.d
+
+# vim
+.swp
