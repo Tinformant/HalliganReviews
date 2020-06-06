@@ -1,0 +1,13 @@
+# Editors
+.vscode/
+.idea/
+
+# cache
+__pycache__/
+
+
+# Mac/OSX
+.DS_Store
+
+# Windows
+Thumbs.d
