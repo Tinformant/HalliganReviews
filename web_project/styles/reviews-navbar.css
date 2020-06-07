@@ -202,14 +202,29 @@
 
 /* review tab */
 .tab-style{
-  font-size: 1.2rem;
-  color: #5191CE;
+  font-size: 1.5rem;
+  color: #ACACAC;
 }
 
 .tab-style:hover{
-  color: red;
+  color: #012f62;
+  background-color: #EFEFEF;
+  border: transparent solid 1px;
 }
 
+
+.nav-tabs .nav-item .nav-link.active {
+  color: #012f62;
+}
+
+
+
+
+
+
+/* #review-tab li a{
+  color: #5191CE;
+} */
 
 
 /* COURSE INFORMATION */
