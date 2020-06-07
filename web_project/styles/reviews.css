@@ -1,9 +1,12 @@
 body {
-  background-color: #ffffff;
   font-family: 'Lato', sans-serif;
-  color: #1b262c;
+  color: #ffffff;
+  /* color: #1b262c; */
   background-color: #5191CE;
+  background-color: #083049;
+
 }
+
 
 h1, h2, h3, h4, h5 {
   font-family: 'Roboto', sans-serif;
@@ -31,7 +34,7 @@ h1 {
 }
 
 #sidebar-menu {
-  background-color: #5191CE;
+  /* background-color: #5191CE; */
   /* padding-left: 4%; */
 }
 
@@ -53,7 +56,7 @@ h1 {
 }
 
 .hr-brand {
-    color: #012f62;
+    /* color: #012f62; */
     padding-left: 1rem;
 }
 
@@ -66,7 +69,7 @@ h1 {
 }
 
 .nav-link {
-  color: #012f62;
+  /* color: #012f62; */
 }
 
 .nav-item-icon {
@@ -86,7 +89,7 @@ h1 {
 }
 
 .btn-write-review {
-  background-color: #012f62;
+  /* background-color: #012f62; */
   border-radius: 2rem;
   border: none;
   font-size: 1rem;
@@ -105,14 +108,21 @@ h1 {
   position: sticky;
   top: 0px;
   z-index: 1000;
-  background-color: #ffffff;
+  background-color: #083049 ;
+  /* background-color: #ffffff; */
   padding-top: 2%;
 }
 
 /* course information */
 
+.review-body {
+  padding:0 15px;
+  background-color: #fff  ;
+}
+
 .mid-col{
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
+    background-color: #6d6e71   ;
 }
 
 .course-name {
@@ -242,7 +252,7 @@ h1 {
 /* right sidebar */
 
 .right-col{
-    background-color: #FFFFFF;
+    /* background-color: #FFFFFF; */
 }
 
 .right-sidebar {

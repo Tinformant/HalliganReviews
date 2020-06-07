@@ -1,62 +1,44 @@
 var divId = "myDiv";
+var divIdList = ["myDiv1","myDiv2", "myDiv3", "myDiv4" ];
 
-// var goupLabels = ["General", "Grads", "Undergrads"];
-// var assessmentLabels = ["Terrible", "Satisfied", "Excellent"];
-// var assessmentColors = ['#363062', '#4d4c7d', '#827397'];
-// var x = [
-//   [1, 2, 3],
-//   [3, 4, 5]
-// ]
-// var x1 = [1,1,1]
+var reviewClass = ["Terrible", "Satisfied", "Exellent"];
+var studentIdentities = ["Overall", "Grads", "Undergrads"];
+var color = ['#363062', '#4d4c7d', '#827397']
+var distribute = [
+  [0.2, 0.3, 0.1],
+  [0.2, 0.3, 0.1],
+  [0.2, 0.3, 0.1]
+]
+var traces = getData();
 
+function setData(name, yValue, color, xValue){
+  var data = {
+    name: name,
+    x: xValue, y: yValue,
+    yaxis: 'y', type: "bar", barmode: 'stack', orientation: 'h',
+    marker: { color: color },
+  };
+  return data;
+}
 
-var data = [
-  {
-    name: "Terrible",
-    y: ["Overall", "Grads", "Undergrads"],
-    yaxis: 'y',
-    type: "bar",
-    barmode: 'stack',
-    orientation: 'h',
-    marker: {
-      color: '#363062'
-    },
-    x: [0.2, 0.3, 0.1],
-  },
-  {
-    name: "Satisfied",
-    y: ["Overall", "Grads", "Undergrads"],
-    yaxis: 'y',
-    type: "bar",
-    barmode: 'stack',
-    orientation: 'h',
-    marker: {
-      color: '#4d4c7d'
-    },
-    x: [0.2, 0.3, 0.1],
-  },
-  {
-    name: "Exellent",
-    y: ["Overall", "Grads", "Undergrads"],
-    yaxis: 'y',
-    type: "bar",
-    barmode: 'stack',
-    orientation: 'h',
-    marker: {
-      color: '#827397'
-    },
-    x: [0.2, 0.3, 0.1],
-  },
-
-];
+function getData(){
+  data = [];
+  for(var i =0;i < studentIdentities.length; i++){
+    data.push(setData(reviewClass[i] ,studentIdentities,color[i],distribute[i]));
+  }
+  return data;
+}
 
 
 var layouts = {
+  title: "reviews of the professor",
   barmode: "stack",
   xaxis: {
     tickformat: "%",
     showgrid: false,
     zeroline: false,
+    fixedrange: true,
+    // domain: [0, 1]
     // showticklabels: false,
     // tickvals: [0,1],
     // ticktext : ['terrible', 'exellent'],
@@ -64,122 +46,31 @@ var layouts = {
   yaxis: {
     // anchor: 'y',
     automargin: true,
+    fixedrange: true,
   },
   // plot_bgcolor: "#",
   // paper_bgcolor: "#fbad50",
 
   width: 700,
-  height: 150,
+  height: 180,
   margin: {
     l: 50,
     r: 50,
     b: 20,
-    t: 20,
+    t: 50,
     pad: 3
   },
   // showlegend: false,
+  static: true,
 };
 
 var display = {
   displayModeBar: false,
 }
 
-Plotly.newPlot(divId, data, layouts, display)
 
+for (let i = 0; i < divIdList.length; i++) {
+  Plotly.newPlot(divIdList[i], traces, layouts, display); 
+}
+// Plotly.newPlot(divId, traces, layouts, display)
 
-// Plotly.newPlot(
-//   "myDiv",
-//   [
-//     {
-//       x: ["A", "B", "C"],
-//       y: [0.3, 0.35, 0.4],
-//       type: "bar",
-//       name: "series 1a", 
-//       xaxis: 'x1',
-//       barmode: 'stack', 
-//       marker: {color: '#448'}
-//     },
-//     {
-//       x: ["A", "B", "C"],
-//       y: [0.6, 0.50, 0.40],
-//       type: "bar",
-//       name: "series 1b", 
-//       xaxis: 'x1',
-//       barmode: 'stack', marker: {color: '#88C'}
-//     },
-//     {
-//       x: ["A", "B", "C"],
-//       y: [0.1, 0.15, 0.20],
-//       type: "bar",
-//       name: "series 1c", 
-//       xaxis: 'x1',
-//       barmode: 'stack', 
-//       marker: {color: '#CCF'}
-//     },
-//     {
-//       x: ["A", "B", "C"],
-//       y: [0.3, 0.35, 0.4],
-//       type: "bar",
-//       name: "series 2a",
-//       xaxis: 'x2',     
-//       barmode: 'stack', marker: {color: '#080'}
-//     },
-//     {
-//       x: ["A", "B", "C"],
-//       y: [0.25, 0.15, 0.05],
-//       type: "bar",
-//       name: "series 2b",
-//       xaxis: 'x2',     
-//       barmode: 'stack', marker: {color: '#8c8'}
-//     },
-//     {
-//       x: ["A", "B", "C"],
-//       y: [0.45, 0.50, 0.55],
-//       type: "bar",
-//       name: "series 2c", 
-//       xaxis: 'x2',
-//       barmode: 'stack', marker: {color: '#CFC'}
-//     },
-//      {
-//       x: ["A", "B", "C"],
-//       y: [0.3, 0.35, 0.4],
-//       type: "bar",
-//       name: "series 3a", 
-//       xaxis: 'x3',
-//       barmode: 'stack', marker: {color: '#880'}
-//     },
-//     {
-//       x: ["A", "B", "C"],
-//       y: [0.6, 0.50, 0.40],
-//       type: "bar",
-//       name: "series 3b", 
-//       xaxis: 'x3',
-//       barmode: 'stack', marker: {color: '#CC8'}
-//     },
-//     {
-//       x: ["A", "B", "C"],
-//       y: [0.1, 0.15, 0.20],
-//       type: "bar",
-//       name: "series 3c", 
-//       xaxis: 'x3',
-//       barmode: 'stack', marker: {color: '#FFC'}
-//     },
-//   ],
-//   {
-//     barmode: "stack",
-//     yaxis: {tickformat: '%'},
-//     xaxis: {
-//       domain: [0, 0.33],
-//       anchor: 'x1', 
-//       title: 'Apples'
-//     },
-//     xaxis2: {
-//       domain: [0.33, 0.66],
-//       anchor: 'x2', title: 'Pears'
-//     },
-//     xaxis3: {
-//       domain: [0.67, 1.0],
-//       anchor: 'x3', title: 'Cherries'
-//     }
-//   }
-// );

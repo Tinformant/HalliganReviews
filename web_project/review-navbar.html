@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review-Navbar</title>
+
+  <!-- bootstrap style -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <!-- Google fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <!-- custom style sheets -->
+  <link rel="stylesheet" href="styles/reviews-navbar.css">
+
+  <!-- bootstrap scripts -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
+  <!-- font-awesome -->
+  <script src="https://kit.fontawesome.com/f9b872e49d.js" crossorigin="anonymous"></script>
+
+  <!-- plotly -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+      aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-container container-fluid">
+      <div class="col-3">
+        <a class="navbar-brand" href="#">Hidden brand</a>
+      </div>
+      <div class="col-6">
+        <div class="search-group input-group">
+          <div class="search-icon input-group-prepend">
+            <div class="search-icon input-group-text">
+              <i class="search-icon fas fa-search"></i>
+            </div>
+          </div>
+          <input type="text" class="search-form form-control" placeholder="Username">
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <div class="main-body container-fluid">
+      <div id="review-header">
+        <div id="course-info">
+          <h1 class="course-name">Comp0160-01 Introduction to Algorithm and its happy companions</h1>
+          <!-- <h3 class="relative-info">
+                        <span class="course-number">Comp0160-01</span>
+                        <span class="course-time">Spring/Summer/Fall</span>
+                    </h3> -->
+          <form class="review-header-form">
+            <div class="review-header-form-row row">
+              <div class="review-header-form-col col">
+                <select class="form-control form-control-sm">
+                  <option>Semester</option>
+                  <option>Spring</option>
+                  <option>Summer</option>
+                  <option>Fall</option>
+                </select>
+              </div>
+              <div class="review-header-form-col col">
+                <select class="form-control form-control-sm">
+                  <option>Year</option>
+                  <option>2020</option>
+                </select>
+              </div>
+              <div class="review-header-form-col col">
+                <select class="form-control form-control-sm">
+                  <option>Professor</option>
+                  <option>Albus Percival Wulfric Brian Dumbledore</option>
+                </select>
+              </div>
+            </div>
+          </form>
+        </div>
+        <hr>
+      </div>
+
+      <div class="review-body">
+        <ul class="nav nav-pills mb-3" id="review-tab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="review-course-tab" data-toggle="pill" href="#review-course" role="tab"
+              aria-controls="review-course" aria-selected="true">Course</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="review-professor-tab" data-toggle="pill" href="#review-professor" role="tab"
+              aria-controls="review-professor" aria-selected="false">Professor</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="review-comment-tab" data-toggle="pill" href="#review-comment" role="tab"
+              aria-controls="review-comment" aria-selected="false">Comment</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="pills-tabcontent">
+          <div class="tab-pane fade show active" id="review-course" role="tabpanel">
+
+            <h5>Course General</h5>
+            <h5>Work Loads</h5>
+            <h5>Course Objectives</h5>
+            <h5>Course Content</h5>
+            <h5>Course Material</h5>
+            <h5>Course Relevance</h5>
+
+            <div class="overall-avg rating-item">
+              <div class="row">
+                <div class="col-4 rating-label">
+                  <span>Overall</span>
+                </div>
+                <div class="col-4 ratings">
+                  <span class="fas fa-star"></span>
+                  <span class="fas fa-star"></span>
+                  <span class="fas fa-star"></span>
+                  <span class="fas fa-star"></span>
+                  <span class="far fa-star"></span>
+                </div>
+                <div class="col-4 ratings">
+                  <span>4.0</span>
+                </div>
+              </div>
+            </div>
+            <div class="difficulty-avg rating-item">
+              <div class="row">
+                <div class="col-4 rating-label">
+                  <span>Difficulty</span>
+                </div>
+                <div class="col-4 ratings">
+                  <span class="fas fa-star"></span>
+                  <span class="fas fa-star"></span>
+                  <span class="fas fa-star"></span>
+                  <span class="fas fa-star"></span>
+                  <span class="far fa-star"></span>
+                </div>
+                <div class="col-4 ratings">
+                  <span>4.0</span>
+                </div>
+              </div>
+            </div>
+            <div class="workload-avg rating-item">
+              <div class="row">
+                <div class="col-4 rating-label">
+                  <span>Workload</span>
+                </div>
+                <div class="col-4 ratings">
+                  <span class="fas fa-star"></span>
+                  <span class="fas fa-star"></span>
+                  <span class="fas fa-star"></span>
+                  <span class="fas fa-star"></span>
+                  <span class="far fa-star"></span>
+                </div>
+                <div class="col-4 ratings">
+                  <span>4.0</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="review-professor" role="tabpanel" aria-labelledby="review-professor-tab">
+
+
+
+            <div id="myDiv1" class="" style="padding: 50px;"></div>
+            <div id="myDiv2" class="" style="padding: 50px;"></div>
+            <div id="myDiv3" class="" style="padding: 50px;"></div>
+            <div id="myDiv4" class="" style="padding: 50px;"></div>
+            <script src="scripts/courseEvaluationPlots.js"></script>
+
+            <!-- contents -->
+
+          </div>
+          <div class="tab-pane fade" id="review-comment" role="tabpanel" aria-labelledby="review-comment-tab">
+            <!-- course reviews -->
+            <div class="review-row row">
+              <div class="assesment-col col-3">
+                <div class="row">
+                  <div class="col-8 assesment-item">
+                    <span>Overall</span>
+                  </div>
+                  <div class="col-4 assesment-item">
+                    <span>4</span>
+                  </div>
+                  <div class="col-8 assesment-item">
+                    <span>Difficulty</span>
+                  </div>
+                  <div class="col-4 assesment-item">
+                    <span>4</span>
+                  </div>
+                  <div class="col-8 assesment-item">
+                    <span>Workload</span>
+                  </div>
+                  <div class="col-4 assesment-item">
+                    <span>4</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-9">
+                <div class="reviews-content">
+                  <p class="reviews-info">
+                    <span class="reviews-info-label">Professor:</span>
+                    <span>Prof. </span>
+                  </p>
+                  <p class="reviews-info">
+                    <span class="reviews-info-label">Assessment Method:</span>
+                    <span>3 Projects + mid-terms + Final exam</span>
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut
+                    labore et dolore magna aliqua. A scelerisque purus semper eget duis. Lectus
+                    magna fringilla
+                    urna
+                    porttitor rhoncus. Convallis posuere morbi leo urna molestie at. Eget egestas
+                    purus viverra
+                    accumsan in nisl nisi scelerisque eu. Sagittis id consectetur purus ut faucibus
+                    pulvinar
+                    elementum integer enim. A diam sollicitudin tempor id eu nisl nunc mi ipsum.
+                  </p>
+                </div>
+
+
+                <div class="reveiw-footer-row row">
+                  <div class="col-4 no-padding-col">
+                    <p class="student-name student-info">
+                      Leopold James Fitz
+                    </p>
+                  </div>
+                  <div class="col-4 no-padding-col">
+                    <p class="student-identity student-info">
+                      Graduate Student
+                    </p>
+                  </div>
+                  <div class="col-4 no-padding-col">
+                    <p class="post-time student-info">
+                      04/22/2020
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- course reviews -->
+            <div class="review-row row">
+              <div class="assesment-col col-3">
+                <div class="row">
+                  <div class="col-8 assesment-item">
+                    <span>Overall</span>
+                  </div>
+                  <div class="col-4 assesment-item">
+                    <span>4</span>
+                  </div>
+                  <div class="col-8 assesment-item">
+                    <span>Difficulty</span>
+                  </div>
+                  <div class="col-4 assesment-item">
+                    <span>4</span>
+                  </div>
+                  <div class="col-8 assesment-item">
+                    <span>Workload</span>
+                  </div>
+                  <div class="col-4 assesment-item">
+                    <span>4</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-9">
+                <div class="reviews-content">
+                  <p class="reviews-info">
+                    <span class="reviews-info-label">Professor:</span>
+                    <span>Prof. </span>
+                  </p>
+                  <p class="reviews-info">
+                    <span class="reviews-info-label">Assessment Method:</span>
+                    <span>3 Projects + mid-terms + Final exam</span>
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut
+                    labore et dolore magna aliqua. A scelerisque purus semper eget duis. Lectus
+                    magna fringilla
+                    urna
+                    porttitor rhoncus. Convallis posuere morbi leo urna molestie at. Eget egestas
+                    purus viverra
+                    accumsan in nisl nisi scelerisque eu. Sagittis id consectetur purus ut faucibus
+                    pulvinar
+                    elementum integer enim. A diam sollicitudin tempor id eu nisl nunc mi ipsum.
+                  </p>
+                </div>
+
+
+                <div class="reveiw-footer-row row">
+                  <div class="col-4 no-padding-col">
+                    <p class="student-name student-info">
+                      Leopold James Fitz
+                    </p>
+                  </div>
+                  <div class="col-4 no-padding-col">
+                    <p class="student-identity student-info">
+                      Graduate Student
+                    </p>
+                  </div>
+                  <div class="col-4 no-padding-col">
+                    <p class="post-time student-info">
+                      04/22/2020
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- course-reviews -->
+            <div class="review-row row">
+              <div class="assesment-col col-3">
+                <div class="row">
+                  <div class="col-8 assesment-item">
+                    <span>Overall</span>
+                  </div>
+                  <div class="col-4 assesment-item">
+                    <span>4</span>
+                  </div>
+                  <div class="col-8 assesment-item">
+                    <span>Difficulty</span>
+                  </div>
+                  <div class="col-4 assesment-item">
+                    <span>4</span>
+                  </div>
+                  <div class="col-8 assesment-item">
+                    <span>Workload</span>
+                  </div>
+                  <div class="col-4 assesment-item">
+                    <span>4</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-9">
+                <div class="reviews-content">
+                  <p class="reviews-info">
+                    <span class="reviews-info-label">Professor:</span>
+                    <span>Prof. </span>
+                  </p>
+                  <p class="reviews-info">
+                    <span class="reviews-info-label">Assessment Method:</span>
+                    <span>3 Projects + mid-terms + Final exam</span>
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut
+                    labore et dolore magna aliqua. A scelerisque purus semper eget duis. Lectus
+                    magna fringilla
+                    urna
+                    porttitor rhoncus. Convallis posuere morbi leo urna molestie at. Eget egestas
+                    purus viverra
+                    accumsan in nisl nisi scelerisque eu. Sagittis id consectetur purus ut faucibus
+                    pulvinar
+                    elementum integer enim. A diam sollicitudin tempor id eu nisl nunc mi ipsum.
+                  </p>
+                </div>
+
+
+                <div class="reveiw-footer-row row">
+                  <div class="col-4 no-padding-col">
+                    <p class="student-name student-info">
+                      Jemma Anne Simmons
+                    </p>
+                  </div>
+                  <div class="col-4 no-padding-col">
+                    <p class="student-identity student-info">
+                      Graduate Student
+                    </p>
+                  </div>
+                  <div class="col-4 no-padding-col">
+                    <p class="post-time student-info">
+                      04/22/2020
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+      <hr>
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>
