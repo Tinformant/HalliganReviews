@@ -6,10 +6,6 @@
 
 /* TODO: font family */
 
-/* body {
-
-} */
-
 .row, .col {
   margin: 0;
   padding: 0;
@@ -132,7 +128,7 @@
 /* ======== MAINBODY ======== */
 
 .main-body {
-    padding: 0 15%;
+    padding: 0 20%;
 }
 
 /* BODY HEADER */
@@ -149,6 +145,24 @@
   margin: 0;
 }
 
+/* filter box */
+.option-color:focus{
+  background-color: #5191CE;
+  outline: none;
+}
+
+.btn-style {
+  background-color: #DCDCDC;
+}
+
+
+
+.btn-style:focus{
+  outline-color: red;
+  border: none;
+  box-shadow: none;
+}
+
 /* COURSE INFORMATION */
 
 .review-body {
@@ -158,11 +172,11 @@
 
 .review-header-form-row {
     padding: 0;
-    margin: 0;
+    margin: 3% 0;
 }
 
 .review-header-form-col {
-  padding: 0;
+  padding: 0 3%;
 }
 
 .course-name {
