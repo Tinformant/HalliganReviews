@@ -1,4 +1,5 @@
 
+
 /* TODO: font family */
 
 div.row, div.col {
@@ -14,7 +15,7 @@ div.row, div.col {
   padding: 0;
 }
 .navbar {
-  background-color: #012f62;
+    background-color: #012f62;
 }
 
 /* NAVBAR BRAND */
@@ -104,6 +105,7 @@ div.row, div.col {
 
 /* BODY HEADER */
 
+
 #review-header {
   /* position: -webkit-sticky;
   position: sticky;
@@ -126,6 +128,7 @@ div.row, div.col {
     padding: 0;
     margin: 0;
 }
+
 .review-header-form-col {
   padding: 0;
 }
@@ -137,62 +140,22 @@ div.row, div.col {
   text-align: center;
 }
 
-.relative-info {
-  padding-bottom: 1%;
-}
 
-.course-number {
-  font-size: 1.2rem;
-  font-weight: bold;
-}
 
-.course-time {
-  font-size: 0.9rem;
-  font-weight: bold;
-  padding: 0 3%;
-}
-
-/* RATINGS */
-.rating-item {
-  text-align: left;
-  padding: 1% 10%;
-}
-
-.rating-label {
-  font-weight: bolder;
-}
-
-.ratings {
-  text-align: center;
-  color: #012f62;
-}
-
-/* REVIEWS SORTINGS AND TOTAL POSTS */
-
-/* REVIEW SECTION */
+/* Review section */
 
 .review-row {
   margin: 0 0 3%;
+  padding: 3%;
   /* border: 1px solid; */
   background-color: #ececec;
   border-radius: 1rem;
 }
 
-.assesment-col {
-  align-self: top;
-  margin: 0;
-  padding: 0;
-}
-
-.assesment-item {
-  padding: 10% 10%;
-  margin: 0;
-  font-weight: bold;
-}
 
 .reviews-content {
   line-height: 1.5;
-  padding-top: 3%;
+  
 }
 
 .reviews-info {
