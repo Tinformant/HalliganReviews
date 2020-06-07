@@ -71,7 +71,6 @@
   background-color: transparent;
 }
 
-/* TODO:  adding clear button on right end of the search form  */
 #search-bar-clear-btn {
   color: #012f62;
 }
@@ -81,8 +80,6 @@
 
 
 /* NAVBAR-LINKS */
-
-/* TODO: contrast between login and signup  */
 
 .navbar-link {
   /* color: #fff; */
@@ -128,7 +125,7 @@
 /* ======== MAINBODY ======== */
 
 .main-body {
-    padding: 0 20%;
+    padding: 80px 20% 0;
 }
 
 /* BODY HEADER */
