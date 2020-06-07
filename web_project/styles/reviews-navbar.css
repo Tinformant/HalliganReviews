@@ -1,6 +1,14 @@
 
+/* font imports */
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Anton&display=swap');
+
 
 /* TODO: font family */
+
+/* body {
+
+} */
 
 .row, .col {
   margin: 0;
@@ -29,6 +37,8 @@
 
 .navbar-brand {
   color: #ffffff;
+  font-family: 'Anton', sans-serif;
+  font-size: 1.5rem;
 }
 .navbar-brand:hover {
   color: #5191CE;
