@@ -121,6 +121,25 @@
 }
 
 
+/* ====== WRITE REVEIW BUTTON ====== */
+
+#write-review-btn {
+  position: fixed;
+  bottom: 50px;
+  right: 80px;
+  background-color: #5191CE;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  
+}
+.feather-icon {
+  color: #012f62;
+  font-size: 5rem;
+  position: relative;
+  left: 5px;
+  bottom: 72px;
+}
 
 /* ======== MAINBODY ======== */
 
