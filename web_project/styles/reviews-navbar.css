@@ -21,6 +21,11 @@
 /* NAVBAR BRAND */
 
 /* TODO: Adding logo picture */
+.logo-img {
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
 
 .navbar-brand {
   color: #ffffff;
@@ -28,6 +33,8 @@
 .navbar-brand:hover {
   color: #5191CE;
 }
+
+
 
 /* NAVBAR SEARCH BAR  */
 
