@@ -48,7 +48,6 @@
 
 /* NAVBAR SEARCH BAR  */
 
-/* TODO:  adding clear button on right end of the search form  */
 
 .search-group {
   background-color: #DCDCDC;
@@ -56,6 +55,11 @@
   border-radius: 1.5rem;
   height: 2.5rem;
   line-height: 2.5rem;
+}
+
+.search-form, .search-icon {
+  background-color: transparent;
+  border: none;
 }
 
 .search-group:focus-within {
@@ -71,9 +75,12 @@
   background-color: transparent;
 }
 
-.search-form, .search-icon {
-  background-color: transparent;
-  border: none;
+/* TODO:  adding clear button on right end of the search form  */
+#search-bar-clear-btn {
+  color: #012f62;
+}
+#search-bar-clear-btn:focus {
+  box-shadow: none;
 }
 
 
