@@ -2,7 +2,7 @@
 
 /* TODO: font family */
 
-div.row, div.col {
+.row, .col {
   margin: 0;
   padding: 0;
 }
@@ -100,7 +100,7 @@ div.row, div.col {
 /* ======== MAINBODY ======== */
 
 .main-body {
-    padding: 0 15%;
+    padding: 0 20%;
 }
 
 /* BODY HEADER */
@@ -117,6 +117,24 @@ div.row, div.col {
   margin: 0;
 }
 
+/* filter box */
+.option-color:focus{
+  background-color: #5191CE;
+  outline: none;
+}
+
+.btn-style {
+  background-color: #DCDCDC;
+}
+
+
+
+.btn-style:focus{
+  outline-color: red;
+  border: none;
+  box-shadow: none;
+}
+
 /* COURSE INFORMATION */
 
 .review-body {
@@ -126,11 +144,11 @@ div.row, div.col {
 
 .review-header-form-row {
     padding: 0;
-    margin: 0;
+    margin: 3% 0;
 }
 
 .review-header-form-col {
-  padding: 0;
+  padding: 0 3%;
 }
 
 .course-name {
