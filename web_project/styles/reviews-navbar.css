@@ -139,6 +139,15 @@
 }
 
 /* filter box */
+
+.review-header-form-row {
+    padding: 0;
+    margin: 3% 0;
+}
+
+.review-header-form-col {
+  padding: 0;
+}
 .option-color:focus{
   background-color: #5191CE;
   outline: none;
@@ -148,13 +157,31 @@
   background-color: #DCDCDC;
 }
 
+.to-left {
+  text-align: left;
+}
+
+.to-right {
+  text-align: right;
+}
+
+.to-center {
+  text-align: center;
+}
 
 
-.btn-style:focus{
+
+/* .btn-style:focus{
   outline-color: red;
   border: none;
   box-shadow: none;
-}
+} */
+
+/* review tab */
+
+
+
+
 
 /* COURSE INFORMATION */
 
@@ -163,14 +190,7 @@
   background-color: #fff  ;
 }
 
-.review-header-form-row {
-    padding: 0;
-    margin: 3% 0;
-}
 
-.review-header-form-col {
-  padding: 0 3%;
-}
 
 .course-name {
   font-size: 2rem;
