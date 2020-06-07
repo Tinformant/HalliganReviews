@@ -1,14 +1,37 @@
 
-/* ======= navbar ========*/
-.navbar {
-    background-color: #012f62;
+/* TODO: font family */
+
+div.row, div.col {
+  margin: 0;
+  padding: 0;
 }
 
+/* ======= NAVBAR ========*/
 
-/* navbar brand */
+/* TODO: responsive layouts and toggle behavior */
 
+.navbar-container {
+  padding: 0;
+}
+.navbar {
+  background-color: #012f62;
+}
 
-/* navbar search bar  */
+/* NAVBAR BRAND */
+
+/* TODO: Adding logo picture */
+
+.navbar-brand {
+  color: #ffffff;
+}
+.navbar-brand:hover {
+  color: #5191CE;
+}
+
+/* NAVBAR SEARCH BAR  */
+
+/* TODO:  adding clear button on right end of the search form  */
+
 .search-group {
   background-color: #DCDCDC;
   border: 1px solid;
@@ -35,13 +58,51 @@
   border: none;
 }
 
-/* ======== mainbody ======== */
+
+/* NAVBAR-LINKS */
+
+/* TODO: contrast between login and signup  */
+
+.navbar-btn {
+  /* color: #fff; */
+  text-shadow: 0 0 15pt #ffffff;
+  /* border-radius: 4px; */
+  /* padding: 4px 8px; */
+  /* margin: 0 6px; */
+  font-weight: 700;
+}
+
+.log-in-btn {
+  color: #5191CE;
+  border: 1px solid #5191CE;
+  text-shadow: 0 0 15pt #5191CE;
+}
+
+.log-in-btn:hover {
+  color: #DCDCDC;
+  border: 1px solid #DCDCDC;
+  background-color: #5191CE;
+  text-shadow: 0 0 15pt #dcdcdc;
+}
+
+.sign-up-btn {
+  /* color: #012f62;
+  background-color: #DCDCDC; */
+}
+.sign-up-btn:hover {
+  /* color: #5191CE;
+  text-shadow: 0 0 15pt #5191CE; */
+}
+
+
+
+/* ======== MAINBODY ======== */
 
 .main-body {
     padding: 0 15%;
 }
 
-/* body header */
+/* BODY HEADER */
 
 #review-header {
   /* position: -webkit-sticky;
@@ -51,12 +112,13 @@
   /* background-color: #083049 ; */
   background-color: #ffffff;
   padding-top: 2%;
+  margin: 0;
 }
 
-/* course information */
+/* COURSE INFORMATION */
 
 .review-body {
-  padding:0 15px;
+  padding:0;
   background-color: #fff  ;
 }
 
@@ -64,6 +126,10 @@
     padding: 0;
     margin: 0;
 }
+.review-header-form-col {
+  padding: 0;
+}
+
 .mid-col{
     background-color: #ffffff;
     /* background-color: #6d6e71   ; */
@@ -72,6 +138,8 @@
 .course-name {
   font-size: 2rem;
   font-weight: bold;
+  margin: 0 0px 20px;
+  text-align: center;
 }
 
 .relative-info {
@@ -89,7 +157,7 @@
   padding: 0 3%;
 }
 
-/* ratings */
+/* RATINGS */
 .rating-item {
   text-align: left;
   padding: 1% 10%;
@@ -104,28 +172,9 @@
   color: #012f62;
 }
 
-/* reviews sortings and total posts */
+/* REVIEWS SORTINGS AND TOTAL POSTS */
 
-.sort-header {
-  margin: 1% 0px;
-  font-size: 0.7rem;
-}
-
-
-.total-post {
-  text-align: left;
-  padding: 0;
-}
-
-
-.sort-by {
-  text-align: right;
-  padding: 0;
-  margin: 0;
-}
-
-/* Review section */
-
+/* REVIEW SECTION */
 
 .review-row {
   margin: 0 0 3%;
