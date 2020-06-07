@@ -81,11 +81,32 @@
               </div>
             </div>
             <input
+              id="search-bar-input"
               type="text"
               class="search-form form-control"
               placeholder="Search Course"
             />
+            <button id="search-bar-clear-btn"  class="btn btn-default">
+              <i class="far fa-times-circle"></i>
+              <!-- <span class="glyphicon glyphicon-remove-circle">x</span> -->
+            </button>
           </div>
+          <script>
+            $(document).ready(function () {
+              $("#search-bar-input").keyup(function () {
+                $("#search-bar-clear-btn").toggle(Boolean($(this).val()));
+              });
+              $("#search-bar-clear-btn").toggle(Boolean($("#search-bar-input").val()));
+              $("#search-bar-clear-btn").click(function () {
+                $("#search-bar-input").val('').focus();
+                $(this).hide();
+              });
+            });
+            $("#search-bar-clear-btn").click(function () {
+              $("#search-bar-input").val('');
+              $(this).hide();
+            });
+          </script>
         </div>
         <div class="col-3">
           <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
