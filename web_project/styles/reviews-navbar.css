@@ -130,11 +130,6 @@ div.row, div.col {
   padding: 0;
 }
 
-.mid-col{
-    background-color: #ffffff;
-    /* background-color: #6d6e71   ; */
-}
-
 .course-name {
   font-size: 2rem;
   font-weight: bold;
