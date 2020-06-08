@@ -31,7 +31,7 @@ function getData(){
 
 
 var layouts = {
-  title: "reviews of the professor",
+  // title: "reviews of the professor",
   barmode: "stack",
   xaxis: {
     tickformat: "%",
@@ -50,9 +50,9 @@ var layouts = {
   },
   // plot_bgcolor: "#",
   // paper_bgcolor: "#fbad50",
-
-  width: 700,
-  height: 180,
+  autosize: true,
+  // width: 700,
+  // height: 180,
   margin: {
     l: 50,
     r: 50,
@@ -66,11 +66,33 @@ var layouts = {
 
 var display = {
   displayModeBar: false,
+  responsive: true
 }
+
+var d3 = Plotly.d3;
+var HEIGHT_IN_PERCENT_OF_PARENT = 80;
+var WIDTH_IN_PERCENT_OF_PARENT = 80;
+
+var gd3 = d3.select('#myDiv').append('div').style({
+    // 'height': HEIGHT_IN_PERCENT_OF_PARENT + '%',
+    // 'width' : WIDTH_IN_PERCENT_OF_PARENT + '%',
+    'margin': 3 + '%'
+    // 'margin-top': 0 + 'pt',
+    // 'margin-bottom': 0 + 'pt'
+});
+
+var gd = gd3.node();
+// Plotly.plot(gd, data, layouts,display);
 
 
 for (let i = 0; i < divIdList.length; i++) {
   Plotly.newPlot(divIdList[i], traces, layouts, display); 
+  window.onresize = function() {
+    Plotly.Plots.resize(gd);
+  };
 }
-// Plotly.newPlot(divId, traces, layouts, display)
 
+window.onresize = function() {
+  Plotly.Plots.resize(gd);
+};
+// Plotly.newPlot(divId, traces, layouts, display)

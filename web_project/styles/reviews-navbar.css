@@ -170,12 +170,13 @@ body {
 
 /* ======== MAINBODY ======== */
 
+
+
 .main-body {
-    padding: 80px 20% 0;
+    padding: 100px 20% 0;
 }
 
 /* BODY HEADER */
-
 
 #review-header {
   /* position: -webkit-sticky;
@@ -187,6 +188,21 @@ body {
   padding-top: 2%;
   margin: 0;
 }
+
+.review-body {
+  padding:0;
+  background-color: #fff  ;
+}
+
+/* COURSE INFORMATION */
+
+.course-name {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 0px 20px;
+  text-align: center;
+}
+
 
 /* filter box */
 
@@ -227,7 +243,7 @@ body {
   box-shadow: none;
 } */
 
-/* review tab */
+/* review tabs */
 .tab-style{
   font-size: 1.5rem;
   color: #ACACAC;
@@ -244,31 +260,17 @@ body {
   color: #012f62;
 }
 
+/* course evaluation */
 
 
-
-
-
-/* #review-tab li a{
-  color: #5191CE;
-} */
-
-
-/* COURSE INFORMATION */
-
-.review-body {
-  padding:0;
-  background-color: #fff  ;
+/* professor evaluation */
+.chart-plot {
+  width: 100%;
+  height: 200%;
 }
 
 
 
-.course-name {
-  font-size: 2rem;
-  font-weight: bold;
-  margin: 0 0px 20px;
-  text-align: center;
-}
 
 
 
