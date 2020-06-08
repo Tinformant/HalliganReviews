@@ -128,8 +128,8 @@ body {
 
 .write-review {
   position: fixed;
-  bottom: 50px;
-  right: 80px;
+  bottom: 100px;
+  right: 40px;
 
   height: 160px;
   width: 200px;
@@ -254,8 +254,9 @@ body {
 
 /* review tab */
 .tab-style{
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #ACACAC;
+  padding: 4px 8px;
 }
 
 .tab-style:hover{
@@ -272,13 +273,6 @@ body {
 
 
 
-
-
-/* #review-tab li a{
-  color: #5191CE;
-} */
-
-
 /* COURSE INFORMATION */
 
 .review-body {
@@ -286,15 +280,12 @@ body {
   background-color: #fff  ;
 }
 
-
-
 .course-name {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
   margin: 0 0px 20px;
   text-align: center;
 }
-
 
 
 /* Review section */
@@ -310,12 +301,10 @@ body {
 
 .reviews-content {
   line-height: 1.5;
-  
 }
 
 .reviews-info {
   margin: 0;
-
 }
 
 .reviews-info-label {
@@ -343,10 +332,6 @@ body {
   /* height: 2.5rem;
   line-height: 2.5rem; */
   margin: 0;
-}
-
-.no-padding-col {
-  padding: 0;
 }
 
 .review-footer-row {
