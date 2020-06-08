@@ -51,6 +51,13 @@
 
     <!-- plotly -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-plotly.js@2.2.0/dist/create-plotly-component.js"></script>
+
+
     <!-- select -->
     <script src="scripts/select.js"></script>
   </head>
@@ -133,7 +140,7 @@
 
 
 
-    <div class="main-body container-fluid">
+    <div class="main-body">
       <div id="review-header">
         <div id="course-info">
           <h1 class="course-name">
@@ -230,12 +237,47 @@
             id="review-course"
             role="tabpanel"
           >
-            <h5>Course General</h5>
             <h5>Work Loads</h5>
+            <h5>Course General</h5>
+            <div>
+              <span>Avg. Score: </span> <span>3</span> 
+            </div>
+            <div>
+              <span>Num of Respondants: </span> <span>121</span>
+            </div>
+            <div id="myDiv1" class="chart-plot"></div>
             <h5>Course Objectives</h5>
+            <div>
+              <span>Avg. Score: </span> <span>3</span> 
+            </div>
+            <div>
+              <span>Num of Respondants: </span> <span>121</span>
+            </div>
+            <div id="myDiv2" class="chart-plot"></div>
             <h5>Course Content</h5>
+            <div>
+              <span>Avg. Score: </span> <span>3</span> 
+            </div>
+            <div>
+              <span>Num of Respondants: </span> <span>121</span>
+            </div>
+            <div id="myDiv3" class="chart-plot"></div>
             <h5>Course Material</h5>
+            <div>
+              <span>Avg. Score: </span> <span>3</span> 
+            </div>
+            <div>
+              <span>Num of Respondants: </span> <span>121</span>
+            </div>
+            <div id="myDiv4" class="chart-plot"></div>
             <h5>Course Relevance</h5>
+            <div>
+              <span>Avg. Score: </span> <span>3</span> 
+            </div>
+            <div>
+              <span>Num of Respondants: </span> <span>121</span>
+            </div>
+
           </div>
           <div
             class="tab-pane fade"
@@ -243,12 +285,45 @@
             role="tabpanel"
             aria-labelledby="review-professor-tab"
           >
-            <div id="myDiv" class="chart-plot"></div>
-            <div id="myDiv1" class="chart-plot"></div>
-            <div id="myDiv2" class="chart-plot"></div>
-            <div id="myDiv3" class="chart-plot"></div>
-            <div id="myDiv4" class="chart-plot"></div>
-            <script src="scripts/courseEvaluationPlots.js"></script>
+            <h5>Instructor General</h5>
+            <div>
+              <span>Avg. Score: </span> <span>3</span> 
+            </div>
+            <div>
+              <span>Num of Respondants: </span> <span>121</span>
+            </div>
+            <div id="myDiv11" class="chart-plot"></div>
+            <h5>Teaching Methods</h5>
+            <div>
+              <span>Avg. Score: </span> <span>3</span> 
+            </div>
+            <div>
+              <span>Num of Respondants: </span> <span>121</span>
+            </div>
+            <div id="myDiv12" class="chart-plot"></div>
+            <h5>Delivery</h5>
+            <div>
+              <span>Avg. Score: </span> <span>3</span> 
+            </div>
+            <div>
+              <span>Num of Respondants: </span> <span>121</span>
+            </div>
+            <div id="myDiv13" class="chart-plot"></div>
+            <h5>Responsiveness</h5>
+            <div>
+              <span>Avg. Score: </span> <span>3</span> 
+            </div>
+            <div>
+              <span>Num of Respondants: </span> <span>121</span>
+            </div>
+            <div id="myDiv14" class="chart-plot"></div>
+            <h5>Class Management</h5>
+            <div>
+              <span>Avg. Score: </span> <span>3</span> 
+            </div>
+            <div>
+              <span>Num of Respondants: </span> <span>121</span>
+            </div>
 
             <!-- contents -->
           </div>
@@ -295,10 +370,96 @@
                 </div>
               </div>
             </div>
+
+            <!-- course reviews -->
+            <div class="review-row">
+              <div class="reviews-content">
+                <p class="reviews-info">
+                  <span class="reviews-info-label">Assessment Method:</span>
+                  <span>3 Projects + mid-terms + Final exam</span>
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  A scelerisque purus semper eget duis. Lectus magna fringilla
+                  urna porttitor rhoncus. Convallis posuere morbi leo urna
+                  molestie at. Eget egestas purus viverra accumsan in nisl nisi
+                  scelerisque eu. Sagittis id consectetur purus ut faucibus
+                  pulvinar elementum integer enim. A diam sollicitudin tempor id
+                  eu nisl nunc mi ipsum.
+                </p>
+              </div>
+
+              <div class="row reveiw-footer-row">
+                <div class="col-4">
+                  <p class="student-name student-info">
+                    Leopold James Fitz
+                  </p>
+                </div>
+                <div class="col-4">
+                  <p class="student-identity student-info">
+                    Graduate Student
+                  </p>
+                </div>
+                <div class="col-4">
+                  <p class="post-time student-info">
+                    04/22/2020
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- course reviews -->
+            <div class="review-row">
+              <div class="reviews-content">
+                <p class="reviews-info">
+                  <span class="reviews-info-label">Assessment Method:</span>
+                  <span>3 Projects + mid-terms + Final exam</span>
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  A scelerisque purus semper eget duis. Lectus magna fringilla
+                  urna porttitor rhoncus. Convallis posuere morbi leo urna
+                  molestie at. Eget egestas purus viverra accumsan in nisl nisi
+                  scelerisque eu. Sagittis id consectetur purus ut faucibus
+                  pulvinar elementum integer enim. A diam sollicitudin tempor id
+                  eu nisl nunc mi ipsum.
+                </p>
+              </div>
+
+              <div class="row reveiw-footer-row">
+                <div class="col-4">
+                  <p class="student-name student-info">
+                    Leopold James Fitz
+                  </p>
+                </div>
+                <div class="col-4">
+                  <p class="student-identity student-info">
+                    Graduate Student
+                  </p>
+                </div>
+                <div class="col-4">
+                  <p class="post-time student-info">
+                    04/22/2020
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <hr />
     </div>
+
+    <footer>
+      this is a footer for Tufts University
+      <p>facebook</p>
+      <p>twitter</p>
+      <p>github</p>
+    </footer>
+
+
+    <!-- Plotly scripts -->
+    <script src="scripts/courseEvaluationPlots.js"></script>
   </body>
 </html>
