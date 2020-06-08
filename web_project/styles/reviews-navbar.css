@@ -3,10 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Allura&family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Itim&family=Sriracha&display=swap');
 /* TODO: font family */
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 .row, .col {
@@ -131,40 +131,65 @@ body {
   bottom: 50px;
   right: 80px;
 
-  height: 120px;
-  width: 120px;
+  height: 160px;
+  width: 200px;
 }
 
 #write-review-btn {
   position: absolute;
-  background-color: #5191CE;
+  background-color: #012f62;
+  transition:         color 0.2s;
+  /* background-color: #5191CE; */
   border-radius: 50%;
   
   margin: 0;
   padding: 0;
 
-  bottom: 10px;
+  top: 80px;
   left: 10px;
   
-  width: 40px;
-  height: 40px;
+  width: 27px;
+  height: 27px;
 }
 
 .feather-icon {
-  color: #012f62;
+  color: #5191CE;
   font-size: 5rem;
   position: absolute;
-  left: 20px;
-  bottom: 20px;
+  left: 13px;
+  bottom: 13px;
+  transition:         color 0.5s;
 }
 
-#write-review-btn:hover {
-  background-color: #23558d;
+.write-review:hover #write-review-btn {
+  background-color: #5191CE;
 }
-#write-review-btn:hover .feather-icon {
-  bottom: 15px;
+
+.write-review:hover .feather-icon {
+  color: #012f62;
+  bottom: 10px;
   transform: rotate(-40deg);
   transform-origin: 0% 100%;
+}
+
+.write-review-text {
+  font-family: 'Courgette', cursive;
+  text-align: left;
+  padding: 0;
+  position: absolute;
+  color: #012f62;
+  width: 180px;
+  top: 30px;
+  left: -5px;
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.write-review:hover .write-review-text {
+  /* visibility: visible;   */
+  color: #012f62;
+  text-shadow: 10px 10px 10px  #7C7C7C;
 }
 
 
