@@ -237,69 +237,57 @@
             id="review-course"
             role="tabpanel"
           >
-            <!-- TODO: Accordion example -->
-
+            <div class="course-eval-title-row row">
+              <div class="course-eval-title-col col col-3"></div>
+              <div class="course-eval-title-col col col-2">
+                Avg. Score
+              </div>
+              <div class="course-eval-title-col col col-6">
+                <div class="course-eval-legend-row row">
+                  <div class="course-eval-legend-col col col-4">
+                    <i class="sqr-eval-0 fas fa-square-full"></i>
+                    <span>Terrible</span>
+                  </div>
+                  <div class="course-eval-legend-col col col-4">
+                    <i class="sqr-eval-1 fas fa-square-full"></i>
+                    <span>Fair</span>
+                  </div>
+                  <div class="course-eval-legend-col col col-4">
+                    <i class="sqr-eval-2 fas fa-square-full"></i>
+                    <span>Good</span>
+                  </div>
+                  <div class="course-eval-legend-col col col-4">
+                    <i class="sqr-eval-3 fas fa-square-full"></i>
+                    <span>Excellent</span>
+                  </div>
+                  <div class="course-eval-legend-col col col-4">
+                    <i class="sqr-eval-4 fas fa-square-full"></i>
+                    <span>Perfect</span>
+                  </div>
+                </div>
+              </div>
+              <div class="course-eval-title-col col col-1">
+                Details
+              </div>
+            </div>
+            <hr class="eval-title-hr">
             <div class="course-general-row row">
-              <div class="course-eval-text course-general-col col">
+              <div class="col col-3 eval-text-col  course-general-col ">
                 <h5>Course General</h5>
               </div>
-              <div class="course-eval-overall-chart course-general-col col">
+              <div class="avg-score-col course-general-col col col-2">
+                <span>3</span>
+              </div>
+              <div class="overall-chart-col course-general-col col">
                 <div id="myDiv1" class="chart-plot"></div>
               </div>
-              <div class="course-eval-avg-score-text course-general-col col">
-                <span>Avg. Score: </span> <span>3</span>
-              </div>
-              <div class="course-eval-text course-general-col col">
-                <a class="btn btn-sm btn-primary" data-toggle="collapse" href="#collapseExample1" role="button">
-                  Details
-                </a>
+              <div class="course-general-col col col-1">
+                <button class="detail-btn btn btn-default" data-toggle="collapse" href="#course-general-detail" role="button">
+                  <i class="detail-btn-icon fas fa-angle-double-down"></i>
+                </button>
               </div>
             </div>
-            <div class="collapse" id="collapseExample1">
-              <div class="card card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil
-                anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-              </div>
-            </div>
-            <div class="course-general-row row">
-              <div class="course-eval-text course-general-col col">
-                <h5>Course General</h5>
-              </div>
-              <div class="course-eval-overall-chart course-general-col col">
-                <div id="myDiv2" class="chart-plot"></div>
-              </div>
-              <div class="course-eval-avg-score-text course-general-col col">
-                <span>Avg. Score: </span> <span>3</span>
-              </div>
-              <div class="course-eval-text course-general-col col">
-                <a class="btn btn-sm btn-primary" data-toggle="collapse" href="#collapseExample2" role="button">
-                  Details
-                </a>
-              </div>
-            </div>
-            <div class="collapse" id="collapseExample2">
-              <div class="card card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil
-                anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-              </div>
-            </div>
-            <div class="course-general-row row">
-              <div class="course-eval-text course-general-col col">
-                <h5>Course General</h5>
-              </div>
-              <div class="course-eval-overall-chart course-general-col col">
-                <div id="myDiv3" class="chart-plot"></div>
-              </div>
-              <div class="course-eval-avg-score-text course-general-col col">
-                <span>Avg. Score: </span> <span>3</span>
-              </div>
-              <div class="course-eval-text course-general-col col">
-                <a class="btn btn-sm btn-primary" data-toggle="collapse" href="#collapseExample3" role="button">
-                  Details
-                </a>
-              </div>
-            </div>
-            <div class="collapse" id="collapseExample3">
+            <div class="collapse" id="course-general-detail">
               <div class="card card-body">
                 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil
                 anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.

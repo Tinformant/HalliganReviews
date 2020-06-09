@@ -10,9 +10,14 @@ body {
   color: #012f62;
 }
 
-.row, .col {
+h1, h2, h3, h4, h5 {
   margin: 0;
   padding: 0;
+}
+.row, .col {
+  margin: auto 0;
+  padding: 0;
+  text-align: center;
 }
 
 /* ======= NAVBAR ========*/
@@ -310,16 +315,52 @@ body {
 
 /* ========== EVALUATION PARTS =========*/
 
+.eval-title-hr {
+  margin: 3px 0 2px;
+}
+
+.sqr-eval-0 { color: #012f62; }
+.sqr-eval-1 { color: #6e7693; }
+.sqr-eval-2 { color: #c6c6c6; }
+.sqr-eval-3 { color: #dfb879; }
+.sqr-eval-4 { color: #e9ab14; }
+
 .chart-plot {
   margin: auto;
   width: 500px;
-  height: 150px;
+  height: 50px;
+}
+
+
+.eval-text-col {
+  text-align: left;
+}
+
+.detail-btn {
+  padding: 0;
+  margin: auto;
+  font-size: 1.5rem;
+}
+
+.detail-btn-icon {
+  padding: 0;
+  margin: 0;
 }
 
 /* course evaluation */
-.course-general-col {
-  margin-top: auto;
+.course-eval-title-col {
+  margin: auto 0;
+  text-align: center;
 }
+.course-eval-legend-col {
+  text-align: left;
+  padding-left: 20px;
+}
+
+/* .course-general-col {
+  margin: auto 0;
+  text-align: center;
+} */
 
 
 /* professor evaluation */
@@ -329,8 +370,6 @@ body {
 }
 
 /* comments */
-
-/* COURSE INFORMATION */
 
 .review-body {
   padding:0;

@@ -70,7 +70,7 @@ var layouts = {
     l: 60,
     r: 70,
     b: 0,
-    t: 100,
+    t: 0,
     pad: 0
   },
   showlegend: false,
