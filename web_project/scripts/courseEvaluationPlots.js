@@ -2,12 +2,18 @@ var divId = "myDiv";
 var divIdList = ["myDiv1", "myDiv2", "myDiv3", "myDiv4"];
 
 var reviewClass = ["Terrible", "Satisfied", "Exellent"];
-var studentIdentities = ["Undergrads", "Grads", "Overall"];
+// var studentIdentities = ["Undergrads", "Grads", "Overall"];
+var studentIdentities = ["Overall"];
 var color = ['#363062', '#4d4c7d', '#827397']
+// var distribute = [
+//   [0.2, 0.3, 0.5],
+//   [0.1, 0.2, 0.2],
+//   [0.7, 0.5, 0.3]
+// ]
 var distribute = [
-  [0.2, 0.3, 0.5],
-  [0.1, 0.2, 0.2],
-  [0.7, 0.5, 0.3]
+  [0.2],
+  [0.1],
+  [0.7]
 ]
 var traces = getData();
 
@@ -29,7 +35,7 @@ function setData(name, yValue, color, xValue) {
 
 function getData() {
   data = [];
-  for (var i = 0; i < studentIdentities.length; i++) {
+  for (var i = 0; i < reviewClass.length; i++) {
     data.push(setData(reviewClass[i], studentIdentities, color[i], distribute[i]));
   }
   return data;
@@ -45,7 +51,7 @@ var layouts = {
     zeroline: false,
     fixedrange: true,
     // domain: [0, 1]
-    // showticklabels: false,
+    showticklabels: false,
     // tickvals: [0,1],
     // ticktext : ['terrible', 'exellent'],
   },
@@ -53,20 +59,21 @@ var layouts = {
     // anchor: 'y',
     automargin: true,
     fixedrange: true,
+    showticklabels: false,
   },
-  // plot_bgcolor: "#",
+  // plot_bgcolor:  "#fbad50",
   // paper_bgcolor: "#fbad50",
   width: $("#myDiv1").width(),
   height: $("#myDiv1").height(),
   // autosize: true,
   margin: {
-    l: 50,
-    r: 50,
-    b: 20,
-    t: 10,
-    pad: 3
+    l: 60,
+    r: 70,
+    b: 0,
+    t: 100,
+    pad: 0
   },
-  // showlegend: false,
+  showlegend: false,
   static: true,
 };
 

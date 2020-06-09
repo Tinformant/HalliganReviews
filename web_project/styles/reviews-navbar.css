@@ -37,12 +37,12 @@ body {
 }
 
 .navbar-brand {
-color: #1dbab4;
+  color: #1dbab4;
   font-family: 'Anton', sans-serif;
   font-size: 1.5rem;
 }
 .navbar-brand:hover {
-  color: #5191CE;
+  color: #DCDCDC;
 }
 
 
@@ -140,7 +140,10 @@ color: #1dbab4;
 
 .write-review {
   position: fixed;
-  bottom: 100px;
+  /* text-align: right; */
+  /* top: 500px; */
+  /* left: 1000px; */
+  bottom: 200px; 
   right: 40px;
 
   height: 160px;
@@ -252,6 +255,7 @@ color: #1dbab4;
 .review-header-form-col {
   padding: 0;
 }
+
 .option-color:focus{
   background-color: #5191CE;
   outline: none;
@@ -259,8 +263,8 @@ color: #1dbab4;
 
 .btn-style {
   background-color: #fff;
-  border: 1px solid #DCDCDC;
-  outline: auto;
+  border: 1px solid #1dbab4;
+  /* outline: auto; */
 }
 
 .to-left {
@@ -285,9 +289,10 @@ color: #1dbab4;
 
 /* review tabs */
 .tab-style{
-  font-size: 1rem;
+  font-weight: bold;
+  font-size: 1.2rem;
   color: #1dbab4;
-  padding: 4px 8px;
+  padding: 7px 15px;
 }
 
 .tab-style:hover{
@@ -302,14 +307,22 @@ color: #1dbab4;
   background-color: #1dbab4;
 }
 
-/* course evaluation */
 
-/* professor evaluation */
+/* ========== EVALUATION PARTS =========*/
+
 .chart-plot {
-  margin: 10px auto 50px;
-  width: 800px;
+  margin: auto;
+  width: 500px;
   height: 150px;
 }
+
+/* course evaluation */
+.course-general-col {
+  margin-top: auto;
+}
+
+
+/* professor evaluation */
 
 #review-professor {
   position: relative;
@@ -317,11 +330,11 @@ color: #1dbab4;
 
 /* comments */
 
-
 /* COURSE INFORMATION */
 
 .review-body {
   padding:0;
+  min-height: 450px;
   background-color: #fff  ;
 }
 
@@ -365,7 +378,7 @@ color: #1dbab4;
 }
 
 .student-name {
-  text-emphasis: left;
+  text-align: left;
 }
 
 .student-identity {
@@ -374,13 +387,10 @@ color: #1dbab4;
 
 .post-time {
   text-align: right;
-  /* height: 2.5rem;
-  line-height: 2.5rem; */
   margin: 0;
 }
 
-.review-footer-row {
-  height: 2rem;
+.comment-footer-row {
   padding: 0;
   margin: 0;
 }
@@ -388,6 +398,8 @@ color: #1dbab4;
 
 
 /* ====== Footer ====== */
+
+/* TODO: make sure footer in on the bottom of the screen  */
 
 footer {
   background-color: #012f62;

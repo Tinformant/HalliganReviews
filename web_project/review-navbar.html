@@ -181,7 +181,7 @@
                     data-style="btn-style"
                     data-live-search="true"
                     data-actions-box="true"
-                    title="Professor"
+                    title="Instructor"
                   >
                   <option class="option-color">Albus Percival Wulfric Brian Dumbledore</option>
                 </select>
@@ -215,7 +215,7 @@
               role="tab"
               aria-controls="review-professor"
               aria-selected="false"
-              >Professor</a
+              >Instructor</a
             >
           </li>
           <li class="nav-item">
@@ -237,46 +237,77 @@
             id="review-course"
             role="tabpanel"
           >
-            <h5>Work Loads</h5>
-            <h5>Course General</h5>
-            <div>
-              <span>Avg. Score: </span> <span>3</span> 
+            <!-- TODO: Accordion example -->
+
+            <div class="course-general-row row">
+              <div class="course-eval-text course-general-col col">
+                <h5>Course General</h5>
+              </div>
+              <div class="course-eval-overall-chart course-general-col col">
+                <div id="myDiv1" class="chart-plot"></div>
+              </div>
+              <div class="course-eval-avg-score-text course-general-col col">
+                <span>Avg. Score: </span> <span>3</span>
+              </div>
+              <div class="course-eval-text course-general-col col">
+                <a class="btn btn-sm btn-primary" data-toggle="collapse" href="#collapseExample1" role="button">
+                  Details
+                </a>
+              </div>
             </div>
-            <div>
-              <span>Num of Respondants: </span> <span>121</span>
+            <div class="collapse" id="collapseExample1">
+              <div class="card card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil
+                anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+              </div>
             </div>
-            <div id="myDiv1" class="chart-plot"></div>
-            <h5>Course Objectives</h5>
-            <div>
-              <span>Avg. Score: </span> <span>3</span> 
+            <div class="course-general-row row">
+              <div class="course-eval-text course-general-col col">
+                <h5>Course General</h5>
+              </div>
+              <div class="course-eval-overall-chart course-general-col col">
+                <div id="myDiv2" class="chart-plot"></div>
+              </div>
+              <div class="course-eval-avg-score-text course-general-col col">
+                <span>Avg. Score: </span> <span>3</span>
+              </div>
+              <div class="course-eval-text course-general-col col">
+                <a class="btn btn-sm btn-primary" data-toggle="collapse" href="#collapseExample2" role="button">
+                  Details
+                </a>
+              </div>
             </div>
-            <div>
-              <span>Num of Respondants: </span> <span>121</span>
+            <div class="collapse" id="collapseExample2">
+              <div class="card card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil
+                anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+              </div>
             </div>
-            <div id="myDiv2" class="chart-plot"></div>
-            <h5>Course Content</h5>
-            <div>
-              <span>Avg. Score: </span> <span>3</span> 
+            <div class="course-general-row row">
+              <div class="course-eval-text course-general-col col">
+                <h5>Course General</h5>
+              </div>
+              <div class="course-eval-overall-chart course-general-col col">
+                <div id="myDiv3" class="chart-plot"></div>
+              </div>
+              <div class="course-eval-avg-score-text course-general-col col">
+                <span>Avg. Score: </span> <span>3</span>
+              </div>
+              <div class="course-eval-text course-general-col col">
+                <a class="btn btn-sm btn-primary" data-toggle="collapse" href="#collapseExample3" role="button">
+                  Details
+                </a>
+              </div>
             </div>
-            <div>
-              <span>Num of Respondants: </span> <span>121</span>
+            <div class="collapse" id="collapseExample3">
+              <div class="card card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil
+                anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+              </div>
             </div>
-            <div id="myDiv3" class="chart-plot"></div>
-            <h5>Course Material</h5>
-            <div>
-              <span>Avg. Score: </span> <span>3</span> 
-            </div>
-            <div>
-              <span>Num of Respondants: </span> <span>121</span>
-            </div>
-            <div id="myDiv4" class="chart-plot"></div>
-            <h5>Course Relevance</h5>
-            <div>
-              <span>Avg. Score: </span> <span>3</span> 
-            </div>
-            <div>
-              <span>Num of Respondants: </span> <span>121</span>
-            </div>
+
+
+
 
           </div>
           <div
@@ -341,6 +372,7 @@
                   <span>3 Projects + mid-terms + Final exam</span>
                 </p>
                 <p>
+                  <span class="reviews-info-label">Comments:</span>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   A scelerisque purus semper eget duis. Lectus magna fringilla
@@ -352,93 +384,18 @@
                 </p>
               </div>
 
-              <div class="row reveiw-footer-row">
-                <div class="col-4">
+              <div class="row comment-footer-row">
+                <div class="col col-4">
                   <p class="student-name student-info">
                     Leopold James Fitz
                   </p>
                 </div>
-                <div class="col-4">
+                <div class="col col-4">
                   <p class="student-identity student-info">
                     Graduate Student
                   </p>
                 </div>
-                <div class="col-4">
-                  <p class="post-time student-info">
-                    04/22/2020
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- course reviews -->
-            <div class="review-row">
-              <div class="reviews-content">
-                <p class="reviews-info">
-                  <span class="reviews-info-label">Assessment Method:</span>
-                  <span>3 Projects + mid-terms + Final exam</span>
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  A scelerisque purus semper eget duis. Lectus magna fringilla
-                  urna porttitor rhoncus. Convallis posuere morbi leo urna
-                  molestie at. Eget egestas purus viverra accumsan in nisl nisi
-                  scelerisque eu. Sagittis id consectetur purus ut faucibus
-                  pulvinar elementum integer enim. A diam sollicitudin tempor id
-                  eu nisl nunc mi ipsum.
-                </p>
-              </div>
-
-              <div class="row reveiw-footer-row">
-                <div class="col-4">
-                  <p class="student-name student-info">
-                    Leopold James Fitz
-                  </p>
-                </div>
-                <div class="col-4">
-                  <p class="student-identity student-info">
-                    Graduate Student
-                  </p>
-                </div>
-                <div class="col-4">
-                  <p class="post-time student-info">
-                    04/22/2020
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!-- course reviews -->
-            <div class="review-row">
-              <div class="reviews-content">
-                <p class="reviews-info">
-                  <span class="reviews-info-label">Assessment Method:</span>
-                  <span>3 Projects + mid-terms + Final exam</span>
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  A scelerisque purus semper eget duis. Lectus magna fringilla
-                  urna porttitor rhoncus. Convallis posuere morbi leo urna
-                  molestie at. Eget egestas purus viverra accumsan in nisl nisi
-                  scelerisque eu. Sagittis id consectetur purus ut faucibus
-                  pulvinar elementum integer enim. A diam sollicitudin tempor id
-                  eu nisl nunc mi ipsum.
-                </p>
-              </div>
-
-              <div class="row reveiw-footer-row">
-                <div class="col-4">
-                  <p class="student-name student-info">
-                    Leopold James Fitz
-                  </p>
-                </div>
-                <div class="col-4">
-                  <p class="student-identity student-info">
-                    Graduate Student
-                  </p>
-                </div>
-                <div class="col-4">
+                <div class="col col-4">
                   <p class="post-time student-info">
                     04/22/2020
                   </p>
