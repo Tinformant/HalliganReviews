@@ -30,6 +30,8 @@ h1, h2, h3, h4, h5 {
 }
 .navbar {
     background-color: #012f62;
+    /* height: 60px; */
+    /* background: radial-gradient(circle, rgba(1,47,98,1) 50%, rgba(78,97,133,1) 100%); */
     box-shadow: 0 1px 2px #e9ab14 ;
 }
 
@@ -62,6 +64,9 @@ h1, h2, h3, h4, h5 {
   border-radius: 1.5rem;
   height: 2.5rem;
   line-height: 2.5rem;
+  
+  /* background-color: transparent;
+  border: 1px solid #012f62; */
 }
 
 .search-form, .search-icon {
