@@ -49,6 +49,7 @@ h1, h2, h3, h4, h5 {
 }
 .navbar-brand:hover {
   color: #DCDCDC;
+  transition: color 0.17s;
 }
 
 
@@ -124,20 +125,23 @@ h1, h2, h3, h4, h5 {
 .log-in-link:hover {
   color: #DCDCDC;
   border: 1px solid transparent;
+  transition: color 0.2s;
   /* background-color: #5191CE; */
   /* text-shadow: 0 0 5pt #dcdcdc; */
 }
 
 .sign-up-link {
   color: #fff;
-  color: #012f62;
-  background-color: #e9ab14;
+  color: #e9ab14;
+  /* background-color: #e9ab14; */
   border: 1px solid #e9ab14;
 }
 .sign-up-link:hover {
-  color: #dcdcdc;
+  color: #012f62;
   /* background-color: #dfb879; */
+  background-color: #e9ab14;
   border: 1px solid #dfb879;
+  transition: color 0.2s;
 }
 
 
@@ -148,11 +152,11 @@ h1, h2, h3, h4, h5 {
   /* text-align: right; */
   /* top: 500px; */
   /* left: 1000px; */
-  bottom: 100px; 
-  right: 40px;
+  bottom: 70px; 
+  right: 15px;
 
   height: 160px;
-  width: 200px;
+  width: 170px;
 }
 
 #write-review-btn {
