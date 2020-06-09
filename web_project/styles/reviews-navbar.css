@@ -10,9 +10,15 @@ body {
   color: #012f62;
 }
 
-.row, .col {
+h1, h2, h3, h4, h5 {
+  font-weight: bold;
   margin: 0;
   padding: 0;
+}
+.row, .col {
+  margin: auto 0;
+  padding: 0;
+  text-align: center;
 }
 
 /* ======= NAVBAR ========*/
@@ -24,7 +30,7 @@ body {
 }
 .navbar {
     background-color: #012f62;
-    box-shadow: 0 1px 2px #1dbab4 ;
+    box-shadow: 0 1px 2px #e9ab14 ;
 }
 
 /* NAVBAR BRAND */
@@ -37,7 +43,7 @@ body {
 }
 
 .navbar-brand {
-  color: #1dbab4;
+  color: #e9ab14;
   font-family: 'Anton', sans-serif;
   font-size: 1.5rem;
 }
@@ -69,7 +75,7 @@ body {
 }
 .search-group:focus-within {
   background-color: #012f62;
-  border: 1px #1dbab4 solid;
+  border: 1px #e9ab14 solid;
   box-shadow: 0px 0px 1px 1px #88c1bd;
 }
 
@@ -81,13 +87,11 @@ body {
 }
 
 .search-group:focus-within .search-icon{
-  color: #1dbab4;
+  color: #e9ab14;
 }
 
 .search-group:focus-within #search-bar-clear-btn{
-  color: #DCDCDC;
-  color: #505d83;
-  color: #88c1bd;
+  color: #dfb879;
 }
 
 #search-bar-clear-btn {
@@ -112,27 +116,28 @@ body {
 }
 
 .log-in-link {
-  color: #1dbab4;
-  /* border: 1px solid #5191CE; */
+  color: #e9ab14;
+  border: 1px solid transparent;
   /* text-shadow: 0 0 5pt #5191CE; */
 }
 
 .log-in-link:hover {
   color: #DCDCDC;
-  /* border: 1px solid #DCDCDC; */
+  border: 1px solid transparent;
   /* background-color: #5191CE; */
   /* text-shadow: 0 0 5pt #dcdcdc; */
 }
 
 .sign-up-link {
   color: #fff;
-  background-color: #1dbab4;
-  border: 1px solid #1dbab4;
+  color: #012f62;
+  background-color: #e9ab14;
+  border: 1px solid #e9ab14;
 }
 .sign-up-link:hover {
-  color: #fff;
-  background-color: #40c3c4;
-  border: 1px solid #40c3c4;
+  color: #dcdcdc;
+  /* background-color: #dfb879; */
+  border: 1px solid #dfb879;
 }
 
 
@@ -143,7 +148,7 @@ body {
   /* text-align: right; */
   /* top: 500px; */
   /* left: 1000px; */
-  bottom: 200px; 
+  bottom: 100px; 
   right: 40px;
 
   height: 160px;
@@ -168,7 +173,7 @@ body {
 }
 
 .feather-icon {
-  color: #1dbab4;
+  color: #e9ab14;
   font-size: 5rem;
   position: absolute;
   left: 13px;
@@ -177,7 +182,7 @@ body {
 }
 
 .write-review:hover #write-review-btn {
-  background-color: #1dbab4;
+  background-color: #e9ab14;
 }
 
 .write-review:hover .feather-icon {
@@ -263,7 +268,7 @@ body {
 
 .btn-style {
   background-color: #fff;
-  border: 1px solid #1dbab4;
+  border: 1px solid #e9ab14;
   /* outline: auto; */
 }
 
@@ -291,24 +296,35 @@ body {
 .tab-style{
   font-weight: bold;
   font-size: 1.2rem;
-  color: #1dbab4;
+  color: #012f62;
   padding: 7px 15px;
 }
 
 .tab-style:hover{
-  color: #1dbab4;
+  /* color: #e9ab14; */
+  color: #012f62;
   background-color: #EFEFEF;
-  /* border:#1dbab4 solid 1px; */
+  /* border:#e9ab14 solid 1px; */
 }
 
 
 .nav-tabs .nav-item .nav-link.active {
   color: #ffffff;
-  background-color: #1dbab4;
+  background-color: #012f62;
 }
 
 
 /* ========== EVALUATION PARTS =========*/
+
+.eval-title-hr {
+  margin: 3px 0 2px;
+}
+
+.sqr-eval-0 { color: #012f62; }
+.sqr-eval-1 { color: #6e7693; }
+.sqr-eval-2 { color: #c6c6c6; }
+.sqr-eval-3 { color: #dfb879; }
+.sqr-eval-4 { color: #e9ab14; }
 
 .chart-plot {
   margin: auto;
@@ -316,10 +332,50 @@ body {
   height: 50px;
 }
 
-/* course evaluation */
-.course-general-col {
-  margin-top: auto;
+.eval-text-col {
+  text-align: left;
 }
+
+.avg-score-col {
+  font-weight: bold;
+}
+
+.detail-btn {
+  padding: 0;
+  margin: auto;
+  font-size: 1.5rem;
+}
+
+.detail-btn:hover,.detail-btn:focus {
+  /* border: 1px solid transparent; */
+  box-shadow: none;
+}
+.detail-btn:hover {
+  color: #e9ab14;
+}
+
+.detail-btn-icon {
+  padding: 0;
+  margin: 0;
+}
+
+/* course evaluation */
+
+.course-eval-title-col {
+  font-weight: bold;
+  margin: auto 0;
+  text-align: center;
+}
+.course-eval-legend-col {
+  font-weight: normal;
+  text-align: left;
+  padding-left: 20px;
+}
+
+/* .course-general-col {
+  margin: auto 0;
+  text-align: center;
+} */
 
 
 /* professor evaluation */
@@ -329,8 +385,6 @@ body {
 }
 
 /* comments */
-
-/* COURSE INFORMATION */
 
 .review-body {
   padding:0;

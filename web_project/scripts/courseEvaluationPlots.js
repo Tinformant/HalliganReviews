@@ -76,8 +76,8 @@ var layouts = {
   margin: {
     l: 10,
     r: 10,
-    b: 0,
-    t: 10,
+    b: 5,
+    t: 5,
     pad: 0
   },
   showlegend: false,
