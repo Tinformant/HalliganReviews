@@ -1,19 +1,21 @@
 var divId = "myDiv";
 var divIdList = ["myDiv1", "myDiv2", "myDiv3", "myDiv4"];
 
-var reviewClass = ["Terrible", "Satisfied", "Exellent"];
+var reviewClass = ["Terrible", "Fair", "Good", "Excellent", "Perfect"];
 // var studentIdentities = ["Undergrads", "Grads", "Overall"];
 var studentIdentities = ["Overall"];
-var color = ['#363062', '#4d4c7d', '#827397']
+var color = ['#012f62', '#6e7693', '#c6c6c6','#dfb879','#e9ab14']
 // var distribute = [
 //   [0.2, 0.3, 0.5],
 //   [0.1, 0.2, 0.2],
 //   [0.7, 0.5, 0.3]
 // ]
 var distribute = [
-  [0.2],
   [0.1],
-  [0.7]
+  [0.2],
+  [0.3],
+  [0.3],
+  [0.1]
 ]
 var traces = getData();
 
@@ -25,6 +27,10 @@ function setData(name, yValue, color, xValue) {
     yaxis: 'y',
     type: "bar",
     barmode: 'stack',
+    // hovertemplate: "%{x:%}",
+    texttemplate:"%{x:%}",
+    textposition: 'auto',
+    hoverinfo: 'none',
     orientation: 'h',
     marker: {
       color: color
@@ -45,6 +51,7 @@ function getData() {
 var layouts = {
   // title: "reviews of the professor",
   barmode: "stack",
+  // hovermode: "closest",
   xaxis: {
     tickformat: "%",
     showgrid: false,
@@ -67,10 +74,10 @@ var layouts = {
   height: $("#myDiv1").height(),
   // autosize: true,
   margin: {
-    l: 60,
-    r: 70,
+    l: 10,
+    r: 10,
     b: 0,
-    t: 100,
+    t: 10,
     pad: 0
   },
   showlegend: false,
