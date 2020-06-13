@@ -146,7 +146,7 @@
     </nav>
 
     <div class="write-review">
-      <button id="write-review-btn" class="btn btn-default">
+      <button id="write-review-btn" class="btn btn-default" onclick="clickButton(this)">
         <i class="feather-icon fas fa-feather-alt"></i>
         <!-- <span class="glyphicon glyphicon-remove-circle">x</span> -->
         <p class="write-review-text">Write a Review</p>
@@ -159,11 +159,12 @@
       <div id="review-header">
         <div id="course-info">
           <h1 class="course-name">
-            COMP0160-01 Introduction to Algorithm and its Happy Companions
+                    <span id="Department">Dept</span><span id="Course-Number">1234</span>-<span id="Course-Sub-Number">11</span> <span id="Course-Name">Name</span>
           </h1>
           <form class="review-header-form">
             <div class="row review-header-form-row">
               <div class="col-4 review-header-form-col to-left">
+                <p id="Semester">Semester</p>
                 <select
                   class="selectpicker"
                   multiple
@@ -178,6 +179,7 @@
                 </select>
               </div>
               <div class="col-4 review-header-form-col to-center">
+                <p id="Year">Year</p>
                 <select
                   class="selectpicker"
                   multiple
@@ -190,6 +192,7 @@
                 </select>
               </div>
               <div class="col-4 review-header-form-col to-right">
+                <p id="Instructor-1">Instructor</p>
                   <select
                     class="selectpicker"
                     multiple
@@ -292,7 +295,7 @@
                 <h5>General</h5>
               </div>
               <div class="avg-score-col course-general-col col col-2">
-                <span>3</span>
+                <span id="Course-General">3</span>
               </div>
               <div class="overall-chart-col course-general-col col">
                 <div id="myDiv1" class="chart-plot"></div>
@@ -323,7 +326,7 @@
           >
             <h5>Instructor General</h5>
             <div>
-              <span>Avg. Score: </span> <span>3</span> 
+              <span>Avg. Score: </span> <span id="Instructor-General">3</span> 
             </div>
 
 
@@ -344,14 +347,16 @@
                 </p>
                 <p>
                   <span class="reviews-info-label">Comments:</span>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  A scelerisque purus semper eget duis. Lectus magna fringilla
-                  urna porttitor rhoncus. Convallis posuere morbi leo urna
-                  molestie at. Eget egestas purus viverra accumsan in nisl nisi
-                  scelerisque eu. Sagittis id consectetur purus ut faucibus
-                  pulvinar elementum integer enim. A diam sollicitudin tempor id
-                  eu nisl nunc mi ipsum.
+                  <span id="Comments">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    A scelerisque purus semper eget duis. Lectus magna fringilla
+                    urna porttitor rhoncus. Convallis posuere morbi leo urna
+                    molestie at. Eget egestas purus viverra accumsan in nisl nisi
+                    scelerisque eu. Sagittis id consectetur purus ut faucibus
+                    pulvinar elementum integer enim. A diam sollicitudin tempor id
+                    eu nisl nunc mi ipsum.
+                  </span>
                 </p>
               </div>
 

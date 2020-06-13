@@ -1,5 +1,6 @@
 var divId = "myDiv";
-var divIdList = ["myDiv1", "myDiv2", "myDiv3", "myDiv4"];
+// var divIdList = ["myDiv1", "myDiv2", "myDiv3", "myDiv4"];
+var divIdList = ["myDiv1"];
 
 var reviewClass = ["Terrible", "Fair", "Good", "Excellent", "Perfect"];
 // var studentIdentities = ["Undergrads", "Grads", "Overall"];

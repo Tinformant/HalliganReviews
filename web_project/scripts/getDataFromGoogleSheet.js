@@ -2,10 +2,16 @@
 var googleSheetUrl = "https://docs.google.com/spreadsheets/d/1sPDYudSaMCLrIzG96Ql4AFylRJlwQcQoQp5W8XR34LE/edit?usp=sharing";
 
 function clickButton() {
+    var courseList = ["ME", "COMP", "EE"];
     var query = new google.visualization.Query(googleSheetUrl);
-    query.setQuery("SELECT * WHERE B CONTAINS 'ME'");
+    query.setQuery(`SELECT * WHERE B CONTAINS  '${courseList[getRandomInt(3)]}'`);
     query.send(handleResponse);
 }
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+
 
 function handleResponse(response) {
     if (response.isError()) {
