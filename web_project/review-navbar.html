@@ -62,8 +62,18 @@
     <!-- select -->
     <script src="scripts/select.js"></script>
 
-    
 
+    <!-- The google backend api and scripts #3-->
+
+    <!-- google js api -->
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load('visualization', '1', {
+            packages: ['corechart']
+        });
+    </script>
+
+    <script src="scripts/getDataFromGoogleSheet.js"></script>
 
   </head>
 
@@ -300,72 +310,6 @@
               </div>
             </div>
 
-            <div class="course-general-row row">
-              <div class="col col-3 eval-text-col  course-general-col ">
-                <h5> Content</h5>
-              </div>
-              <div class="avg-score-col course-general-col col col-2">
-                <span>3</span>
-              </div>
-              <div class="overall-chart-col course-general-col col">
-                <div id="myDiv2" class="chart-plot"></div>
-              </div>
-              <div class="course-general-col col col-1">
-                <button class="detail-btn btn btn-default" data-toggle="collapse" href="#course-objectives-detail" role="button">
-                  <i class="detail-btn-icon fas fa-angle-double-down"></i>
-                </button>
-              </div>
-            </div>
-            <div class="collapse" id="course-objectives-detail">
-              <div class="card card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil
-                anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-              </div>
-            </div>
-            <div class="course-general-row row">
-              <div class="col col-3 eval-text-col  course-general-col ">
-                <h5> Objectives</h5>
-              </div>
-              <div class="avg-score-col course-general-col col col-2">
-                <span>3</span>
-              </div>
-              <div class="overall-chart-col course-general-col col">
-                <div id="myDiv3" class="chart-plot"></div>
-              </div>
-              <div class="course-general-col col col-1">
-                <button class="detail-btn btn btn-default" data-toggle="collapse" href="#course-management-detail" role="button">
-                  <i class="detail-btn-icon fas fa-angle-double-down"></i>
-                </button>
-              </div>
-            </div>
-            <div class="collapse" id="course-management-detail">
-              <div class="card card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil
-                anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-              </div>
-            </div>
-            <div class="course-general-row row">
-              <div class="col col-3 eval-text-col  course-general-col ">
-                <h5> Management</h5>
-              </div>
-              <div class="avg-score-col course-general-col col col-2">
-                <span>3</span>
-              </div>
-              <div class="overall-chart-col course-general-col col">
-                <div id="myDiv4" class="chart-plot"></div>
-              </div>
-              <div class="course-general-col col col-1">
-                <button class="detail-btn btn btn-default" data-toggle="collapse" href="#course-general-detail" role="button">
-                  <i class="detail-btn-icon fas fa-angle-double-down"></i>
-                </button>
-              </div>
-            </div>
-            <div class="collapse" id="course-general-detail">
-              <div class="card card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil
-                anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-              </div>
-            </div>
 
 
 
