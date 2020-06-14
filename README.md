@@ -7,7 +7,7 @@ Proof of Concept:
 - [x] parse the data into .json format
 - [x] obtain value from the data in json format from google sheet 
 - [x] change the inner html text by the value from data when click write review button
-- [ ] respond to the search input
+- [x] respond to the search input
 - [ ] create the 'No result found' error page
 - [ ] react to the drop down box
 - [ ] create 'No review related to the course' error page
