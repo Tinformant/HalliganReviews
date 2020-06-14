@@ -18,10 +18,19 @@ function handleResponse(response) {
         alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
         return;
     }
+    
     var data = response.getDataTable();
+    console.log(data);
+    
+    
     var dataJSON = JSON.parse(data.toJSON());
     
     var colLabel = dataJSON.cols.map(x => x.label);
+    console.log(dataJSON);
+    if (dataJSON.rows.length === 0) {
+        alert('Can not find any result!');
+        return;
+    }
     var row = dataJSON.rows[0].c
     var rowValue = row.map(x => {
         if (x === null){
@@ -36,4 +45,22 @@ function handleResponse(response) {
     }
     // $("#name").html(data.getValue(0,0));
 }
+
+function search() {
+    var input = document.getElementById("search-bar-input");
+    input.addEventListener("keyup", function(event) {
+        console.log('YOU PRESS ENTER');
+        if (event.keyCode === 13) {
+            
+            event.preventDefault();
+            
+            var inputValue = document.getElementById("search-bar-input").value;
+            var query = new google.visualization.Query(googleSheetUrl);
+            query.setQuery(`SELECT * WHERE B CONTAINS '${inputValue}'`);
+            query.send(handleResponse);
+        }
+      });
+}
+
+search();
 
