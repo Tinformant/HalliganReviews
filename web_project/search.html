@@ -144,238 +144,47 @@
       </div>
     </nav>
 
-    <div class="write-review">
-      <button id="write-review-btn" class="btn btn-default" onclick="clickButton(this)">
-        <i class="feather-icon fas fa-feather-alt"></i>
-        <!-- <span class="glyphicon glyphicon-remove-circle">x</span> -->
-        <p class="write-review-text">Write a Review</p>
-      </button>
-    </div>
-
-
-
     <div class="main-body">
       <div id="review-header">
-        <div id="course-info">
-          <h1 class="course-name">
-                    <span id="Department">Dept</span><span id="Course-Number">1234</span>-<span id="Course-Sub-Number">11</span> <span id="Course-Name">Name</span>
-          </h1>
-          <form class="review-header-form">
-            <div class="row review-header-form-row">
-              <div class="col-4 review-header-form-col to-left">
-                <p id="Semester">Semester</p>
-                <select
-                  class="selectpicker show-tick"
-                  data-style="btn-style"
-                  data-live-search="true"
-                  data-actions-box="true"
-                  title="Semester"
-                >
-                  <option class="option-color">Spring</option>
-                  <option class="option-color">Summer</option>
-                  <option class="option-color">Fall</option>
-                </select>
-              </div>
-              <div class="col-4 review-header-form-col to-center">
-                <p id="Year">Year</p>
-                <select
-                  class="selectpicker show-tick"
-                  data-style="btn-style"
-                  data-live-search="true"
-                  data-actions-box="true"
-                  title="Year"
-                >
-                  <option class="option-color">2020</option>
-                </select>
-              </div>
-              <div class="col-4 review-header-form-col to-right">
-                <p id="Instructor-1">Instructor</p>
-                  <select
-                    class="selectpicker show-tick"
-                    data-style="btn-style"
-                    data-live-search="true"
-                    data-actions-box="true"
-                    title="Instructor"
-                  >
-                  <option class="option-color">Albus Percival Wulfric Brian Dumbledore</option>
-                </select>
-              </div>
-            </div>
-          </form>
+        <div id="search-result-info">
+          <p>We found <span id="number-of-search-results">2</span> related courses for "<span id="search-keyword">COMP</span>"</p>
         </div>
+        <p>Filter</p>
+        <form class="review-header-form">
+          <div class="row review-header-form-row">
+            <div class="col-4 review-header-form-col to-left">
+              <select class="selectpicker show-tick" data-style="btn-style" data-live-search="true"
+                data-actions-box="true" title="Semester">
+                <option class="option-color">Spring</option>
+                <option class="option-color">Summer</option>
+                <option class="option-color">Fall</option>
+              </select>
+            </div>
+            <div class="col-4 review-header-form-col to-center">
+              <select class="selectpicker show-tick" data-style="btn-style" data-live-search="true"
+                data-actions-box="true" title="Year">
+                <option class="option-color">2020</option>
+              </select>
+            </div>
+            <div class="col-4 review-header-form-col to-right">
+              <select class="selectpicker show-tick" data-style="btn-style" data-live-search="true"
+                data-actions-box="true" title="Instructor">
+                <option class="option-color">Albus Percival Wulfric Brian Dumbledore</option>
+              </select>
+            </div>
+          </div>
+        </form>
       </div>
 
+      <hr />
       <div class="review-body">
-        <ul class="nav nav-tabs mb-3 select-style" id="review-tab" role="tablist">
-          <li class="nav-item">
-            <a
-              class="nav-link active tab-style"
-              data-style="select-style"
-              id="review-course-tab"
-              data-toggle="tab"
-              href="#review-course"
-              role="tab"
-              aria-controls="review-course"
-              aria-selected="true"
-              >Course</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link tab-style"
-              id="review-professor-tab"
-              data-toggle="tab"
-              href="#review-professor"
-              role="tab"
-              aria-controls="review-professor"
-              aria-selected="false"
-              >Instructor</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link tab-style"
-              id="review-comment-tab"
-              data-toggle="tab"
-              href="#review-comment"
-              role="tab"
-              aria-controls="review-comment"
-              aria-selected="false"
-              >Comment</a
-            >
-          </li>
-        </ul>
-        <div class="tab-content" id="tabs-tabcontent">
-          <div
-            class="tab-pane fade show active"
-            id="review-course"
-            role="tabpanel"
-          >
-            <div class="course-eval-title-row row">
-              <div class="course-eval-title-col col col-3"></div>
-              <div class="course-eval-title-col col col-2">
-                Avg. Score
-              </div>
-              <div class="course-eval-title-col col col-6">
-                <div class="course-eval-legend-row row">
-                  <div class="course-eval-legend-col col col-4">
-                    <i class="sqr-eval-0 fas fa-square-full"></i>
-                    <span>Terrible</span>
-                  </div>
-                  <div class="course-eval-legend-col col col-4">
-                    <i class="sqr-eval-1 fas fa-square-full"></i>
-                    <span>Fair</span>
-                  </div>
-                  <div class="course-eval-legend-col col col-4">
-                    <i class="sqr-eval-2 fas fa-square-full"></i>
-                    <span>Good</span>
-                  </div>
-                  <div class="course-eval-legend-col col col-4">
-                    <i class="sqr-eval-3 fas fa-square-full"></i>
-                    <span>Excellent</span>
-                  </div>
-                  <div class="course-eval-legend-col col col-4">
-                    <i class="sqr-eval-4 fas fa-square-full"></i>
-                    <span>Perfect</span>
-                  </div>
-                </div>
-              </div>
-              <div class="course-eval-title-col col col-1">
-                Details
-              </div>
-            </div>
-            <hr class="eval-title-hr">
-
-            <div class="course-general-row row">
-              <div class="col col-3 eval-text-col  course-general-col ">
-                <h5>General</h5>
-              </div>
-              <div class="avg-score-col course-general-col col col-2">
-                <span id="Course-General">3</span>
-              </div>
-              <div class="overall-chart-col course-general-col col">
-                <div id="myDiv1" class="chart-plot"></div>
-              </div>
-              <div class="course-general-col col col-1">
-                <button class="detail-btn btn btn-default" data-toggle="collapse" href="#course-content-detail" role="button">
-                  <i class="detail-btn-icon fas fa-angle-double-down"></i>
-                </button>
-              </div>
-            </div>
-            <div class="collapse" id="course-content-detail">
-              <div class="card card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil
-                anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-              </div>
-            </div>
-
-
-
-
-
-          </div>
-          <div
-            class="tab-pane fade"
-            id="review-professor"
-            role="tabpanel"
-            aria-labelledby="review-professor-tab"
-          >
-            <h5>Instructor General</h5>
-            <div>
-              <span>Avg. Score: </span> <span id="Instructor-General">3</span> 
-            </div>
-
-
-            <!-- contents -->
-          </div>
-          <div
-            class="tab-pane fade"
-            id="review-comment"
-            role="tabpanel"
-            aria-labelledby="review-comment-tab"
-          >
-            <!-- course reviews -->
-            <div class="review-row">
-              <div class="reviews-content">
-                <p class="reviews-info">
-                  <span class="reviews-info-label">Assessment Method:</span>
-                  <span>3 Projects + mid-terms + Final exam</span>
-                </p>
-                <p>
-                  <span class="reviews-info-label">Comments:</span>
-                  <span id="Comments">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    A scelerisque purus semper eget duis. Lectus magna fringilla
-                    urna porttitor rhoncus. Convallis posuere morbi leo urna
-                    molestie at. Eget egestas purus viverra accumsan in nisl nisi
-                    scelerisque eu. Sagittis id consectetur purus ut faucibus
-                    pulvinar elementum integer enim. A diam sollicitudin tempor id
-                    eu nisl nunc mi ipsum.
-                  </span>
-                </p>
-              </div>
-
-              <div class="row comment-footer-row">
-                <div class="col col-4">
-                  <p class="student-name student-info">
-                    Leopold James Fitz
-                  </p>
-                </div>
-                <div class="col col-4">
-                  <p class="student-identity student-info">
-                    Graduate Student
-                  </p>
-                </div>
-                <div class="col col-4">
-                  <p class="post-time student-info">
-                    04/22/2020
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="serach-result-item">
+          COMP0160-00 Algorithms
         </div>
+        <div class="serach-result-item">
+          COMP0135-00 Intro Machine Learning
+        </div>
+
       </div>
       <hr />
     </div>
