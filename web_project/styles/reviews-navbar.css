@@ -271,14 +271,23 @@ h1, h2, h3, h4, h5 {
 }
 
 .option-color:focus{
-  background-color: #5191CE;
+  background-color: #5191CE !important;
   outline: none;
 }
 
-/* .option-color:{
-  background-color: #5191CE;
+.option-color{
+  background-color:white !important;
+  color: black !important;
   outline: none;
-} */
+}
+
+.option-color:hover{
+  background-color: #5191CE !important;
+  outline: none;
+}
+
+
+
 
 .btn-style {
   background-color: #fff;
