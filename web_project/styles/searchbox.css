@@ -1,0 +1,59 @@
+.ui-autocomplete {
+    position: absolute;
+    top: 100%;
+    left: 27% !important;
+    z-index: 1000000;
+    display: none;
+    float: left;
+    min-width: 46%;
+    padding: 0;
+    margin-top: 2px;
+    list-style: none;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    background-color: #DFDFDF;
+    /* color: white; */
+    opacity: 90%;
+    border: 1px solid #cccccc;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    background-clip: padding-box;
+  }
+  
+
+.ui-autocomplete > li > div {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 2;
+    color: black;
+    white-space: nowrap;
+  }
+  
+  .ui-state-hover,
+  .ui-state-active,
+  .ui-state-focus {
+    text-decoration: none;
+    color: #ffffff !important;
+    background-color: #e9ab14 !important;
+    border: none !important;
+    outline: none !important;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  
+  .ui-helper-hidden-accessible {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
