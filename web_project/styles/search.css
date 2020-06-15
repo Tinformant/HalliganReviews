@@ -149,78 +149,6 @@ h1, h2, h3, h4, h5 {
   transition: color 0.2s;
 }
 
-
-/* ====== WRITE REVEIW BUTTON ====== */
-
-.write-review {
-  position: fixed;
-  /* text-align: right; */
-  /* top: 500px; */
-  /* left: 1000px; */
-  bottom: 70px; 
-  right: 15px;
-
-  height: 160px;
-  width: 170px;
-}
-
-#write-review-btn {
-  position: absolute;
-  background-color: #012f62;
-  transition:         color 0.2s;
-  /* background-color: #5191CE; */
-  border-radius: 50%;
-  
-  margin: 0;
-  padding: 0;
-
-  top: 80px;
-  left: 10px;
-  
-  width: 27px;
-  height: 27px;
-}
-
-.feather-icon {
-  color: #e9ab14;
-  font-size: 5rem;
-  position: absolute;
-  left: 13px;
-  bottom: 13px;
-  transition:         color 0.5s;
-}
-
-.write-review:hover #write-review-btn {
-  background-color: #e9ab14;
-}
-
-.write-review:hover .feather-icon {
-  color: #012f62;
-  bottom: 10px;
-  transform: rotate(-40deg);
-  transform-origin: 0% 100%;
-}
-
-.write-review-text {
-  font-family: 'Courgette', cursive;
-  text-align: left;
-  padding: 0;
-  position: absolute;
-  color: #012f62;
-  width: 180px;
-  top: 30px;
-  left: -5px;
-  margin: 0;
-  font-weight: bold;
-  font-size: 1.4rem;
-}
-
-.write-review:hover .write-review-text {
-  color: #012f62;
-  text-shadow: 10px 10px 10px  #7C7C7C;
-}
-
-
 /* ======== MAINBODY ======== */
 
 
@@ -240,7 +168,6 @@ h1, h2, h3, h4, h5 {
   z-index: 1000; */
   /* background-color: #083049 ; */
   background-color: #ffffff;
-  padding-top: 2%;
   margin: 0;
 }
 
@@ -249,21 +176,12 @@ h1, h2, h3, h4, h5 {
   background-color: #fff  ;
 }
 
-/* COURSE INFORMATION */
-
-.course-name {
-  font-size: 2rem;
-  font-weight: bold;
-  margin: 0 0px 20px;
-  text-align: center;
-}
-
 
 /* filter box */
 
 .review-header-form-row {
-    padding: 0;
-    margin: 3% 0;
+  padding: 0;
+    /* margin: 3% 0; */
 }
 
 .review-header-form-col {
@@ -339,74 +257,6 @@ h1, h2, h3, h4, h5 {
 
 /* ========== EVALUATION PARTS =========*/
 
-.eval-title-hr {
-  margin: 3px 0 2px;
-}
-
-.sqr-eval-0 { color: #012f62; }
-.sqr-eval-1 { color: #6e7693; }
-.sqr-eval-2 { color: #c6c6c6; }
-.sqr-eval-3 { color: #dfb879; }
-.sqr-eval-4 { color: #e9ab14; }
-
-.chart-plot {
-  margin: auto;
-  width: 500px;
-  height: 50px;
-}
-
-.eval-text-col {
-  text-align: left;
-}
-
-.avg-score-col {
-  font-weight: bold;
-}
-
-.detail-btn {
-  padding: 0;
-  margin: auto;
-  font-size: 1.5rem;
-}
-
-.detail-btn:hover,.detail-btn:focus {
-  /* border: 1px solid transparent; */
-  box-shadow: none;
-}
-.detail-btn:hover {
-  color: #e9ab14;
-}
-
-.detail-btn-icon {
-  padding: 0;
-  margin: 0;
-}
-
-/* course evaluation */
-
-.course-eval-title-col {
-  font-weight: bold;
-  margin: auto 0;
-  text-align: center;
-}
-.course-eval-legend-col {
-  font-weight: normal;
-  text-align: left;
-  padding-left: 20px;
-}
-
-/* .course-general-col {
-  margin: auto 0;
-  text-align: center;
-} */
-
-
-/* professor evaluation */
-
-#review-professor {
-  position: relative;
-}
-
 /* comments */
 
 .review-body {
@@ -414,74 +264,3 @@ h1, h2, h3, h4, h5 {
   min-height: 450px;
   background-color: #fff  ;
 }
-
-.course-name {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin: 0 0px 20px;
-  text-align: center;
-}
-
-
-/* Review section */
-
-.review-row {
-  margin: 0 0 3%;
-  padding: 3%;
-  /* border: 1px solid; */
-  background-color: #ececec;
-  border-radius: 1rem;
-}
-
-
-.reviews-content {
-  line-height: 1.5;
-}
-
-.reviews-info {
-  margin: 0;
-}
-
-.reviews-info-label {
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-.student-info {
-  font-size: 0.7rem;
-  height: 2rem;
-  line-height: 2rem;
-  margin: 0;
-}
-
-.student-name {
-  text-align: left;
-}
-
-.student-identity {
-  text-align: center;
-}
-
-.post-time {
-  text-align: right;
-  margin: 0;
-}
-
-.comment-footer-row {
-  padding: 0;
-  margin: 0;
-}
-
-
-
-/* ====== Footer ====== */
-
-/* TODO: make sure footer in on the bottom of the screen  */
-
-footer {
-  background-color: #012f62;
-  text-align: center;
-  height: 150px;
-  color: #DCDCDC;
-}
-
