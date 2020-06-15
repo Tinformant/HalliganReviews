@@ -1,5 +1,6 @@
 
 var googleSheetUrl = "https://docs.google.com/spreadsheets/d/1sPDYudSaMCLrIzG96Ql4AFylRJlwQcQoQp5W8XR34LE/edit?usp=sharing";
+var title;
 
 function clickButton() {
     var courseList = ["ME", "COMP", "EE"];
@@ -47,9 +48,9 @@ function handleResponse(response) {
 }
 
 function search() {
+    
     var input = document.getElementById("search-bar-input");
     input.addEventListener("keyup", function(event) {
-        console.log('YOU PRESS ENTER');
         if (event.keyCode === 13) {
             
             event.preventDefault();
@@ -62,5 +63,16 @@ function search() {
       });
 }
 
+function updateInfo(){
+    var url = window.location.href;
+    var urlParse = url.split("?");
+    var id = urlParse[1];
+    var query = new google.visualization.Query(googleSheetUrl);
+    query.setQuery(`SELECT * WHERE A CONTAINS '${id}'`);
+    query.send(handleResponse);
+
+}
+
+google.setOnLoadCallback(updateInfo);
 search();
 
