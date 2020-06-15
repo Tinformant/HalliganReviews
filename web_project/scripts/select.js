@@ -1,7 +1,3 @@
-// // Material Select Initialization
-// $(document).ready(function() {
-//     $('.mdb-select').materialSelect();
-//     });
 
 
 $('select').selectpicker();
@@ -9,8 +5,12 @@ $('select').selectpicker();
 $( function() {
     var courses = ["ME","EE","COMP"];
     $( "#search-bar-input" ).autocomplete({
-      source: courses
+      source: courses,
+      select: redirect,
     });
+    function redirect(ui, event){
+        window.location.assign("course.html?3");
+    }
 } );
 
 
