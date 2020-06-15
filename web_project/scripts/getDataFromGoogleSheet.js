@@ -65,8 +65,12 @@ function search() {
 
 function updateInfo(){
     var url = window.location.href;
+    if (!url.includes("?")){
+        return;
+    }
     var urlParse = url.split("?");
     var id = urlParse[1];
+    console.log(id);
     var query = new google.visualization.Query(googleSheetUrl);
     query.setQuery(`SELECT * WHERE A CONTAINS '${id}'`);
     query.send(handleResponse);
