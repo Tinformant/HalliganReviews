@@ -21,7 +21,7 @@ function Title(props) {
       <Col lg={c3}>
         <Row>
           {colorScheme.map((x, i) => {
-            return <Legend key={i} color={x.color} name={x.name} />;
+            return <Legend key={i} color={x.color} title={x.title} />;
           })}
         </Row>
       </Col>

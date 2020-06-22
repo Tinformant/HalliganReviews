@@ -5,9 +5,7 @@ import createPlotlyComponent from "react-plotly.js/factory";
 const Plot = createPlotlyComponent(Plotly);
 
 function SingleStackBarPlot(props) {
-  const color = ["#012f62", "#6e7693", "#c6c6c6", "#dfb879", "#e9ab14"];
-  const distribute = [0.1, 0.2, 0.3, 0.3, 0.1];
-
+  
   function setData(x, color) {
     return {
       x: [x],
@@ -24,7 +22,7 @@ function SingleStackBarPlot(props) {
 
   function getData() {
     let data = [];
-    for (var i = 0; i < color.length; i++) {
+    for (var i = 0; i < props.dist.length; i++) {
       data.push(
         setData(props.dist[i], props.colorScheme[i] )
       );
