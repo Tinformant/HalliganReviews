@@ -7,7 +7,7 @@ import Review from "./Review";
 function MainBody(props) {
   return <div className="main-body">
       <Header data={props.data}/>
-      {/* <Review data={data}/> */}
+      <Review data={props.data}/>
   </div>;
 }
 

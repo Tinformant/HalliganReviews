@@ -4,7 +4,7 @@ import "./CourseInfo.css";
 function CourseInfo(props) {
   return (
     <div id="course-info">
-      <h1 class="course-name">
+      <h1 className="course-name">
         <span id="Department">{props.data.info.department}</span>
         <span id="Course-Number">{props.data.info.number}</span>-
         <span id="Course-Sub-Number">{props.data.info.subnumber}</span>

@@ -1,9 +1,9 @@
 const courseData = [{
         name: "General",
         data: {
-            undergraduate: [5, 10, 15, 20, 25],
-            graduate: [4, 1, 5, 7, 20],
-            other: [1, 2, 3, 4, 5]
+            undergraduate: [5, 1, 5, 20, 25],
+            graduate: [4, 1, 5, 20, 20],
+            other: [1, 2, 3, 1, 5]
         },
     },
     {

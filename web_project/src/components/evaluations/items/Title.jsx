@@ -13,10 +13,14 @@ function Legend(props) {
 
 function Title(props) {
   const [c1, c2, c3, c4] = props.widthList;
-  const legend = [];
-  for (let index = 0; index < props.legend.length; index++) {
-    legend.push({title:props.legend.title[index], color: props.legend.color[index]});
+  let legend = [];
+  for (let index = 0; index < props.legend.title.length; index++) {
+    legend.push({
+      title: props.legend.title[index],
+      color: props.legend.color[index],
+    });
   }
+  
   return (
     <Row>
       <Col lg={c1}></Col>

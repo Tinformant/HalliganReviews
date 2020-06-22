@@ -16,8 +16,6 @@ function Item(props) {
 
   const generalDist = [];
 
-  console.log(props.data.data);
-
   for (let index = 0; index < undergraduate.length; index++) {
     generalDist.push(undergraduate[index] + graduate[index] + other[index]);
   }
@@ -30,9 +28,9 @@ function Item(props) {
     return x / sumGeneralDist;
   });
 
-  const avgScore = generalDistPercent.reduce((cur, acc, i) => {
+  const avgScore = generalDistPercent.reduce((acc, cur, i) => {
     return cur * (i + 1) + acc;
-  });
+  }).toFixed(1);
 
   //   const {name, avgScore} = props.data;
   return (

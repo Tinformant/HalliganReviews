@@ -45,7 +45,7 @@ function SingleStackBarPlot(props) {
       showticklabels: false,
     },
     width: 400,
-    height: 60,
+    height: 50,
     margin: { l: 10, r: 10, b: 5, t: 5, pad: 0 },
     showlegend: false,
     static: true,
