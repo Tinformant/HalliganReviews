@@ -18,7 +18,7 @@ function Reveiw(props) {
         <Course data={props.data.course} />
       </Tab>
       <Tab eventKey='instructor' title='Instructor'>
-        {/* <Instructor data={props.data.instructor} /> */}
+        <Instructor data={props.data.instructor} />
       </Tab>
       <Tab eventKey='comment' title='Comment'>
         <Comment data={props.data.comment} />

@@ -2,7 +2,7 @@ import React from "react";
 import "./SelectBox.css";
 
 function setOperation(value) {
-  return <option className="option-color">{value}</option>;
+  return <option className="option-color" key={value.key}>{value}</option>;
 }
 
 function SelectBox(props) {

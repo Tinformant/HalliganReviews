@@ -23,6 +23,31 @@ const courseData = [{
         },
     },
 ];
+const instructorData = [{
+        name: "General",
+        data: {
+            undergraduate: [5, 1, 5, 20, 25],
+            graduate: [4, 1, 5, 20, 20],
+            other: [1, 2, 3, 1, 5]
+        },
+    },
+    {
+        name: "Method",
+        data: {
+            undergraduate: [5, 10, 15, 20, 25],
+            graduate: [4, 1, 5, 7, 20],
+            other: [1, 2, 3, 4, 5]
+        },
+    },
+    {
+        name: "Responsive",
+        data: {
+            undergraduate: [5, 10, 15, 20, 25],
+            graduate: [4, 1, 5, 7, 20],
+            other: [1, 2, 3, 4, 5]
+        },
+    },
+];
 const commentData = [{
         userName: "Leopold James Fitz",
         status: "graduate",
@@ -44,7 +69,7 @@ const data = {
     },
     comment: commentData,
     course: courseData,
-    instructor: [1, 2, 3],
+    instructor: instructorData,
 };
 
 

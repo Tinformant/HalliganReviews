@@ -32,7 +32,6 @@ function Item(props) {
     return cur * (i + 1) + acc;
   }).toFixed(1);
 
-  //   const {name, avgScore} = props.data;
   return (
     <div>
       <ItemTitle widthList={widthList} legend={legend} />
