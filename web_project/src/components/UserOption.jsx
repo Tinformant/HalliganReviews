@@ -1,16 +1,18 @@
 import React from "react";
-import {Nav, NavItem} from "react-bootstrap"
+import { Nav, NavItem } from "react-bootstrap";
+import './NavigationBar.css';
 
-function UserOption(){
-    return <Nav className="ml-auto">
-        <NavItem>
-            <Nav.Link className="log-in-link navbar-link nav-link" href="#">LOG IN</Nav.Link>
-        </NavItem>
-        <NavItem>
-            <Nav.Link className="sign-up-link navbar-link nav-link" href="#">SIGN UP</Nav.Link>
-        </NavItem>
+function UserOption() {
+  return (
+    <Nav className="ml-auto">
+      <Nav.Link href="#" className="log-in-link navbar-link">
+        LOG IN
+      </Nav.Link>
+      <Nav.Link href="#" className="sign-up-link navbar-link">
+        SIGN UP
+      </Nav.Link>
     </Nav>
-    ;
+  );
 }
 
 export default UserOption;
