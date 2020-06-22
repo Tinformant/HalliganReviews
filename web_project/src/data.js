@@ -47,7 +47,9 @@ info: {
 },
 comment: commentData,
 course: courseData,
-instructor: [1, 2, 3],
+instructor: ["Tyrion"],
+semester: ["Fall"],
+year: ["2020"],
 };
 
 

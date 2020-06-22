@@ -1,8 +1,8 @@
 import React from "react";
 import "./SelectBox.css";
 
-function setOperation(value) {
-  return <option className="option-color">{value}</option>;
+function setOperation(value,index) {
+  return <option key={index} className="option-color">{value}</option>;
 }
 
 function SelectBox(props) {
@@ -16,8 +16,9 @@ function SelectBox(props) {
             data-live-search="true"
             data-actions-box="true"
             title="Semester"
+            defaultValue={props.data.semester[0]}
           >
-            {props.data.instructor.map(setOperation)}
+            {props.data.semester.map(setOperation)}
           </select>
         </div>
         <div className="col-4 review-header-form-col to-center">
@@ -27,8 +28,9 @@ function SelectBox(props) {
             data-live-search="true"
             data-actions-box="true"
             title="Year"
+            defaultValue={props.data.year[0]}
           >
-            {props.data.instructor.map(setOperation)}
+            {props.data.year.map(setOperation)}
           </select>
         </div>
         <div className="col-4 review-header-form-col to-right">
@@ -38,6 +40,7 @@ function SelectBox(props) {
             data-live-search="true"
             data-actions-box="true"
             title="Instructor"
+            defaultValue={props.data.instructor[0]}
           >
             {props.data.instructor.map(setOperation)}{" "}
           </select>
