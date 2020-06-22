@@ -5,7 +5,6 @@ const courseData = [{
             graduate: [4, 1, 5, 7, 20],
             other: [1, 2, 3, 4, 5]
         },
-        avgScore: 3.1
     },
     {
         name: "Method",
@@ -14,7 +13,6 @@ const courseData = [{
             graduate: [4, 1, 5, 7, 20],
             other: [1, 2, 3, 4, 5]
         },
-        avgScore: 4.2
     },
     {
         name: "Responsive",
@@ -23,7 +21,6 @@ const courseData = [{
             graduate: [4, 1, 5, 7, 20],
             other: [1, 2, 3, 4, 5]
         },
-        avgScore: 3.9
     },
 ];
 const commentData = [{
