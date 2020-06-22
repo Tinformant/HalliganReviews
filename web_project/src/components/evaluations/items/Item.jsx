@@ -3,29 +3,45 @@ import ItemTitle from "./Title";
 import ItemContent from "./Content";
 
 function Item(props) {
-  // console.log(props);
-
   const widthList = [3, 2, 6, 1];
-  const colorScheme = [
-    { name: "Terrible", color: "#012f62" },
-    { name: "Fair", color: "#6e7693" },
-    { name: "Good", color: "#c6c6c6" },
-    { name: "Excellent", color: "#dfb879" },
-    { name: "Perfect", color: "#e9ab14" },
-  ];
-  const color = ["#012f62", "#6e7693", "#c6c6c6", "#dfb879", "#e9ab14"];
-  const dist = [0.1, 0.1, 0.4, 0.3, 0.1];
-  
-  const {name, avgScore} = props.data;
+  const legend = {
+    title: ["Terrible", "Fair", "Good", "Excellent", "Perfect"],
+    color: ["#012f62", "#6e7693", "#c6c6c6", "#dfb879", "#e9ab14"],
+  };
+
+  const {
+    name,
+    data: { undergraduate, graduate, other },
+  } = props.data;
+
+  const generalDist = [];
+
+  for (let index = 0; index < undergraduate.length; index++) {
+    generalDist.push(undergraduate[index] + graduate[index] + other[index]);
+  }
+
+  const sumGeneralDist = generalDist.reduce((cur, acc) => {
+    return cur + acc;
+  });
+
+  const generalDistPercent = generalDist.map((x) => {
+    return x / sumGeneralDist;
+  });
+
+  const avgScore = generalDistPercent.reduce((acc, cur, i) => {
+    return cur * (i + 1) + acc;
+  }).toFixed(1);
+
+  //   const {name, avgScore} = props.data;
   return (
     <div>
-      <ItemTitle widthList={widthList} colorScheme={colorScheme} />
+      <ItemTitle widthList={widthList} legend={legend} />
       <ItemContent
         widthList={widthList}
         name={name}
         avgScore={avgScore}
-        colorScheme={color}
-        dist={dist}
+        colorScheme={legend.color}
+        dist={generalDistPercent}
       />
     </div>
   );

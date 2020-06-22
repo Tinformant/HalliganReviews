@@ -5,7 +5,7 @@ function Legend(props) {
   return (
     <Col lg={4}>
       <i className='sqr-eval-3 fas fa-square-full' style={{color:props.color}}></i>
-      <span>{props.name}</span>
+      <span>{props.title}</span>
     </Col>
   );
 }
@@ -13,15 +13,22 @@ function Legend(props) {
 
 function Title(props) {
   const [c1, c2, c3, c4] = props.widthList;
-  const colorScheme = props.colorScheme;
+  let legend = [];
+  for (let index = 0; index < props.legend.title.length; index++) {
+    legend.push({
+      title: props.legend.title[index],
+      color: props.legend.color[index],
+    });
+  }
+  
   return (
     <Row>
       <Col lg={c1}></Col>
       <Col lg={c2}>Avg.Score</Col>
       <Col lg={c3}>
         <Row>
-          {colorScheme.map((x, i) => {
-            return <Legend key={i} color={x.color} name={x.name} />;
+          {legend.map((x, i) => {
+            return <Legend key={i} color={x.color} title={x.title} />;
           })}
         </Row>
       </Col>
