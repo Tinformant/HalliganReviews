@@ -1,0 +1,12 @@
+
+#review-header {
+  /* position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    z-index: 1000; */
+  /* background-color: #083049 ; */
+  background-color: #ffffff;
+  /* padding-top: 2%; */
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
