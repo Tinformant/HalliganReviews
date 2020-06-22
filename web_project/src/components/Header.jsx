@@ -1,8 +1,11 @@
 import React from "react";
-import ReactDOM from "react-dom";
 
 function Header() {
-  return <h1>this is Header</h1>;
+  return (
+    <div>
+      <h1>This should be rendered as the COURSE TITLE</h1>
+    </div>
+  );
 }
 
 export default Header;

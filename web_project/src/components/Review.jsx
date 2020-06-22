@@ -18,10 +18,10 @@ function Reveiw(props) {
       activeKey={key}
       onSelect={(k) => setKey(k)}>
       <Tab eventKey='course' title='Course'>
-        <Course/>
+        <Course data={props.data.course}/>
       </Tab>
       <Tab eventKey='instructor' title='Instructor'>
-        <Instructor />
+        <Instructor data={props.data.instructor}/>
       </Tab>
       <Tab eventKey='comment' title='Comment' >
           <Comment data={props.data.comment} />

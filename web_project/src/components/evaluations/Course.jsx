@@ -1,7 +1,12 @@
 import React from "react";
+import RevItem from "./items/Item";
 
-function Course() {
-  return <p>this is to be rendered as the comment page</p>;
+function Course(props) {
+  return props.data.map((x, i) => {
+    return <div key={i}>
+      <RevItem data={x}/>
+    </div>;
+  });
 }
 
 export default Course;
