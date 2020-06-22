@@ -1,13 +1,13 @@
 import React from "react";
-import Header from "./Header";
+import Header from "./header/Header";
 import Review from "./Review";
 
-import data from "../data.js";
 
-function MainBody() {
+
+function MainBody(props) {
   return <div className="main-body">
-      <Header />
-      <Review data={data}/>
+      <Header data={props.data}/>
+      {/* <Review data={data}/> */}
   </div>;
 }
 

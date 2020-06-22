@@ -1,21 +1,53 @@
-const course = [{
-        name: "General",
-        avgScore: 3.1
+const courseData = [{
+    name: "General",
+    data: {
+        undergraduate: [5, 10, 15, 20, 25],
+        graduate: [4, 1, 5, 7, 20],
+        other: [1, 2, 3, 4, 5]
     },
-    {
-        name: "Method",
-        avgScore: 4.2
+    avgScore: 3.1
+},
+{
+    name: "Method",
+    data: {
+        undergraduate: [5, 10, 15, 20, 25],
+        graduate: [4, 1, 5, 7, 20],
+        other: [1, 2, 3, 4, 5]
     },
-    {
-        name: "Responsive",
-        avgScore: 3.9
+    avgScore: 4.2
+},
+{
+    name: "Responsive",
+    data: {
+        undergraduate: [5, 10, 15, 20, 25],
+        graduate: [4, 1, 5, 7, 20],
+        other: [1, 2, 3, 4, 5]
     },
+    avgScore: 3.9
+},
 ];
+const commentData = [{
+    userName: "Leopold James Fitz",
+    status: "graduate",
+    comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.A scelerisque purus semper eget duis. Lectus magna fringillaurna porttitor rhoncus. Convallis posuere morbi leo urnamolestie at. Eget egestas purus viverra accumsan in nisl nisiscelerisque eu. Sagittis id consectetur purus ut faucibuspulvinar elementum integer enim. A diam sollicitudin tempor ideu nisl nunc mi ipsum"
+},
+{
+    userName: "Jemma Anne Simmons",
+    status: "graduate",
+    comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.A scelerisque purus semper eget duis. Lectus magna fringillaurna porttitor rhoncus. Convallis posuere morbi leo urnamolestie at. Eget egestas purus viverra accumsan in nisl nisiscelerisque eu. Sagittis id consectetur purus ut faucibuspulvinar elementum integer enim. A diam sollicitudin tempor ideu nisl nunc mi ipsum"
+},
+]
 
 const data = {
-    comment: ["Comment1", "Comment2", "Comment3"],
-    course: course,
-    instructor: [1, 2, 3],
+info: {
+    title: "Introduction to Algorithm and its Happy Companions",
+    department: "COMP",
+    number: "0160",
+    subnumber: "00"
+},
+comment: commentData,
+course: courseData,
+instructor: [1, 2, 3],
 };
 
 
