@@ -1,5 +1,5 @@
 import React from "react";
-import { Nav, NavItem } from "react-bootstrap";
+import { Nav } from "react-bootstrap";
 import './NavigationBar.css';
 
 function UserOption() {
