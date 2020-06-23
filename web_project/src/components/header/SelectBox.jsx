@@ -16,9 +16,9 @@ function SelectBox(props) {
             data-live-search="true"
             data-actions-box="true"
             title="Semester"
-            defaultValue={props.data.semester[0]}
+            defaultValue={props.data.info.semester[0]}
           >
-            {props.data.semester.map(setOperation)}
+            {props.data.info.semester.map(setOperation)}
           </select>
         </div>
         <div className="col-4 review-header-form-col to-center">
@@ -28,9 +28,9 @@ function SelectBox(props) {
             data-live-search="true"
             data-actions-box="true"
             title="Year"
-            defaultValue={props.data.year[0]}
+            defaultValue={props.data.info.year[0]}
           >
-            {props.data.year.map(setOperation)}
+            {props.data.info.year.map(setOperation)}
           </select>
         </div>
         <div className="col-4 review-header-form-col to-right">
@@ -40,9 +40,9 @@ function SelectBox(props) {
             data-live-search="true"
             data-actions-box="true"
             title="Instructor"
-            defaultValue={props.data.instructor[0]}
+            defaultValue={props.data.info.instructor[0]}
           >
-            {props.data.instructor.map(setOperation)}{" "}
+            {props.data.info.instructor.map(setOperation)}{" "}
           </select>
         </div>
       </div>

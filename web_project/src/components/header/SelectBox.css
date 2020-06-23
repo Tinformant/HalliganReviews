@@ -1,3 +1,9 @@
+.btn-style {
+  background-color: #fff;
+  border: 1px solid #e9ab14;
+  /* outline: auto; */
+}
+
 .review-header-form-row {
   padding: 0;
   margin: 3% 0;
