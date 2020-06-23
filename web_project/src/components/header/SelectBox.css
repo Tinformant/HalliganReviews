@@ -9,10 +9,6 @@
   margin: 3% 0;
 }
 
-.review-header-form-col {
-  padding: 0;
-}
-
 .option-color:focus {
   background-color: #5191ce !important;
   outline: none;
@@ -27,16 +23,4 @@
 .option-color:hover {
   background-color: #5191ce !important;
   outline: none;
-}
-
-.to-left {
-  text-align: left;
-}
-
-.to-right {
-  text-align: right;
-}
-
-.to-center {
-  text-align: center;
 }

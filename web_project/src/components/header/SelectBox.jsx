@@ -1,4 +1,6 @@
 import React from "react";
+import { Row, Col } from "react-bootstrap";
+
 import "./SelectBox.css";
 
 function setOperation(value,index) {
@@ -8,8 +10,8 @@ function setOperation(value,index) {
 function SelectBox(props) {
   return (
     <form className="review-header-form">
-      <div className="row review-header-form-row">
-        <div className="col-4 review-header-form-col to-left">
+      <Row className="review-header-form-row" noGutters={true}>
+        <Col className="review-header-form-col to-left">
           <select
             className="selectpicker show-tick"
             data-style="btn-style"
@@ -20,8 +22,8 @@ function SelectBox(props) {
           >
             {props.data.info.semester.map(setOperation)}
           </select>
-        </div>
-        <div className="col-4 review-header-form-col to-center">
+        </Col>
+        <Col className="review-header-form-col to-center">
           <select
             className="selectpicker show-tick"
             data-style="btn-style"
@@ -32,8 +34,8 @@ function SelectBox(props) {
           >
             {props.data.info.year.map(setOperation)}
           </select>
-        </div>
-        <div className="col-4 review-header-form-col to-right">
+        </Col>
+        <Col className="review-header-form-col to-right">
           <select
             className="selectpicker show-tick"
             data-style="btn-style"
@@ -44,8 +46,8 @@ function SelectBox(props) {
           >
             {props.data.info.instructor.map(setOperation)}{" "}
           </select>
-        </div>
-      </div>
+        </Col>
+      </Row>
     </form>
   );
 }

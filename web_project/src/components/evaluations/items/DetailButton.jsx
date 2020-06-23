@@ -1,8 +1,7 @@
 import React from "react";
 
 function DetailButton(props) {
-  // console.log(props);
-  return <span>Detail button</span>;
+  return <i className='fas fa-angle-double-down'></i>;
 }
 
 export default DetailButton;

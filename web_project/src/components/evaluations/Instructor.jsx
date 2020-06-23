@@ -1,12 +1,10 @@
 import React from "react";
-import RevItem from "./items/Item";
+// import ItemTitle from "./items/Title";
+// import RevItem from "./items/Item";
+import GeneralEval from "./GeneralEval";
 
 function Instructor(props) {
-  return props.data.map((x, i) => {
-    return <div key={i}>
-      <RevItem data={x}/>
-    </div>;
-  });
+  return <GeneralEval data={props.data}/>
 }
 
 export default Instructor;

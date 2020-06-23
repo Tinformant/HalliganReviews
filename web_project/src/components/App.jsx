@@ -4,6 +4,7 @@ import MainBody from "./MainBody";
 import NavigationBar from './navigation/NavigationBar';
 import Writer from "./writeReview/Writer";
 import data from "../data.js";
+
 // import'bootstrap/dist/css/bootstap.min.css';
 
 function App() {

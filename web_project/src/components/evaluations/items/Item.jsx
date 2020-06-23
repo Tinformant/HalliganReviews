@@ -1,14 +1,7 @@
 import React from "react";
-import ItemTitle from "./Title";
 import ItemContent from "./Content";
 
 function Item(props) {
-  const widthList = [3, 2, 6, 1];
-  const legend = {
-    title: ["Terrible", "Fair", "Good", "Excellent", "Perfect"],
-    color: ["#012f62", "#6e7693", "#c6c6c6", "#dfb879", "#e9ab14"],
-  };
-
   const {
     name,
     data: { undergraduate, graduate, other },
@@ -33,16 +26,14 @@ function Item(props) {
   }).toFixed(1);
 
   return (
-    <div>
-      <ItemTitle widthList={widthList} legend={legend} />
       <ItemContent
-        widthList={widthList}
+        widthList={props.widthList}
+        alignList={props.alignList}
         name={name}
         avgScore={avgScore}
-        colorScheme={legend.color}
+        colorScheme={props.color}
         dist={generalDistPercent}
       />
-    </div>
   );
 }
 export default Item;

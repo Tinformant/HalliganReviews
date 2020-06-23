@@ -1,0 +1,16 @@
+.main-body {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.to-left {
+  text-align: left;
+}
+
+.to-right {
+  text-align: right;
+}
+
+.to-center {
+  text-align: center;
+}
