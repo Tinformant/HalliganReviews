@@ -4,7 +4,7 @@ import { Row, Col} from "react-bootstrap";
 function Legend(props) {
   return (
     <Col lg={4}>
-      <i className='sqr-eval-3 fas fa-square-full' style={{color:props.color}}></i>
+      <i className='sqr-eval-3 fas fa-square-full' style={{color:props.color,margin:"0px 5px"}}></i>
       <span>{props.title}</span>
     </Col>
   );
@@ -25,7 +25,9 @@ function Title(props) {
   return (
     <Row noGutters={true}>
       <Col className={a1} sm={w1}></Col>
-      <Col className={a2} sm={w2}>Avg.Score</Col>
+      <Col className={a2} sm={w2}>
+        Avg.Score
+      </Col>
       <Col className={a3} sm={w3}>
         <Row noGutters={true}>
           {legend.map((x, i) => {
@@ -33,7 +35,9 @@ function Title(props) {
           })}
         </Row>
       </Col>
-      <Col className={a4} sm={w4}>Detail</Col>
+      <Col className={a4} sm={w4}>
+        Detail
+      </Col>
     </Row>
   );
 }

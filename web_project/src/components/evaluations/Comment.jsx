@@ -8,9 +8,9 @@ function CommentItem(props) {
     <Card>
       <p> <span>Comment: </span> {props.comment}</p>
       <Row noGutters={true}>
-        <Col className="to-left" sm={4}>{props.userName}</Col>
-        <Col className="to-center" sm={4}>{props.status}</Col>
-        <Col className="to-right" sm={4}>{props.date}</Col>
+        <Col className="to-left" >{props.userName}</Col>
+        <Col className="to-center">{props.status}</Col>
+        <Col className="to-right">{props.date}</Col>
       </Row>
     </Card>
   );

@@ -4,7 +4,9 @@ import RevItem from "./items/Item";
 
 function GeneralEval(props) {
   const widthList = [3, 2, 6, 1];
-  const alignList = ["to-left", "to-center", "to-left", "to-center"];
+  const alignList = ["to-left", "to-center", "to-left", "to-center"].map((x)=>{
+      return x + " align-center-vertical";
+  });
   
   const legend = {
     title: ["Terrible", "Fair", "Good", "Excellent", "Perfect"],

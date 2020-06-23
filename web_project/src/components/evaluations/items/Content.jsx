@@ -10,7 +10,7 @@ function Content(props) {
   return (
     <Accordion>
       <Row noGutters={true}>
-        <Col className={a1}  sm={c1}>{props.name}</Col>
+        <Col className={a1} sm={c1}>{props.name}</Col>
         <Col className={a2} sm={c2}>{props.avgScore}</Col>
         <Col className={a3} sm={c3}>
             <SingleStackBarPlot dist={props.dist} colorScheme={props.colorScheme}/>
