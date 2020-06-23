@@ -1,0 +1,11 @@
+.detail-content-card {
+    margin: 0 0 3%;
+    padding: 3%;
+    /* border: 1px solid; */
+    background-color: #ececec;
+    border-radius: 1rem;
+}
+
+.detail-content-p {
+    font-weight: bold;
+}

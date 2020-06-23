@@ -5,12 +5,15 @@ import Course from "./evaluations/Course";
 import Instructor from "./evaluations/Instructor";
 import Comment from "./evaluations/Comment";
 
+import "./Review.css";
+
 function Reveiw(props) {
   const [key, setKey] = useState("course");
 
   return (
     <Tabs
-      id='controlled-tab-example'
+      className="rev"
+      id='controlled-tab'
       variant='pills'
       activeKey={key}
       onSelect={(k) => setKey(k)}>

@@ -1,0 +1,10 @@
+.rev-content-name, .rev-content-avg-score, .rev-content-detail{
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #012f62;
+}
+
+.rev-content-avg-score {
+    font-weight: normal;
+    font-size: 1.1rem;
+}

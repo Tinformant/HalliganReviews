@@ -1,0 +1,21 @@
+.rev-title {
+    margin-top: 10px;
+}
+
+.rev-title-hr {
+    margin-top: 0;
+    border: none;
+    border-bottom:1px solid #c6c6c6;
+    color: #c6c6c6;
+}
+
+.rev-title-avg-score, .rev-title-detail {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #012f62;
+}
+
+.rev-title-legend-text {
+    margin-left: 3px;
+    font-size: 0.9rem;
+}
