@@ -1,5 +1,5 @@
 import React from "react";
-import ItemContent from "./Content";
+import ItemContent from "./RevContent";
 
 function Item(props) {
   const {

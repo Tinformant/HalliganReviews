@@ -1,0 +1,25 @@
+.rev > .nav-item {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #012f62;
+  padding: 7px 15px;
+}
+
+.rev > .nav-item:hover {
+  /* color: #e9ab14; */
+  color: #012f62;
+  background-color: #EFEFEF;
+  /* border:#e9ab14 solid 1px; */
+}
+
+
+.rev > .nav-link.active {
+  color: #ffffff;
+  background-color: #012f62;
+}
+
+.rev > .nav-item:focus {
+  color: #ffffff;
+  background-color: #012f62;
+}
+
