@@ -1,9 +1,8 @@
-.orange-text{
+i.rating-star-filled{
     color: orange;
 }
 
-.star-empty{
-    color: #0a0a0a;
-    content: "\2605";
-    opacity: 0;
+.rating-star{
+    color: white;
+    text-shadow: 0px 0px 3px black;
 }

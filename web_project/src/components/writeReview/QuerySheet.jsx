@@ -3,34 +3,21 @@ import "./QuerySheet.css";
 import { MDBContainer, MDBRating } from "mdbreact";
 
 function QuerySheet() {
+  // TODO: optimize the rating stars effect: start from the empty stars and hover on filled stars 
   const [basic] = React.useState([
-    {
-      tooltip: "Terrible",
-    },
-    {
-      tooltip: "Fair",
-    },
-    {
-      tooltip: "Good",
-    },
-    {
-      tooltip: "Excellent",
-    },
-    {
-      tooltip: "Perfect",
-    },
+    { tooltip: "Terrible" },
+    { tooltip: "Fair" },
+    { tooltip: "Good" },
+    { tooltip: "Excellent" },
+    { tooltip: "Perfect" },
   ]);
-  const colors = ['orange-text',
-  'orange-text',
-  'orange-text',
-  'orange-text',
-  'orange-text'];
+
   return (
     <MDBContainer>
       <MDBRating
-        fillClassName="star-empty"
+        iconClassName='rating-star'
+        fillClassName='rating-star-filled'
         data={basic}
-        fillColors={colors}
       />
     </MDBContainer>
   );
