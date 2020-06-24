@@ -1,0 +1,48 @@
+/* background */
+.write-background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.write-form {
+  position: absolute;
+  left: 20%;
+  right: 20%;
+  top: 18%;
+  bottom: 18%;
+  margin: auto;
+  background: white;
+  border-radius: 8px;
+}
+
+/* close button */
+.close-form{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    margin: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.close-form:focus-within{
+    border: none;
+    outline: none;
+}
+
+/* query sheet */
+.query-sheet {
+    width: 95%;
+    height: 94%;
+    margin: 3%;
+    overflow-y: scroll;
+}
