@@ -1,0 +1,9 @@
+.orange-text{
+    color: orange;
+}
+
+.star-empty{
+    color: #0a0a0a;
+    content: "\2605";
+    opacity: 0;
+}
