@@ -6,7 +6,15 @@ import SingleStackBarPlot from "../plots/SingleStackBarPlot"
 
 import "./RevContent.css";
 
+
 function Content(props) {
+  // const [plotSize, setPlotSize] = React.useState({height: 0, width: 0})
+  // const ref = React.useRef(null)
+  
+  // React.useEffect(() => {
+  //   setPlotSize({height: ref.current.clientHeight, width: ref.current.clientWidth})
+  // }, [plotSize.width]);
+
   const [c1, c2, c3, c4] = props.widthList;
   const [a1, a2, a3, a4] = props.alignList;
   return (
@@ -15,7 +23,7 @@ function Content(props) {
         <Col className={a1 + " rev-content-name"} sm={c1}>{props.name}</Col>
         <Col className={a2 + " rev-content-avg-score"} sm={c2}>{props.avgScore}</Col>
         <Col className={a3 + " rev-content-plot"} sm={c3}>
-            <SingleStackBarPlot dist={props.dist} colorScheme={props.colorScheme}/>
+            <SingleStackBarPlot width={500} height={40} dist={props.dist} colorScheme={props.colorScheme}/>
         </Col>
         <Col className={a4 + " rev-content-detail"} sm={c4}>
             <DetailButton eventKey='0'/>

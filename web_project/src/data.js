@@ -15,7 +15,7 @@ const courseData = [{
         },
     },
     {
-        name: "Useful",
+        name: "Usefulness",
         data: {
             undergraduate: [5, 10, 15, 20, 25],
             graduate: [4, 1, 5, 7, 20],

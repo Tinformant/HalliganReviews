@@ -1,5 +1,8 @@
 import React from "react";
 
+import "./SingleStackBarPlot.css";
+
+
 import Plotly from "plotly.js";
 import createPlotlyComponent from "react-plotly.js/factory";
 const Plot = createPlotlyComponent(Plotly);
@@ -44,9 +47,9 @@ function SingleStackBarPlot(props) {
       fixedrange: true,
       showticklabels: false,
     },
-    width: 500,
-    height: 50,
-    margin: { l: 0, r: 0, b: 0, t: 0, pad: 0 },
+    width: props.width,
+    height: props.height,
+    margin: { l: 0, r: 1, b: 1, t: 1, pad: 0 },
     showlegend: false,
     static: true,
   };
