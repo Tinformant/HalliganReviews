@@ -21,5 +21,6 @@
 .rev > .nav-item:focus {
   color: #ffffff;
   background-color: #012f62;
+  outline: none;
 }
 

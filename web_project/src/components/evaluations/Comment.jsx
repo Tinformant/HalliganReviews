@@ -24,7 +24,7 @@ function Comment(props) {
         key={i}
         userName={x.userName}
         status={x.status}
-        date={x.data}
+        date={x.date}
         comment={x.comment}
       />
     );

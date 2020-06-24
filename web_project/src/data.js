@@ -7,7 +7,15 @@ const courseData = [{
         },
     },
     {
-        name: "Method",
+        name: "Material",
+        data: {
+            undergraduate: [15, 10, 15, 20, 25],
+            graduate: [4, 1, 5, 7, 20],
+            other: [6, 2, 3, 4, 5],
+        },
+    },
+    {
+        name: "Useful",
         data: {
             undergraduate: [5, 10, 15, 20, 25],
             graduate: [4, 1, 5, 7, 20],
@@ -15,7 +23,7 @@ const courseData = [{
         },
     },
     {
-        name: "Responsive",
+        name: "Work Load",
         data: {
             undergraduate: [5, 10, 15, 20, 25],
             graduate: [4, 1, 5, 7, 20],
@@ -32,7 +40,7 @@ const instructorData = [{
         },
     },
     {
-        name: "Method",
+        name: "Responsive",
         data: {
             undergraduate: [5, 10, 15, 20, 25],
             graduate: [4, 1, 5, 7, 20],
@@ -40,7 +48,7 @@ const instructorData = [{
         },
     },
     {
-        name: "Responsive",
+        name: "Expressive",
         data: {
             undergraduate: [5, 10, 15, 20, 25],
             graduate: [4, 1, 5, 7, 20],
@@ -51,13 +59,13 @@ const instructorData = [{
 const commentData = [{
         userName: "Leopold James Fitz",
         status: "graduate",
-        data:"6,5,2020",
+        date:"6,5,2020",
         comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.A scelerisque purus semper eget duis. Lectus magna fringillaurna porttitor rhoncus. Convallis posuere morbi leo urnamolestie at. Eget egestas purus viverra accumsan in nisl nisiscelerisque eu. Sagittis id consectetur purus ut faucibuspulvinar elementum integer enim. A diam sollicitudin tempor ideu nisl nunc mi ipsum",
     },
     {
         userName: "Jemma Anne Simmons",
         status: "graduate",
-        data:"6,5,2020",
+        date:"6,5,2020",
         comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.A scelerisque purus semper eget duis. Lectus magna fringillaurna porttitor rhoncus. Convallis posuere morbi leo urnamolestie at. Eget egestas purus viverra accumsan in nisl nisiscelerisque eu. Sagittis id consectetur purus ut faucibuspulvinar elementum integer enim. A diam sollicitudin tempor ideu nisl nunc mi ipsum",
     },
 ];

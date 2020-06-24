@@ -13,10 +13,14 @@ function GeneralEval(props) {
     color: ["#012f62", "#6e7693", "#c6c6c6", "#dfb879", "#e9ab14"],
   };
 
+  const data = props.data.filter((x)=>{
+    return (x.name !== "Work Load");
+  });
+  
   return (
-    <div className="general-eval">
+    <div className='general-eval'>
       <ItemTitle widthList={widthList} alignList={alignList} legend={legend} />
-      {props.data.map((x, i) => {
+      {data.map((x, i) => {
         return (
           <RevItem
             key={i}
