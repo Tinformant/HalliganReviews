@@ -68,6 +68,24 @@ const commentData = [{
         date:"6,5,2020",
         comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.A scelerisque purus semper eget duis. Lectus magna fringillaurna porttitor rhoncus. Convallis posuere morbi leo urnamolestie at. Eget egestas purus viverra accumsan in nisl nisiscelerisque eu. Sagittis id consectetur purus ut faucibuspulvinar elementum integer enim. A diam sollicitudin tempor ideu nisl nunc mi ipsum",
     },
+    {
+        userName: "Hermione Jane Granger",
+        status: "undergraduate",
+        date:"6,15,2020",
+        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.A scelerisque purus semper eget duis. Lectus magna fringillaurna porttitor rhoncus. Accumsan in nisl nisiscelerisque eu. Sagittis id consectetur purus ut faucibuspulvinar elementum integer enim. A diam sollicitudin tempor ideu nisl nunc mi ipsum",
+    },
+    {
+        userName: "Aemon Targaryen",
+        status: "other",
+        date:"3,21,2018",
+        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.A scelerisque purus semper eget duis. Lectus magna fringillaurna porttitor rhoncus. Accumsan in nisl nisiscelerisque eu. Sagittis id consectetur purus ut faucibuspulvinar elementum integer enim. A diam sollicitudin tempor ideu nisl nunc mi ipsum",
+    },
+    {
+        userName: "Galadriel",
+        status: "other",
+        date:"5,1,1999",
+        comment: "Lnsectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.A scelerisque purus semper eget duis. faucibuspulvinar elementum integer enim. A diam sollicitudin tempor ideu nisl nunc mi ipsum",
+    },
 ];
 
 const data = {

@@ -30,7 +30,7 @@ function Title(props) {
       <Row className="rev-title-content" noGutters={true}>
         <Col className={a1}  sm={w1}> </Col>
         <Col className={a2 + " rev-title-avg-score"} sm={w2}>
-          Average
+          Average Score
         </Col>
         <Col className={a3 + " rev-title-legend"} sm={w3}>
           <Row noGutters={true}>
@@ -40,7 +40,7 @@ function Title(props) {
           </Row>
         </Col>
         <Col className={a4 + " rev-title-detail"} sm={w4}>
-          Detail
+          Details
         </Col>
       </Row>
       <hr className="rev-title-hr"/>

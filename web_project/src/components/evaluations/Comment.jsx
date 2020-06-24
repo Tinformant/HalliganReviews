@@ -6,12 +6,15 @@ import "./CommentItem.css";
 
 function CommentItem(props) {
   return (
-    <Card className="comment-card">
-      <p> <span>Comment: </span> {props.comment}</p>
-      <Row className="comment-footer" noGutters={true}>
-        <Col className="to-left" >{props.userName}</Col>
-        <Col className="to-center">{props.status}</Col>
-        <Col className="to-right">{props.date}</Col>
+    <Card className='comment-card'>
+      <p>
+        <span className='comment-card-title'>Comment: </span>
+        <span className='comment-card-content'>{props.comment}</span>
+      </p>
+      <Row className='comment-footer' noGutters={true}>
+        <Col className='to-left'>{props.userName}</Col>
+        <Col className='to-center'>{props.status}</Col>
+        <Col className='to-right'>{props.date}</Col>
       </Row>
     </Card>
   );

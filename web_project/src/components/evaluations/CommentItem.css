@@ -1,7 +1,17 @@
 .comment-card {
-    margin: 1% 0 2%;
-    padding: 3%;
+    margin: 30px 0 10px;
+    padding: 30px 40px 20px;
     border: none;
     background-color: #ececec;
     border-radius: 1rem;
+}
+
+.comment-card-title {
+    font-weight: bold;
+    color: #012f62;
+}
+
+.comment-footer {
+    font-size: 0.85rem;
+    color: gray;
 }
