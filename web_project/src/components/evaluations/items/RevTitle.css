@@ -21,6 +21,9 @@
 }
 
 .rev-title-legend-score {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: normal;
     position: relative;
     bottom: 7px;
     left: 1px;
