@@ -1,8 +1,15 @@
+/* combobox style */
+.select-style{
+    background-color: #ffffff;
+    border: 1px solid #314572;
+}
+
+/* rating stars */
 i.rating-star-filled{
-    color: #e9ab14;
+    color: gold;
 }
 
 .rating-star{
     color: white;
-    text-shadow: 0px 0px 3px black;
+    text-shadow: 0px 0px 3px #AAAAAA;
 }
