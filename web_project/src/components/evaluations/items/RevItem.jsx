@@ -2,8 +2,6 @@ import React from "react";
 import RevContent from "./RevContent";
 
 function Item(props) {
-  console.log(props.data);
-  
   if (!(props.data)) {
     return <p>Empty data</p>
   }

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Tabs, Tab } from "react-bootstrap";
+import { Tab } from "react-bootstrap";
+import { Nav } from "react-bootstrap";
 
 import Course from "./evaluations/Course";
 import Instructor from "./evaluations/Instructor";
@@ -11,22 +12,41 @@ function Reveiw(props) {
   const [key, setKey] = useState("course");
 
   return (
-    <Tabs
-      className="rev"
-      id='controlled-tab'
-      variant='pills'
-      activeKey={key}
-      onSelect={(k) => setKey(k)}>
-      <Tab eventKey='course' title='Course'>
-        <Course data={props.data.course} />
-      </Tab>
-      <Tab eventKey='instructor' title='Instructor'>
-        <Instructor data={props.data.instructor} />
-      </Tab>
-      <Tab eventKey='comment' title='Comment'>
-        <Comment data={props.data.comment} />
-      </Tab>
-    </Tabs>
+    <Tab.Container id='rev-tab' activeKey={key} onSelect={(k) => setKey(k)}>
+      <Nav variant="none" bg="none"  className='rev-nav'>
+        <Nav.Item  className='rev-nav-item'>
+          <Nav.Link  className='rev-nav-link' eventKey='course'>
+            Course
+          </Nav.Link>
+        </Nav.Item>
+        <Nav.Item className='rev-nav-item'>
+          <Nav.Link className='rev-nav-link' eventKey='instructor'>
+            Instructor
+          </Nav.Link>
+        </Nav.Item>
+        <Nav.Item className='rev-nav-item'>
+          <Nav.Link className='rev-nav-link' eventKey='comment'>
+            Comment
+          </Nav.Link>
+        </Nav.Item>
+        <Nav.Item  className='rev-nav-item write-a-review-nav-item'>
+          <Nav.Link  className='rev-nav-link write-a-review-nav-link'>
+            + Review
+          </Nav.Link>
+        </Nav.Item>
+      </Nav>
+      <Tab.Content>
+        <Tab.Pane eventKey='course'>
+          <Course data={props.data.course} />
+        </Tab.Pane>
+        <Tab.Pane eventKey='instructor'>
+          <Instructor data={props.data.instructor} />
+        </Tab.Pane>
+        <Tab.Pane eventKey='comment'>
+          <Comment data={props.data.comment} />
+        </Tab.Pane>
+      </Tab.Content>
+    </Tab.Container>
   );
 }
 
