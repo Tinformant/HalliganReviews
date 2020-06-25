@@ -19,9 +19,9 @@ function BasicInfo() {
   const semester = ["Spring", "Summer", "Fall"];
   console.log(yearRange);
   return (
-    <form style={{zIndex:100000}}>
+    <form>
       <Row noGutters={true}>
-        <Col style={{zIndex:10000}}>
+        <Col>
           <ComboBox
             btnStyle="select-style"
             defaultValue={yearRange[0]}
