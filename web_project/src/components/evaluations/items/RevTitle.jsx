@@ -8,7 +8,9 @@ function Legend(props) {
     <Col className="rev-title-legend-item">
       <i
         className='rev-title-legend-icon fas fa-square-full'
-        style={{ color: props.color }}></i>
+        style={{ color: props.color }}>
+          <span className='rev-title-legend-score'>{props.score}</span>
+        </i>
       <span className="rev-title-legend-text">{props.title}</span>
     </Col>
   );
@@ -35,7 +37,7 @@ function Title(props) {
         <Col className={a3 + " rev-title-legend"} sm={w3}>
           <Row noGutters={true}>
             {legend.map((x, i) => {
-              return <Legend key={i} color={x.color} title={x.title} />;
+              return <Legend key={i} color={x.color} title={x.title} score={i+1}/>;
             })}
           </Row>
         </Col>

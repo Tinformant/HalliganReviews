@@ -1,5 +1,6 @@
 const courseData = [{
         name: "General",
+        description:"umsan in nisl e eu. Sagittis tur purus ut",
         data: {
             undergraduate: [5, 1, 5, 20, 25],
             graduate: [4, 1, 5, 20, 20],
@@ -8,6 +9,7 @@ const courseData = [{
     },
     {
         name: "Material",
+        description:"elerisque eu. Sagittis id consectetur purus ut",
         data: {
             undergraduate: [15, 10, 15, 20, 25],
             graduate: [4, 1, 5, 7, 20],
@@ -15,7 +17,8 @@ const courseData = [{
         },
     },
     {
-        name: "Usefulness",
+        name: "Work Load",
+        description:" Sagittis id consectetur purus ut",
         data: {
             undergraduate: [5, 10, 15, 20, 25],
             graduate: [4, 1, 5, 7, 20],
@@ -23,7 +26,8 @@ const courseData = [{
         },
     },
     {
-        name: "Work Load",
+        name: "Difficulty",
+        description:"Accumsan in nisl nonsectetur purus ut",
         data: {
             undergraduate: [5, 10, 15, 20, 25],
             graduate: [4, 1, 5, 7, 20],
@@ -33,6 +37,7 @@ const courseData = [{
 ];
 const instructorData = [{
         name: "General",
+        description:"Accumsan in nisl nistis id consectetur purus ut",
         data: {
             undergraduate: [5, 1, 5, 20, 25],
             graduate: [4, 1, 5, 20, 20],
@@ -41,6 +46,7 @@ const instructorData = [{
     },
     {
         name: "Responsive",
+        description:"Accumsan in nisl nisiscelerisqu Sagittis id consectetur purus ut",
         data: {
             undergraduate: [5, 10, 15, 20, 25],
             graduate: [4, 1, 5, 7, 20],
@@ -49,10 +55,20 @@ const instructorData = [{
     },
     {
         name: "Expressive",
+        description:"Accumsan in nisl nisiscelerisque eu. Sagittis id consectetur purus ut",
         data: {
             undergraduate: [5, 10, 15, 20, 25],
             graduate: [4, 1, 5, 7, 20],
             other: [1, 2, 3, 4, 5]
+        },
+    },
+    {
+        name: "Sagittisid ",
+        description:"Accumsan in nisl nisiscelerisque eu. Sagittis id consectetur purus ut",
+        data: {
+            undergraduate: [5, 15, 15, 20, 5],
+            graduate: [4, 1, 5, 7, 2],
+            other: [1, 2, 3, 1, 5]
         },
     },
 ];

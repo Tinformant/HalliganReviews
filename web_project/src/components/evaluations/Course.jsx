@@ -9,27 +9,49 @@ function Course(props) {
       return x + " align-center-vertical";
   });
   
-  const legend = {
+  const workLoadLegend = {
     title: ["<3", "3-6", "7-10", "11-14", ">14"],
     color: ["#012f62", "#6e7693", "#c6c6c6", "#dfb879", "#e9ab14"],
   };
+  const difficultyLegend = {
+    title: ["Very Easy", "Easy", "Normal", "Hard", "Very Hard"],
+    color: ["#012f62", "#6e7693", "#c6c6c6", "#dfb879", "#e9ab14"],
+  };
 
-  const data = props.data.filter((x)=>{
+  const generalData = props.data.filter((x)=>{
+    return (x.name !== "Work Load" && x.name !== "Difficulty");
+  });
+  const workLoadData = props.data.filter((x)=>{
     return (x.name === "Work Load");
+  });
+  const difficultyData = props.data.filter((x)=>{
+    return (x.name === "Difficulty");
   });
 
   return (
     <div>
-      <GeneralEval data={props.data}/>
-      <ItemTitle widthList={widthList} alignList={alignList} legend={legend} />
-      {data.map((x, i) => {
+      <GeneralEval data={generalData}/>
+      <ItemTitle widthList={widthList} alignList={alignList} legend={workLoadLegend} />
+      {workLoadData.map((x, i) => {
         return (
           <RevItem
             key={i}
             widthList={widthList}
             alignList={alignList}
             data={x}
-            color={legend.color}
+            color={workLoadLegend.color}
+          />
+        );
+      })}
+      <ItemTitle widthList={widthList} alignList={alignList} legend={difficultyLegend} />
+      {difficultyData.map((x, i) => {
+        return (
+          <RevItem
+            key={i}
+            widthList={widthList}
+            alignList={alignList}
+            data={x}
+            color={difficultyLegend.color}
           />
         );
       })}

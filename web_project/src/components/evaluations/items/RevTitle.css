@@ -1,5 +1,5 @@
 .rev-title {
-    margin-top: 30px;
+    margin-top: 60px;
 }
 
 .rev-title-hr {
@@ -16,6 +16,12 @@
 }
 
 .rev-title-legend-text {
-    margin-left: 3px;
-    font-size: 0.9rem;
+    margin-left: 5px;
+    font-size: 0.85rem;
+}
+
+.rev-title-legend-score {
+    position: relative;
+    bottom: 7px;
+    left: 1px;
 }
