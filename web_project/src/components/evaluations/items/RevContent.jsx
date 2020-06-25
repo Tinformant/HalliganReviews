@@ -20,7 +20,10 @@ function Content(props) {
   return (
     <Accordion className="rev-content-wrap">
       <Row  className="rev-content-header" noGutters={true}>
-        <Col className={a1 + " rev-content-name"} sm={c1}>{props.name}</Col>
+        <Col className={a1} sm={c1}>
+          <p className="rev-content-name">{props.name}</p>
+          <p className="rev-content-description">{props.description}</p>
+        </Col>
         <Col className={a2 + " rev-content-avg-score"} sm={c2}>{props.avgScore}</Col>
         <Col className={a3 + " rev-content-plot"} sm={c3}>
             <SingleStackBarPlot width={500} height={40} dist={props.dist} colorScheme={props.colorScheme}/>

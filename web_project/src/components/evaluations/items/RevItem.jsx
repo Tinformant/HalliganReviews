@@ -1,9 +1,16 @@
 import React from "react";
-import ItemContent from "./RevContent";
+import RevContent from "./RevContent";
 
 function Item(props) {
+  console.log(props.data);
+  
+  if (!(props.data)) {
+    return <p>Empty data</p>
+  }
+  
   const {
     name,
+    description, 
     data: { undergraduate, graduate, other },
   } = props.data;
 
@@ -26,10 +33,11 @@ function Item(props) {
   }).toFixed(1);
 
   return (
-      <ItemContent
+      <RevContent
         widthList={props.widthList}
         alignList={props.alignList}
         name={name}
+        description={description}
         avgScore={avgScore}
         colorScheme={props.color}
         dist={generalDistPercent}
