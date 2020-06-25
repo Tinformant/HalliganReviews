@@ -41,8 +41,8 @@
 
 /* query sheet */
 .query-sheet {
-    width: 95%;
-    height: 94%;
-    margin: 3%;
+    width: 90%;
+    height: 92%;
+    margin: 4% 5%;
     overflow-y: scroll;
 }
