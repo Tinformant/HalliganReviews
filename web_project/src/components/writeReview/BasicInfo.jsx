@@ -1,8 +1,6 @@
 import React from "react";
-import ComboBox from "../ComboBox";
 import "./QuerySheet.css";
 import { Form, Col, Row } from "react-bootstrap";
-import StarRating from "./StarRating";
 
 function range(start, end) {
   var ans = [];
@@ -17,35 +15,51 @@ function generateOption(value, index) {
   return <option key={index}>{value}</option>;
 }
 
-function BasicInfo() {
-  const [value, setValue] = React.useState("");
+function BasicInfo(props) {
   const date = new Date();
   const currentYear = date.getFullYear();
   const yearLength = 5;
   const yearRange = range(currentYear - yearLength, currentYear);
-  const semester = ["--- Please select ---","Spring", "Summer", "Fall"];
+  const semesters = ["--- Please select ---", "Spring", "Summer", "Fall"];
 
   return (
     <Form>
-      <Form.Row noGutters={true}>
-        <Form.Group as={Col} controlId="year" className="form-group">
+      <Row noGutters={true} className="form-row">
+        <Col controlId="year" className="form-group">
           <Form.Label>In which year did you take the course?</Form.Label>
-          <Form.Control as="select" value={value} className="form-field" onChange={event => setValue(event.target.value)}>
-              {yearRange.map(generateOption)}
+          <Form.Control
+            as="select"
+            value={props.year}
+            className="form-field"
+            onChange={(event) => props.setYear(event.target.value)}
+          >
+            {yearRange.map(generateOption)}
           </Form.Control>
-        </Form.Group>
+        </Col>
 
-        <Form.Group as={Col} controlId="semester" className="form-group">
+        <Col controlId="semester" className="form-group">
           <Form.Label>In which semester did you take the course?</Form.Label>
           <Form.Control
             as="select"
-            value="Choose semester..."
+            value={props.semester}
             className="form-field"
+            onChange={(event) => props.setSemester(event.target.value)}
           >
-            {semester.map(generateOption)}
+            {semesters.map(generateOption)}
           </Form.Control>
-        </Form.Group>
-      </Form.Row>
+        </Col>
+      </Row>
+      <Row className="form-row">
+        <Col controlId="instructor" className="form-group">
+          <Form.Label>Your instructor</Form.Label>
+          <Form.Control
+            type="text"
+            className="form-field"
+            placeholder={props.instructor}
+            readOnly
+          />
+        </Col>
+      </Row>
     </Form>
   );
 }

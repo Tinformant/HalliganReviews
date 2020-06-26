@@ -14,8 +14,10 @@ i.rating-star-filled{
     text-shadow: 0px 0px 3px #AAAAAA;
 }
 
+
+/* form style */
 .form-group{
-    /* margin-left: 4px */
+    margin: 0 5px
 }
 
 .form-field{
@@ -24,4 +26,8 @@ i.rating-star-filled{
 .form-field:focus-within{
     border: 1px solid #e9ab14;
     box-shadow: 0 0 4px #e9ab14;
+}
+
+.form-row{
+    margin-top: 10px;
 }

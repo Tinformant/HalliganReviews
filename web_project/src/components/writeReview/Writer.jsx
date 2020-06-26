@@ -15,7 +15,7 @@ function Writer() {
       <Nav.Link
         className='write-a-review-nav-link'
         onClick={handleClick}>
-        <i class='fas fa-plus'></i> REVIEW
+        <i className='fas fa-plus'></i> REVIEW
       </Nav.Link>
       {showForm && <ReviewForm show={showForm} setShow={setShowForm} />}
     </div>
