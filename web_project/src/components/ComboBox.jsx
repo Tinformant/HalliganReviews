@@ -13,6 +13,7 @@ function setOperation(value, index) {
 function ComboBox(props) {
   return (
     <select
+      // className="selectpicker"
       className="selectpicker show-tick"
       data-style={props.btnStyle}
       data-live-search={props.search}

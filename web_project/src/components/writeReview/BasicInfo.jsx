@@ -1,7 +1,7 @@
 import React from "react";
 import ComboBox from "../ComboBox";
-import "./QuerySheet.css"
-import { Col, Row } from "react-bootstrap";
+// import "./QuerySheet.css"
+import { Col, Row} from "react-bootstrap";
 
 function range(start, end) {
     var ans = [];
@@ -19,19 +19,26 @@ function BasicInfo() {
   const semester = ["Spring", "Summer", "Fall"];
   console.log(yearRange);
   return (
-    <form style={{zIndex:100000}}>
+    <form>
+      <ComboBox
+        btnStyle='select-style'
+        defaultValue={semester[0]}
+        availableOption={semester}
+      />
       <Row noGutters={true}>
-        <Col style={{zIndex:10000}}>
+        <Col>
+          <div className="dropdown bootstrap-select show-tick">
           <ComboBox
             btnStyle="select-style"
             defaultValue={yearRange[0]}
             availableOption={yearRange}
-            search="false"
+            search={false}
           />
+          </div>
         </Col>
         <Col>
           <ComboBox
-            btnStyle="select-style"
+            btnStyle='select-style'
             defaultValue={semester[0]}
             availableOption={semester}
           />

@@ -5,6 +5,7 @@ import { Nav } from "react-bootstrap";
 import Course from "./evaluations/Course";
 import Instructor from "./evaluations/Instructor";
 import Comment from "./evaluations/Comment";
+import Writer from "./writeReview/Writer";
 
 import "./Review.css";
 
@@ -30,9 +31,7 @@ function Reveiw(props) {
           </Nav.Link>
         </Nav.Item>
         <Nav.Item  className='rev-nav-item write-a-review-nav-item'>
-          <Nav.Link  className='rev-nav-link write-a-review-nav-link'>
-            + Review
-          </Nav.Link>
+          <Writer />
         </Nav.Item>
       </Nav>
       <Tab.Content>

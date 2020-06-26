@@ -1,6 +1,7 @@
 import React from "react";
 import "./Writer.css";
 import ReviewForm from "./ReviewForm";
+import {Nav} from "react-bootstrap";
 
 function Writer() {
   const [showForm, setShowForm] = React.useState(false);
@@ -10,17 +11,12 @@ function Writer() {
   }
 
   return (
-    <div>
-      <div className="write-review">
-        <button
-          onClick={handleClick}
-          id="write-review-btn"
-          className="btn btn-default"
-        >
-          <i className="feather-icon fas fa-feather-alt"></i>
-          <p className="write-review-text">Write a Review</p>
-        </button>
-      </div>
+    <div className='write-a-review-wrap-up'>
+      <Nav.Link
+        className='write-a-review-nav-link'
+        onClick={handleClick}>
+        <i class='fas fa-plus'></i> REVIEW
+      </Nav.Link>
       {showForm && <ReviewForm show={showForm} setShow={setShowForm} />}
     </div>
   );
