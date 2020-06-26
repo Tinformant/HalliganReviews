@@ -6,6 +6,7 @@ function WriteComment() {
     return <Form>
         <div className="div-form">
         <Form.Label className="form-label">Do you have any comments?</Form.Label>
+        <Form.Control as="textarea" className="form-field" rows="5"></Form.Control>
         </div>
     </Form>
 }

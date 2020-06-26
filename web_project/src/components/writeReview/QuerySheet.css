@@ -25,6 +25,7 @@ i.rating-star-filled {
 
 .form-field {
   border: 1px solid #aaaaaa;
+  resize: none;
 }
 .form-field:focus-within {
   border: 1px solid #e9ab14;
@@ -36,7 +37,7 @@ i.rating-star-filled {
 }
 
 .div-form {
-  margin: 0 10px;
+  margin: 0 10px 10px;
 }
 
 .form-label {
