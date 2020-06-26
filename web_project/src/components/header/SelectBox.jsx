@@ -9,10 +9,10 @@ function SelectBox(props) {
       <Row className="review-header-form-row" noGutters={true}>
         <Col className="to-left">
           <ComboBox
-            btnStyle="btn-style"
+            btnStyle='btn-style'
             defaultValue={props.data.info.semester[0]}
             availableOption={props.data.info.semester}
-            search="false"
+            search='false'
           />
         </Col>
         <Col className="to-center">

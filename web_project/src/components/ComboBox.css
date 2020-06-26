@@ -1,16 +1,16 @@
 .option-color:focus {
-    background-color: #5191ce !important;
-    outline: none;
-  }
-  
-  .option-color {
-    background-color: white !important;
-    color: black !important;
-    outline: none;
-  }
-  
-  .option-color:hover {
-    background-color: #5191ce !important;
-    outline: none;
-  }
-  
+  background-color: #5191ce !important;
+  outline: none;
+}
+
+.option-color {
+  background-color: white !important;
+  color: black !important;
+  outline: none;
+}
+
+.option-color:hover {
+  background-color: #5191ce !important;
+  outline: none;
+}
+
