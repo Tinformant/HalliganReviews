@@ -20,21 +20,14 @@ function BasicInfo() {
   console.log(yearRange);
   return (
     <form>
-      <ComboBox
-        btnStyle='select-style'
-        defaultValue={semester[0]}
-        availableOption={semester}
-      />
       <Row noGutters={true}>
         <Col>
-          <div className="dropdown bootstrap-select show-tick">
           <ComboBox
             btnStyle="select-style"
             defaultValue={yearRange[0]}
             availableOption={yearRange}
             search={false}
           />
-          </div>
         </Col>
         <Col>
           <ComboBox
