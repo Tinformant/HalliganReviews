@@ -7,7 +7,7 @@ function SelectBox(props) {
   return (
     <form className="review-header-form">
       <Row className="review-header-form-row" noGutters={true}>
-        <Col className="review-header-form-col to-left">
+        <Col className="to-left">
           <ComboBox
             btnStyle="btn-style"
             defaultValue={props.data.info.semester[0]}
@@ -15,25 +15,21 @@ function SelectBox(props) {
             search="false"
           />
         </Col>
-        <Col className="review-header-form-col to-center">
-          <Col className="review-header-form-col to-left">
+        <Col className="to-center">
             <ComboBox
               btnStyle="btn-style"
               defaultValue={props.data.info.year[0]}
               availableOption={props.data.info.year}
               search="false"
             />
-          </Col>
         </Col>
-        <Col className="review-header-form-col to-right">
-          <Col className="review-header-form-col to-left">
+        <Col className="to-right">
             <ComboBox
               btnStyle="btn-style"
               defaultValue={props.data.info.instructor[0]}
               availableOption={props.data.info.instructor}
               search="true"
             />
-          </Col>
         </Col>
       </Row>
     </form>
