@@ -1,33 +1,48 @@
 /* combobox style */
-.select-style{
-    background-color: #ffffff;
-    border: 1px solid #012f62;
+.select-style {
+  background-color: #ffffff;
+  border: 1px solid #012f62;
 }
 
 /* rating stars */
-i.rating-star-filled{
-    color: gold;
+i.rating-star-filled {
+  color: gold;
 }
 
-.rating-star{
-    color: white;
-    text-shadow: 0px 0px 3px #AAAAAA;
+.rating-star {
+  color: white;
+  text-shadow: 0px 0px 3px #aaaaaa;
 }
 
+.container {
+  padding: 0;
+}
 
 /* form style */
-.form-group{
-    margin: 0 5px
+.form-group {
+  margin: 0 5px;
 }
 
-.form-field{
-    border: 1px solid #AAAAAA;
+.form-field {
+  border: 1px solid #aaaaaa;
 }
-.form-field:focus-within{
-    border: 1px solid #e9ab14;
-    box-shadow: 0 0 4px #e9ab14;
+.form-field:focus-within {
+  border: 1px solid #e9ab14;
+  box-shadow: 0 0 4px #e9ab14;
 }
 
-.form-row{
-    margin: 10px 0 0;
+.form-row {
+  margin: 10px 0 0;
+}
+
+.div-form {
+  margin: 0 10px;
+}
+
+.form-label {
+  margin-bottom: 0;
+}
+
+.div-ratings {
+  margin-bottom: 8px;
 }
