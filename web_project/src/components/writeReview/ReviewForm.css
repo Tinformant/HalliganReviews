@@ -43,6 +43,6 @@
 .query-sheet {
     width: 90%;
     height: 92%;
-    margin: 4% 5%;
+    margin: 4% auto;
     overflow-y: scroll;
 }

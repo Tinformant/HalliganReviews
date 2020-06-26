@@ -4,7 +4,9 @@ import BasicInfo from "./BasicInfo";
 
 function QuerySheet() {
   return (
-    <BasicInfo /> 
+    <div>
+      <BasicInfo />
+    </div>
   );
 }
 

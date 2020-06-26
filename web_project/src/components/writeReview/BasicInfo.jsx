@@ -27,7 +27,7 @@ function BasicInfo() {
 
   return (
     <Form>
-      <Form.Row>
+      <Form.Row noGutters={true}>
         <Form.Group as={Col} controlId="year" className="form-group">
           <Form.Label>In which year did you take the course?</Form.Label>
           <Form.Control as="select" value={value} className="form-field" onChange={event => setValue(event.target.value)}>
