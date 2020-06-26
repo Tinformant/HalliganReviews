@@ -24,7 +24,7 @@ function BasicInfo(props) {
 
   return (
     <Form>
-      <Row noGutters={true} className="form-row">
+      <Row className="form-row">
         <Col controlId="year" className="form-group">
           <Form.Label>In which year did you take the course?</Form.Label>
           <Form.Control
