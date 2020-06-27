@@ -25,7 +25,7 @@ function BasicInfo(props) {
   return (
     <Form>
       <Row className="form-row">
-        <Col controlId="year" className="form-group">
+        <Col controlid="year" className="form-group">
           <Form.Label>In which year did you take the course?</Form.Label>
           <Form.Control
             as="select"
@@ -37,7 +37,7 @@ function BasicInfo(props) {
           </Form.Control>
         </Col>
 
-        <Col controlId="semester" className="form-group">
+        <Col controlid="semester" className="form-group">
           <Form.Label>In which semester did you take the course?</Form.Label>
           <Form.Control
             as="select"
@@ -50,7 +50,7 @@ function BasicInfo(props) {
         </Col>
       </Row>
       <Row className="form-row">
-        <Col controlId="instructor" className="form-group">
+        <Col controlid="instructor" className="form-group">
           <Form.Label>Your instructor</Form.Label>
           <Form.Control
             type="text"

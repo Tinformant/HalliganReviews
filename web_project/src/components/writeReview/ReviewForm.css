@@ -16,11 +16,12 @@
   position: absolute;
   left: 20%;
   right: 20%;
-  top: 18%;
-  bottom: 18%;
+  top: 10%;
+  bottom: 10%;
   margin: auto;
   background: white;
   border-radius: 8px;
+  overflow-y: scroll;
 }
 
 /* close button */
@@ -42,7 +43,8 @@
 /* query sheet */
 .query-sheet {
     width: 90%;
-    height: 92%;
-    margin: 4% auto;
-    overflow-y: scroll;
+    height: 95%;
+    margin: 2% auto;
+    
 }
+
