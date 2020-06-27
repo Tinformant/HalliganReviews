@@ -4,13 +4,13 @@ import SearchBar from "./SearchBar";
 import UserOption from "./UserOption";
 import './NavigationBar.css';
 
-function NavigationBar() {
+function NavigationBar(props) {
   return (
     <Navbar bg="none" expand="lg" variant="none" fixed="top">
       <Navbar.Brand href="#">Halligan Reviews</Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
       <Navbar.Collapse id="responsive-navbar-nav">
-        <SearchBar/>
+        <SearchBar onUpdate={props.onUpdate} />
         <UserOption/>
       </Navbar.Collapse>
     </Navbar>

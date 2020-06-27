@@ -9,7 +9,7 @@ function GeneralEval(props) {
   });
   
   const legend = {
-    title: ["Terrible", "Fair", "Good", "Excellent", "Perfect"],
+    title: ["Meh...", "Unsatisfactory", "Fair", "Good", "Excellent"],
     color: ["#012f62", "#6e7693", "#c6c6c6", "#dfb879", "#e9ab14"],
   };
 

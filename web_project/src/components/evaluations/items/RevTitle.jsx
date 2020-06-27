@@ -5,13 +5,13 @@ import "./RevTitle.css";
 
 function Legend(props) {
   return (
-    <Col className="rev-title-legend-item">
+    <Col className='rev-title-legend-item' sm='4'>
       <i
         className='rev-title-legend-icon fas fa-square-full'
         style={{ color: props.color }}>
-          <span className='rev-title-legend-score'>{props.score}</span>
-        </i>
-      <span className="rev-title-legend-text">{props.title}</span>
+        <span className='rev-title-legend-score'>{props.score}</span>
+      </i>
+      <span className='rev-title-legend-text'>{props.title}</span>
     </Col>
   );
 }
