@@ -7,7 +7,7 @@ import rawData from "../data.js";
 // import'bootstrap/dist/css/bootstap.min.css';
 
 function App() {
-  const [val, setVal] = React.useState("");
+  const [val, setVal] = React.useState("Test");
 
   const [data, setData] = React.useState(rawData);
 
