@@ -2,18 +2,26 @@ import React from "react";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import MainBody from "./MainBody";
 import NavigationBar from './navigation/NavigationBar';
-import Writer from "./writeReview/Writer";
-import data from "../data.js";
+import rawData from "../data.js";
 
 // import'bootstrap/dist/css/bootstap.min.css';
 
 function App() {
+  const [val, setVal] = React.useState("Test");
+
+  const [data, setData] = React.useState(rawData);
+
+  const updateVal = (x) => {
+    rawData.info.title = x;
+    setVal(x);
+    setData(rawData);
+    console.log(x);
+  };
 
   return (
     <div>
-      <NavigationBar />
-      <Writer />
-      <MainBody data={data}/>
+      <NavigationBar onUpdate={updateVal}/>
+      {val && <MainBody data={data}/>}
     </div>
   );
 }

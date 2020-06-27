@@ -32,6 +32,12 @@
 
 /* NAVBAR SEARCH BAR  */
 
+.search-wrap {
+    position:relative;
+    width: 100%;
+    margin: 0 15%;
+}
+
 .search-group {
   background-color: #314572;
   border: 1px solid transparent;
@@ -39,7 +45,7 @@
   height: 2.5rem;
   line-height: 2.5rem;
   position: relative;
-  margin: 0 15%;
+  /* margin: 0 15%; */
   
   /* background-color: transparent;
   border: 1px solid #012f62; */
