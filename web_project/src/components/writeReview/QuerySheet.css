@@ -20,7 +20,7 @@ i.rating-star-filled {
 
 /* form style */
 .form-group {
-  margin: 0 5px;
+  margin: 0;
 }
 
 .form-field {
@@ -33,17 +33,22 @@ i.rating-star-filled {
 }
 
 .form-row {
-  margin: 10px 0 0;
+  margin: 0 0 10px;
 }
 
 .div-form {
-  margin: 0 10px 10px;
+  margin: 0 5px 10px;
 }
 
 .form-label {
   margin-bottom: 0;
 }
 
+.form-question{
+    margin: 0 5px 0;
+}
+
 .div-ratings {
   margin-bottom: 8px;
 }
+

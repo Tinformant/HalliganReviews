@@ -4,21 +4,33 @@ import StarRating from "./StarRating";
 import { Form } from "react-bootstrap";
 
 function RatingItem(props) {
+  const [value, setValue] = React.useState("");
+  function handleRating(selected) {
+    console.log(selected);
+    setValue(selected.value);
+    // props.setRatingItems(prevValue => ({
+    //     ...prevValue,
+    //     [props.name]:selected.value
+    // }));
+
+    // console.log(props.setRatingItems);
+    // console.log(props.ratingItems);
+  }
   return (
     <div className="div-ratings">
       <Form.Label className="form-label">{props.question}</Form.Label>
-      <StarRating basic={props.label} />
+      <StarRating basic={props.label} handleRating={handleRating} />
     </div>
   );
 }
 
 function CourseEvaluation(props) {
   const [basic] = React.useState([
-    { tooltip: "Terrible" },
+    { tooltip: "Meh" },
+    { tooltip: "Unsatisfactory" },
     { tooltip: "Fair" },
     { tooltip: "Good" },
     { tooltip: "Excellent" },
-    { tooltip: "Perfect" },
   ]);
 
   const [workload] = React.useState([
@@ -36,10 +48,24 @@ function CourseEvaluation(props) {
     { tooltip: "Very Hard" },
   ]);
 
+//   props.setRatingItems({
+//     courseOverall: 5,
+//     courseMaterial: 0,
+//     courseWorkload: 0,
+//     courseDifficulty: 0,
+//     instructorOverall: 0,
+//     instructorResponsive: 0,
+//     instructorClass: 0,
+//     instructorDelivery: 0,
+//   });
+
   return (
     <Form>
       <div className="div-form">
         <RatingItem
+          ratingItems={props.ratingItems}
+          setRatingItems={props.setRatingItems}
+          name="courseOverall"
           question="How do you rate the course in general?"
           label={basic}
         />

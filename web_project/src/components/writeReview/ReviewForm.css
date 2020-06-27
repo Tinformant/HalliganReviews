@@ -27,8 +27,8 @@
 /* close button */
 .close-form{
     position: absolute;
-    right: 5px;
-    top: 5px;
+    right: 10px;
+    top: 10px;
     margin: 0;
     border: none;
     outline: none;

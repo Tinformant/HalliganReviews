@@ -4,7 +4,7 @@ import { Form, Col, Row } from "react-bootstrap";
 
 function range(start, end) {
   var ans = [];
-  ans.push("--- Please select ---");
+  ans.push("--- Year ---");
   for (let i = end; i >= start; i--) {
     ans.push(i);
   }
@@ -20,14 +20,19 @@ function BasicInfo(props) {
   const currentYear = date.getFullYear();
   const yearLength = 5;
   const yearRange = range(currentYear - yearLength, currentYear);
-  const semesters = ["--- Please select ---", "Spring", "Summer", "Fall"];
+  const semesters = ["--- Semester ---", "Spring", "Summer", "Fall"];
 
   return (
     <Form>
+      <div>
+        <Form.Label className="form-question">
+          When did you take the course?
+        </Form.Label>
+      </div>
       <Row className="form-row">
         <Col controlid="year" className="form-group">
-          <Form.Label>In which year did you take the course?</Form.Label>
           <Form.Control
+            required
             as="select"
             value={props.year}
             className="form-field"
@@ -38,8 +43,8 @@ function BasicInfo(props) {
         </Col>
 
         <Col controlid="semester" className="form-group">
-          <Form.Label>In which semester did you take the course?</Form.Label>
           <Form.Control
+            required
             as="select"
             value={props.semester}
             className="form-field"
@@ -57,6 +62,18 @@ function BasicInfo(props) {
             className="form-field"
             placeholder={props.instructor}
             readOnly
+          />
+        </Col>
+      </Row>
+      <Row className="form-row">
+        <Col controlid="assessment" className="form-group">
+          <Form.Label>Assessment Methods</Form.Label>
+          <Form.Control
+            type="text"
+            className="form-field"
+            placeholder="e.g. 3 assignments + 4 quizzes + 2 tests"
+            value={props.assessment}
+            onChange={(event) => (props.setAssessment(event.target.value))}
           />
         </Col>
       </Row>
