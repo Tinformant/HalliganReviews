@@ -4,10 +4,12 @@ import StarRating from "./StarRating";
 import { Form } from "react-bootstrap";
 
 function RatingItem(props) {
-  const [value, setValue] = React.useState("");
+  const [value1, setValue1] = React.useState({title:"", value:""});
   function handleRating(selected) {
     console.log(selected);
-    setValue(selected.value);
+    // setValue1(selected);
+    // console.log(value1);
+    
     // props.setRatingItems(prevValue => ({
     //     ...prevValue,
     //     [props.name]:selected.value
@@ -19,7 +21,7 @@ function RatingItem(props) {
   return (
     <div className="div-ratings">
       <Form.Label className="form-label">{props.question}</Form.Label>
-      <StarRating basic={props.label} handleRating={handleRating} />
+      <StarRating basic={props.label} handleRating={handleRating}/>
     </div>
   );
 }

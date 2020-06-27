@@ -5,9 +5,10 @@ import { Nav } from "react-bootstrap";
 import Course from "./evaluations/Course";
 import Instructor from "./evaluations/Instructor";
 import Comment from "./evaluations/Comment";
-import Writer from "./writeReview/Writer";
+import Writer from "./write-review/Writer";
 
 import "./Review.css";
+
 
 function Reveiw(props) {
   const [key, setKey] = useState("course");

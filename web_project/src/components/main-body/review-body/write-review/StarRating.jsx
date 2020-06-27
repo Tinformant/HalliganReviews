@@ -10,7 +10,7 @@ function StarRating(props) {
           iconClassName='rating-star'
           fillClassName='rating-star-filled'
           data={props.basic}
-          getValue={props.handleRating}
+          getValue={props.value}
         />
       </MDBContainer>
     );

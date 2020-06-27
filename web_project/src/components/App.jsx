@@ -1,7 +1,9 @@
 import React from "react";
 // import 'bootstrap/dist/css/bootstrap.min.css';
-import MainBody from "./MainBody";
-import NavigationBar from './navigation/NavigationBar';
+// import MainBody from "./mainBody/MainBody";
+import MainBody from "./main-body";
+
+import NavigationBar from './navigation/index';
 import rawData from "../data.js";
 
 // import'bootstrap/dist/css/bootstap.min.css';
@@ -18,10 +20,15 @@ function App() {
     console.log(x);
   };
 
+
+
   return (
     <div>
       <NavigationBar onUpdate={updateVal}/>
-      {val && <MainBody data={data}/>}
+      <MainBody data={data}/>
+      {/* {val && <MainBody isSearch={val} data={data}/>} */}
+      {/* {val && <SearchResult keyword={val}/>} */}
+
     </div>
   );
 }

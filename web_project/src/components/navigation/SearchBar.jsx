@@ -2,9 +2,7 @@ import React from "react";
 import { FormControl } from "react-bootstrap";
 import DropDownMenu from "./DropDownMenu";
 
-import "./NavigationBar.css";
-
-
+import "./SearchBar.css";
 
 
 const candidate = [

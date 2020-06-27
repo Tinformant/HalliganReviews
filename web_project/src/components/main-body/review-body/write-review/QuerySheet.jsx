@@ -11,16 +11,15 @@ function QuerySheet() {
   const [assessment, setAssessment] = React.useState("");
   const [status, setStatus] = React.useState("");
   const [ratingItems, setRatingItems] = React.useState({
-    courseOverall:0,
-    courseMaterial:0,
-    courseWorkload:0,
-    courseDifficulty:0,
-    instructorOverall:0,
-    instructorResponsive:0,
-    instructorClass:0,
-    instructorDelivery:0
+    courseOverall: 0,
+    courseMaterial: 0,
+    courseWorkload: 0,
+    courseDifficulty: 0,
+    instructorOverall: 0,
+    instructorResponsive: 0,
+    instructorClass: 0,
+    instructorDelivery: 0,
   });
-
 
   return (
     <div>
@@ -29,17 +28,17 @@ function QuerySheet() {
         semester={semester}
         setYear={setYear}
         setSemester={setSemester}
-        instructor="Tyrion"
+        instructor='Tyrion'
         assessment={assessment}
         setAssessment={setAssessment}
       />
-      <hr/>
-      <CourseEvaluation 
+      <hr />
+      <CourseEvaluation
         ratingItems={ratingItems}
         setRatingItems={setRatingItems}
       />
       <hr />
-      <WriteComment status={status} setStatus={setStatus}/>
+      <WriteComment status={status} setStatus={setStatus} />
     </div>
   );
 }

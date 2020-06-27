@@ -1,6 +1,6 @@
 import React from "react";
-import ItemTitle from "./items/RevTitle";
-import RevItem from "./items/RevItem";
+import RevTitle from "./items/RevTitle";
+import RevContent from "./items/RevContent";
 import GeneralEval from "./GeneralEval";
 
 function Course(props) {
@@ -31,10 +31,10 @@ function Course(props) {
   return (
     <div>
       <GeneralEval data={generalData}/>
-      <ItemTitle widthList={widthList} alignList={alignList} legend={workLoadLegend} />
+      <RevTitle widthList={widthList} alignList={alignList} legend={workLoadLegend} />
       {workLoadData.map((x, i) => {
         return (
-          <RevItem
+          <RevContent
             key={i}
             widthList={widthList}
             alignList={alignList}
@@ -43,10 +43,10 @@ function Course(props) {
           />
         );
       })}
-      <ItemTitle widthList={widthList} alignList={alignList} legend={difficultyLegend} />
+      <RevTitle widthList={widthList} alignList={alignList} legend={difficultyLegend} />
       {difficultyData.map((x, i) => {
         return (
-          <RevItem
+          <RevContent
             key={i}
             widthList={widthList}
             alignList={alignList}
