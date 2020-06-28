@@ -115,22 +115,21 @@ const commentData = [
   },
 ];
 
-const data = {
-  info: {
-    title: "Introduction to Algorithm and its Happy Companions",
-    department: "COMP",
-    number: "0160",
-    subnumber: "00",
-    instructor: ["Tyrion"],
-    semester: ["Fall"],
-    year: ["2020"],
-  },
-  comment: commentData,
-  course: courseData,
-  instructor: instructorData,
-};
-
 const dataBase = [
+  {
+    info: {
+      title: "Introduction to Algorithm and its Happy Companions",
+      department: "COMP",
+      number: "0160",
+      subnumber: "00",
+      instructor: ["Tyrion"],
+      semester: ["Fall"],
+      year: ["2020"],
+    },
+    comment: commentData,
+    course: courseData,
+    instructor: instructorData,
+  },
   {
     info: {
       title: "Numerical Analysis",
@@ -203,4 +202,4 @@ const dataBase = [
   },
 ];
 
-export default data;
+export default dataBase;

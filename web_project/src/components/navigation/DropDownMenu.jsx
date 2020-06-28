@@ -1,31 +1,84 @@
 import React from "react";
-import './DropDownMenu.css';
+import "./DropDownMenu.css";
 
 const DropDownItem = (props) => {
+  if (props.isText)
+    return (
+      <div
+        className='search-drop-down-text'
+        onClick={(e) => {
+          props.setShowDropDown(false);
+          props.onUpdate((prev) => ({
+            ...prev,
+            isSearch: true,
+            data: props.candidate,
+          }));
+        }}>
+        Search for {props.keyword}
+      </div>
+    );
 
-   if (props.isText)
-     return <p className='search-drop-down-text'>Search for {props.keyword}</p>;
+  const info = props.data.info;
+  // console.log(props.data);
 
-   return (
-     <div className='search-drop-down-item'>
-       <p className='search-drop-down-link'>
-         <span className='search-drop-down-link-header'>
-           {props.department}
-           {props.courseNum}
-         </span>
-         <span>{props.title}</span>
-       </p>
-     </div>
-   );
+  return (
+    <div
+      className='search-drop-down-link'
+      onClick={(e) => {
+        props.setShowDropDown(false);
+        props.onUpdate((prev) => ({
+          ...prev,
+          isSearch: false,
+          data: props.data,
+        }));
+      }}>
+      <span className='search-drop-down-link-header'>
+        {info.department}
+        {info.number}
+      </span>
+      <span>{info.title}</span>
+    </div>
+  );
 };
+// <div className='search-drop-down-item'>
+/* </div> */
+function useOutsideAlerter(ref) {}
 
 const DropDownMenu = (props) => {
-  return <div className='search-drop-down-menu'>
-      <DropDownItem isText keyword={props.searchText}/>
-      {props.candidate.map((x, i)=>{
-        return <DropDownItem key={i} department={x.department} courseNum={x.num} title={x.title}/>;
+  const wrapperRef = React.useRef(null);
+  useOutsideAlerter(wrapperRef);
+  React.useEffect(() => {
+    function handleClickOutside(event) {
+      if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+        props.setShowDropDown(false);
+      }
+    }
+    // Bind the event listener
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      // Unbind the event listener on clean up
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [props]);
+  return (
+    <div
+      ref={wrapperRef}
+      className='search-drop-down-menu'
+      onClick={(e) => {
+        console.log("load");
+      }}>
+      <DropDownItem
+        isText
+        keyword={props.searchText}
+        candidate={props.candidate}
+        onUpdate={props.onUpdate}
+        setShowDropDown={props.setShowDropDown}
+      />
+      {props.candidate.map((x, i) => {
+        return <DropDownItem key={i} data={x} onUpdate={props.onUpdate} setShowDropDown={props.setShowDropDown}/>;
       })}
-  </div>;
+    </div>
+  );
 };
 
 export default DropDownMenu;

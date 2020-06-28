@@ -2,7 +2,6 @@ import React from "react";
 import { Row, Col } from "react-bootstrap";
 import ComboBox from "../../ComboBox";
 
-// import "./SelectBox.css";
 import "./Header.css";
 
 function SelectBox(props) {
@@ -30,7 +29,7 @@ function SelectBox(props) {
               btnStyle="btn-style"
               defaultValue={props.data.info.instructor[0]}
               availableOption={props.data.info.instructor}
-              search="true"
+              search="false"
             />
         </Col>
       </Row>

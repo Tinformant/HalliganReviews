@@ -9,26 +9,25 @@ import rawData from "../data.js";
 // import'bootstrap/dist/css/bootstap.min.css';
 
 function App() {
-  const [val, setVal] = React.useState("Test");
+  // const [state, setState]
 
-  const [data, setData] = React.useState(rawData);
-
-  const updateVal = (x) => {
-    rawData.info.title = x;
-    setVal(x);
-    setData(rawData);
-    console.log(x);
-  };
-
-
+  const [val, setVal] = React.useState({
+    searchKeyword: "",
+    isSearch: false,
+    data: rawData
+  });
+  // const [isSearch, setIsSearch] = React.useState(false);
+  // const [data, setData] = React.useState(rawData);
 
   return (
     <div>
-      <NavigationBar onUpdate={updateVal}/>
-      <MainBody data={data}/>
-      {/* {val && <MainBody isSearch={val} data={data}/>} */}
-      {/* {val && <SearchResult keyword={val}/>} */}
-
+      <NavigationBar onUpdate={setVal} />
+      <MainBody
+        onUpdate={setVal}
+        isSearch={val.isSearch}
+        searchKeyword={val.searchKeyword}
+        data={val.data}
+      />
     </div>
   );
 }
