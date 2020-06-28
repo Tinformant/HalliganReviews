@@ -1,9 +1,10 @@
 import React from "react";
 import "./QuerySheet.css";
-import { Form, Row, Col, Button } from "react-bootstrap";
+import { Form, Row, Col } from "react-bootstrap";
 
 function WriteComment(props) {
   const status = [
+    "--- Please Choose ---",
     "Undergraduate Student",
     "Graduate Student",
     "Prefer not to say",
@@ -19,11 +20,22 @@ function WriteComment(props) {
           as="textarea"
           className="form-field"
           rows="5"
+          placeholder="Write something..."
+          value={props.comment}
+          onChange={event => {props.setComment(event.target.value)}}
         ></Form.Control>
       </div>
       <Row className="form-row">
         <Col className="form-group">
-          <Form.Check size="sm" label="Anonymous" />
+          <Form.Check
+            size="sm"
+            label="Anonymous"
+            onChange={(event) => {
+              // console.log("clicked");
+              // // console.log(event.target.checked);
+              props.setAnonymous(event.target.checked);
+            }}
+          />
         </Col>
         <Col>
           <Row noGutters="true">
@@ -47,9 +59,6 @@ function WriteComment(props) {
           </Row>
         </Col>
       </Row>
-      <div className="div-form">
-        <Button variant="primary">Submit</Button>
-      </div>
     </Form>
   );
 }

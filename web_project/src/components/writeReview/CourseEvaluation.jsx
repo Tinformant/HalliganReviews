@@ -1,63 +1,62 @@
 import React from "react";
 import "./QuerySheet.css";
-import StarRating from "./StarRating";
 import { Form } from "react-bootstrap";
+import { Rating } from "@material-ui/lab";
 
 function RatingItem(props) {
-  const [value, setValue] = React.useState("");
-  function handleRating(selected) {
-    console.log(selected);
-    setValue(selected.value);
-    // props.setRatingItems(prevValue => ({
-    //     ...prevValue,
-    //     [props.name]:selected.value
-    // }));
-
-    // console.log(props.setRatingItems);
-    // console.log(props.ratingItems);
-  }
+  const [value, setValue] = React.useState(0);
+  const [hover, setHover] = React.useState(-1);
   return (
     <div className="div-ratings">
       <Form.Label className="form-label">{props.question}</Form.Label>
-      <StarRating basic={props.label} handleRating={handleRating} />
+      <br />
+      <Rating
+        name={props.name}
+        emptyIcon={<i className="far fa-star"></i>}
+        icon={<i className="fas fa-star"></i>}
+        onChange={(event, newValue) => {
+          setValue(newValue);
+          props.setRatingItems((prevValue) => ({
+            ...prevValue,
+            [props.name]: newValue,
+          }));
+          // console.log(props.ratingItems);
+          // console.log(newValue);
+        }}
+        onChangeActive={(event, newHover) => {
+          setHover(newHover);
+        }}
+      />
+      {value !== null && (
+        <span>{props.label[hover !== -1 ? hover : value]}</span>
+      )}
     </div>
   );
 }
 
 function CourseEvaluation(props) {
-  const [basic] = React.useState([
-    { tooltip: "Meh" },
-    { tooltip: "Unsatisfactory" },
-    { tooltip: "Fair" },
-    { tooltip: "Good" },
-    { tooltip: "Excellent" },
-  ]);
+  const basic = {
+    1: "Meh",
+    2: "Unsatisfactory",
+    3: "Fair",
+    4: "Good",
+    5: "Excellent",
+  };
 
-  const [workload] = React.useState([
-    { tooltip: "<3" },
-    { tooltip: "3-6" },
-    { tooltip: "7-10" },
-    { tooltip: "11-14" },
-    { tooltip: ">14" },
-  ]);
-  const [difficulty] = React.useState([
-    { tooltip: "Very Easy" },
-    { tooltip: "Easy" },
-    { tooltip: "Normal" },
-    { tooltip: "Hard" },
-    { tooltip: "Very Hard" },
-  ]);
-
-//   props.setRatingItems({
-//     courseOverall: 5,
-//     courseMaterial: 0,
-//     courseWorkload: 0,
-//     courseDifficulty: 0,
-//     instructorOverall: 0,
-//     instructorResponsive: 0,
-//     instructorClass: 0,
-//     instructorDelivery: 0,
-//   });
+  const workload = {
+    1: "<3",
+    2: "3-6",
+    3: "7-10",
+    4: "11-14",
+    5: ">14",
+  };
+  const difficulty = {
+    1: "Very Easy",
+    2: "Easy",
+    3: "Normal",
+    4: "Hard",
+    5: "Very Hard",
+  };
 
   return (
     <Form>
@@ -70,35 +69,56 @@ function CourseEvaluation(props) {
           label={basic}
         />
         <RatingItem
+          ratingItems={props.ratingItems}
+          setRatingItems={props.setRatingItems}
           question="How do you rate the materials provided?"
+          name="courseMaterial"
           label={basic}
         />
         <RatingItem
+          ratingItems={props.ratingItems}
+          setRatingItems={props.setRatingItems}
           question="How is the workload of the course (hours per week)?"
+          name="courseWorkload"
           label={workload}
         />
         <RatingItem
+          ratingItems={props.ratingItems}
+          setRatingItems={props.setRatingItems}
           question="How difficult do you think the course is?"
+          name="courseDifficulty"
           label={difficulty}
         />
       </div>
       <hr />
       <div className="div-form">
         <RatingItem
+          ratingItems={props.ratingItems}
+          setRatingItems={props.setRatingItems}
           question="How do you rate the instructor in general?"
+          name="instructorOverall"
           label={basic}
         />
         <RatingItem
+          ratingItems={props.ratingItems}
+          setRatingItems={props.setRatingItems}
           question="How do you rate the instructor's effectiveness in replying to
           questions outside the class and returning assignment?"
+          name="instructorResponsive"
           label={basic}
         />
         <RatingItem
+          ratingItems={props.ratingItems}
+          setRatingItems={props.setRatingItems}
           question="How do you rate the class management of the instructor?"
+          name="instructorClass"
           label={basic}
         />
         <RatingItem
+          ratingItems={props.ratingItems}
+          setRatingItems={props.setRatingItems}
           question="How do you rate the delivery of the instructor?"
+          name="instructorDelivery"
           label={basic}
         />
       </div>

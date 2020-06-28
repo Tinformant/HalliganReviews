@@ -3,18 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.10.2",
+    "@material-ui/lab": "^4.0.0-alpha.56",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "boostrap": "^2.0.0",
     "bootstrap": "^4.5.0",
-    "mdbreact": "^4.27.0",
+    "mime": "^2.4.6",
+    "minimatch": "^3.0.4",
+    "pinkie-promise": "^2.0.1",
     "plotly.js": "^1.54.4",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
+    "react-bootstrap-select": "^0.14.0",
     "react-dom": "^16.13.1",
     "react-plotly.js": "^2.4.0",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "shell-quote": "^1.7.2"
   },
   "scripts": {
     "start": "react-scripts start",

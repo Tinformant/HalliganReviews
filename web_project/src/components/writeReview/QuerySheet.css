@@ -5,17 +5,9 @@
 }
 
 /* rating stars */
-i.rating-star-filled {
-  color: gold;
-}
-
-.rating-star {
-  color: white;
-  text-shadow: 0px 0px 3px #aaaaaa;
-}
-
-.container {
-  padding: 0;
+.MuiRating-label {
+  padding: 5px;
+  margin: 0;
 }
 
 /* form style */
@@ -42,6 +34,7 @@ i.rating-star-filled {
 
 .form-label {
   margin-bottom: 0;
+  padding:2px 0;
 }
 
 .form-question{
