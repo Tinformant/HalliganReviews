@@ -10,24 +10,27 @@ function SelectBox(props) {
       <Row className="review-header-form-row" noGutters={true}>
         <Col className="to-left">
           <ComboBox
+            aligned="to-left"
             defaultValue={props.data.info.semester[0]}
             availableOption={props.data.info.semester}
-            placehoder='Semester'
+            itemName="Semester"
           />
         </Col>
         <Col className="to-center">
-            <ComboBox
-              defaultValue={props.data.info.year[0]}
-              availableOption={props.data.info.year}
-              placehoder='Year'
-            />
+          <ComboBox
+            aligned="to-center"
+            defaultValue={props.data.info.year[0]}
+            availableOption={props.data.info.year}
+            itemName="Year"
+          />
         </Col>
         <Col className="to-right">
-            <ComboBox
-              defaultValue={props.data.info.instructor[0]}
-              availableOption={props.data.info.instructor}
-              placehoder='Instructor'
-            />
+          <ComboBox
+            aligned="to-right"
+            defaultValue={props.data.info.instructor[0]}
+            availableOption={props.data.info.instructor}
+            itemName="Instructor"
+          />
         </Col>
       </Row>
     </form>
@@ -51,8 +54,8 @@ function CourseInfo(props) {
 function Header(props) {
   return (
     <div id="review-header">
-      <CourseInfo data={props.data}/>
-      <SelectBox data={props.data}/>
+      <CourseInfo data={props.data} />
+      <SelectBox data={props.data} />
     </div>
   );
 }
