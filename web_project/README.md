@@ -1,3 +1,35 @@
+
+# TODO List:
+
+## Functional
+
+* index page
+* routing
+* Log-in and sign-up function.
+* marking required field in red in the questionaire 
+* **[Talk to Mentor] Design the filter box of the review page**
+* search page sorting and filtering
+
+
+## Styling 
+
+* logo
+* name of the website
+* search page header styling
+* search page search item styling
+* design comment card
+* search bar drop down menu shadows 
+
+
+
+
+
+
+
+
+
+<!-- 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -65,4 +97,4 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 
 ### `yarn build` fails to minify
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify -->
