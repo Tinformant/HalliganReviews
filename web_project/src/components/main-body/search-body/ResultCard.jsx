@@ -19,8 +19,8 @@ const ResultCard = (props) => {
   };
 
   return (
-    <div className='search-body-result-item'>
-      <p className='search-body-result-link' onClick={handleClick}>
+    <div className='search-body-result-item' onClick={handleClick}>
+      <p className='search-body-result-link' >
         <span className='search-body-result-item-header'>{header} </span>
         <span className='search-body-result-item-title'>{title}</span>
       </p>
