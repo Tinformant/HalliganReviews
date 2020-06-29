@@ -1,0 +1,33 @@
+
+#review-header {
+  background-color: #ffffff;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+
+.course-name {
+  color:#012f62 ;
+  font-size: 2rem;
+  font-weight: bold;
+    margin: 0 0px 20px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+
+.btn-style {
+  background-color: #fff;
+  border: 1px solid #e9ab14;
+  /* outline: auto; */
+}
+
+.review-header-form-row {
+  padding: 0;
+  margin: 3% 0;
+}
+
+
+
+
+

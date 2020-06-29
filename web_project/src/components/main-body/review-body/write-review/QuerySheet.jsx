@@ -36,7 +36,7 @@ function QuerySheet() {
         semester={semester}
         setYear={setYear}
         setSemester={setSemester}
-        instructor="Tyrion"
+        instructor='Tyrion'
         assessment={assessment}
         setAssessment={setAssessment}
       />

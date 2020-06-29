@@ -1,6 +1,6 @@
 import React from "react";
-import ItemTitle from "./items/RevTitle";
-import RevItem from "./items/RevItem";
+import RevTitle from "./items/RevTitle";
+import RevContent from "./items/RevContent";
 
 function GeneralEval(props) {
   const widthList = [3, 2, 6, 1];
@@ -19,10 +19,10 @@ function GeneralEval(props) {
   
   return (
     <div className='general-eval'>
-      <ItemTitle widthList={widthList} alignList={alignList} legend={legend} />
+      <RevTitle widthList={widthList} alignList={alignList} legend={legend} />
       {data.map((x, i) => {
         return (
-          <RevItem
+          <RevContent
             key={i}
             widthList={widthList}
             alignList={alignList}

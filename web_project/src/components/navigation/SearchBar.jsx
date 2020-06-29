@@ -2,20 +2,16 @@ import React from "react";
 import { FormControl } from "react-bootstrap";
 import DropDownMenu from "./DropDownMenu";
 
-import "./NavigationBar.css";
+import "./SearchBar.css";
+
+import dataBase from "../../dataBase";
 
 
-
-
-const candidate = [
-    {department: "COMP", num:"0160", title:"Algorithm"},
-    {department: "COMP", num:"0125", title:"Numerical Analysis"},
-    {department: "COMP", num:"0119", title:"Big Data"},
-    {department: "COMP", num:"0133", title:"Human Robot Interaction"},
-    {department: "COMP", num:"0138", title:"Reinforcement Learning"},
-    {department: "COMP", num:"0135", title:"Introduction to Machine Learning"},
-];
-
+// const candidate = dataBase.map((x, i) => {
+//   var info = x.info;
+//   info.id = i
+//   return info;
+// });
 
 function SearchBar(props) {
   const [searchText, setSearchText] = React.useState("");
@@ -24,16 +20,25 @@ function SearchBar(props) {
 
   const [searchCandiate, setSearchCandidate] = React.useState([]);
 
+  const [showDropDown, setShowDropDown] = React.useState(false);
+
   function handleSearchText(event) {
     var value = event.target.value;
     setSearchText(value);
-    
-    setSearchCandidate(candidate.filter((x)=>{
-      const keywordList = value.toLowerCase().split(" ");
-      // keywordList = keywordList.filter((x)=> x!==" ");
-      const keyword = new RegExp(keywordList.join('.*'));
-      return (x.department+x.num+x.title).toLowerCase().match(keyword);
-    }))
+    props.onUpdate((prev) => ({
+      ...prev,
+      searchKeyword: value,
+    }));
+
+    setSearchCandidate(
+      dataBase.filter((x) => {
+        const keywordList = value.toLowerCase().split(" ");
+        // keywordList = keywordList.filter((x)=> x!==" ");
+        const keyword = new RegExp(keywordList.join(".*"));
+        const info = x.info;
+        return (info.department + info.num + info.title).toLowerCase().match(keyword);
+      })
+    );
     setVisibilityStatus(value.length > 0 ? "visible" : "hidden");
   }
 
@@ -46,18 +51,22 @@ function SearchBar(props) {
   const handleSearchSubmit = (e) => {
     if (e.key === "Enter") {
       e.preventDefault();
-      props.onUpdate(searchText);
+      props.onUpdate((prev) =>({
+        ...prev, 
+        isSearch: true,
+        searchKeyword: searchText,
+        data: searchCandiate
+      }));
       setSearchText("");
     }
   };
-
 
   return (
     <div className='search-wrap'>
       <div
         className='search-group input-group'
         style={
-          searchText && searchFocus
+          showDropDown
             ? {
                 borderRadius: "19px 19px 0 0",
                 borderBottom:'none'
@@ -72,11 +81,12 @@ function SearchBar(props) {
         <FormControl
           onChange={handleSearchText}
           onKeyPress={handleSearchSubmit}
-          onFocus={() => setSearchFocus(true)}
+          onFocus={(e) => {setSearchFocus(true);setShowDropDown(true)}}
           onBlur={() => setSearchFocus(false)}
           id='search-bar'
           type='text'
           placeholder='Search'
+          autoComplete='off'
           className='search-form'
           value={searchText}
         />
@@ -89,7 +99,8 @@ function SearchBar(props) {
         </button>
         {/* <Button variant="outline-success">Search</Button> */}
       </div>
-      {searchText && searchFocus && <DropDownMenu searchText={searchText} candidate={searchCandiate}/>}
+      {showDropDown && <DropDownMenu searchText={searchText} candidate={searchCandiate} onUpdate={props.onUpdate} setShowDropDown={setShowDropDown}/>}
+      {/* {searchText && searchFocus && <DropDownMenu searchText={searchText} candidate={searchCandiate} onUpdate={props.onUpdate}/>} */}
     </div>
   );
 }

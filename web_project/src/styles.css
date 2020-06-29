@@ -21,3 +21,11 @@
 .align-center-vertical {
   margin: auto 0;
 }
+
+
+
+.btn-style {
+  background-color: #fff;
+  border: 1px solid #e9ab14;
+  /* outline: auto; */
+}

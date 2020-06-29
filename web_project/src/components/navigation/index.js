@@ -1,8 +1,21 @@
 import React from "react";
-import { Navbar} from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 import SearchBar from "./SearchBar";
-import UserOption from "./UserOption";
-import './NavigationBar.css';
+import './styles.css';
+
+
+function UserOption() {
+  return (
+    <Nav className="ml-auto">
+      <Nav.Link href="#" className="log-in-link navbar-link">
+        LOG IN
+      </Nav.Link>
+      <Nav.Link href="#" className="sign-up-link navbar-link">
+        SIGN UP
+      </Nav.Link>
+    </Nav>
+  );
+}
 
 function NavigationBar(props) {
   return (

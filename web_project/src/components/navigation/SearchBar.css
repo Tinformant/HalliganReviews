@@ -1,0 +1,70 @@
+/* NAVBAR SEARCH BAR  */
+
+.search-wrap {
+    position:relative;
+    width: 100%;
+    margin: 0 15%;
+}
+
+.search-group {
+  background-color: #314572;
+  border: 1px solid transparent;
+  border-radius: 1.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  position: relative;
+  /* margin: 0 15%; */
+  
+  /* background-color: transparent;
+  border: 1px solid #012f62; */
+}
+
+#search-bar::-webkit-search-cancel-button{
+    position:relative;
+    -webkit-appearance: searchfield-cancel-button;
+    height: 20px;
+    width: 20px;
+    border-radius:10px;
+    background-color: transparent;
+    color: #e9ab14;
+}
+
+.search-form, .search-icon {
+  background-color: transparent;
+  border: none;
+  color: #505d83;
+}
+
+.search-form::placeholder {
+  color: #505d83;
+  /* color: #DCDCDC; */
+}
+.search-group:focus-within {
+  background-color: #012f62;
+  border: 1px #e9ab14 solid;
+  box-shadow: 0px 0px 1px 1px #88c1bd;
+}
+
+.search-form:focus {
+  outline: none;
+  box-shadow: none;
+  background-color: transparent;
+  color: #DCDCDC;
+}
+
+.search-group:focus-within .search-icon{
+  color: #e9ab14;
+}
+
+.search-group:focus-within #search-bar-clear-btn{
+  color: #dfb879;
+}
+
+#search-bar-clear-btn {
+  color: #505d83;
+}
+
+#search-bar-clear-btn:focus {
+  box-shadow: none;
+}
+

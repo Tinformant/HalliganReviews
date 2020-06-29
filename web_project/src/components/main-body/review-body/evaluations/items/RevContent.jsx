@@ -15,18 +15,44 @@ function Content(props) {
   //   setPlotSize({height: ref.current.clientHeight, width: ref.current.clientWidth})
   // }, [plotSize.width]);
 
+  const {
+    name,
+    description, 
+    data: { undergraduate, graduate, other },
+  } = props.data;
+
+  const generalDist = [];
+
+  for (let index = 0; index < undergraduate.length; index++) {
+    generalDist.push(undergraduate[index] + graduate[index] + other[index]);
+  }
+
+  const sumGeneralDist = generalDist.reduce((cur, acc) => {
+    return cur + acc;
+  });
+
+  const generalDistPercent = generalDist.map((x) => {
+    return x / sumGeneralDist;
+  });
+
+  const avgScore = generalDistPercent.reduce((acc, cur, i) => {
+    return cur * (i + 1) + acc;
+  }).toFixed(1);
+
+
   const [c1, c2, c3, c4] = props.widthList;
   const [a1, a2, a3, a4] = props.alignList;
+
   return (
     <Accordion className="rev-content-wrap">
       <Row  className="rev-content-header" noGutters={true}>
         <Col className={a1} sm={c1}>
-          <p className="rev-content-name">{props.name}</p>
-          <p className="rev-content-description">{props.description}</p>
+          <p className="rev-content-name">{name}</p>
+          <p className="rev-content-description">{description}</p>
         </Col>
-        <Col className={a2 + " rev-content-avg-score"} sm={c2}>{props.avgScore}</Col>
+        <Col className={a2 + " rev-content-avg-score"} sm={c2}>{avgScore}</Col>
         <Col className={a3 + " rev-content-plot"} sm={c3}>
-            <SingleStackBarPlot width={500} height={40} dist={props.dist} colorScheme={props.colorScheme}/>
+            <SingleStackBarPlot width={500} height={40} dist={generalDistPercent} colorScheme={props.color}/>
         </Col>
         <Col className={a4 + " rev-content-detail"} sm={c4}>
             <DetailButton eventKey='0'/>

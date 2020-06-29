@@ -1,10 +1,10 @@
 import React from "react";
 import { Card, Row, Col } from "react-bootstrap";
 
-import "./CommentItem.css";
+import "./CommentCard.css";
 
 
-function CommentItem(props) {
+function CommentCard(props) {
   return (
     <Card className='comment-card'>
       <p>
@@ -20,19 +20,4 @@ function CommentItem(props) {
   );
 }
 
-function Comment(props) {
-  return props.data.map((x, i) => {
-    return (
-      <CommentItem 
-        key={i}
-        userName={x.userName}
-        status={x.status}
-        date={x.date}
-        comment={x.comment}
-      />
-    );
-  });
-}
-
-export default Comment;
-
+export default CommentCard;
