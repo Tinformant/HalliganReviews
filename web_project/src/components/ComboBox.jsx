@@ -2,7 +2,7 @@ import React from "react";
 
 import "./ComboBox.css";
 
-import { Select, MenuItem, FormControl, InputLabel } from "@material-ui/core";
+import { Select, MenuItem, FormControl } from "@material-ui/core";
 
 function setOperation(value, index) {
   return (

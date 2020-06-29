@@ -2,35 +2,43 @@ import React from "react";
 import "./DropDownMenu.css";
 
 const DropDownItem = (props) => {
+  const resetAttribute = () => {
+    props.setAttributes((prev) => ({
+      ...prev,
+      queryStr: "",
+      showCancelButton: "hidden",
+      showDropDown: false,
+    }));
+  };
   if (props.isText)
     return (
       <div
         className='search-drop-down-text'
         onClick={(e) => {
-          props.setShowDropDown(false);
           props.onUpdate((prev) => ({
             ...prev,
+            searchKeyword: props.attributes.queryStr,
             isSearch: true,
             data: props.candidate,
           }));
+          resetAttribute();
         }}>
-        Search for {props.keyword}
+        Search for {props.attributes.queryStr}
       </div>
     );
 
   const info = props.data.info;
-  // console.log(props.data);
 
   return (
     <div
       className='search-drop-down-link'
       onClick={(e) => {
-        props.setShowDropDown(false);
         props.onUpdate((prev) => ({
           ...prev,
           isSearch: false,
           data: props.data,
         }));
+        resetAttribute();
       }}>
       <span className='search-drop-down-link-header'>
         {info.department}
@@ -40,17 +48,16 @@ const DropDownItem = (props) => {
     </div>
   );
 };
-// <div className='search-drop-down-item'>
-/* </div> */
-function useOutsideAlerter(ref) {}
 
 const DropDownMenu = (props) => {
   const wrapperRef = React.useRef(null);
-  useOutsideAlerter(wrapperRef);
   React.useEffect(() => {
     function handleClickOutside(event) {
       if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
-        props.setShowDropDown(false);
+        props.setAttributes((prev) => ({
+          ...prev,
+          showDropDown: false,
+        }));
       }
     }
     // Bind the event listener
@@ -69,13 +76,21 @@ const DropDownMenu = (props) => {
       }}>
       <DropDownItem
         isText
-        keyword={props.searchText}
         candidate={props.candidate}
         onUpdate={props.onUpdate}
-        setShowDropDown={props.setShowDropDown}
+        attributes={props.attributes}
+        setAttributes={props.setAttributes}
       />
       {props.candidate.map((x, i) => {
-        return <DropDownItem key={i} data={x} onUpdate={props.onUpdate} setShowDropDown={props.setShowDropDown}/>;
+        return (
+          <DropDownItem
+            key={i}
+            data={x}
+            onUpdate={props.onUpdate}
+            attributes={props.attributes}
+            setAttributes={props.setAttributes}
+          />
+        );
       })}
     </div>
   );

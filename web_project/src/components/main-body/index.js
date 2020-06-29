@@ -10,7 +10,7 @@ function MainBody(props) {
   return (
     <div className='main-body' >
       {props.isSearch ? (
-        <SearchBody data={props.data} searchKeyword={props.searchKeyword}/>
+        <SearchBody data={props.data} searchKeyword={props.searchKeyword} onUpdate={props.onUpdate}/>
       ) : (
         <ReviwBody data={props.data} />
       )}
