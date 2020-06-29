@@ -11,13 +11,25 @@ const Header = (props) => {
       <p>Found {props.data.length} items for keyword "{props.searchKeyword}"</p>
       <Row noGutters>
         <Col className='to-left'>
-          <ComboBox btnStyle='btn-style' availableOption={["---Year---"]} />
+          <ComboBox
+            aligned="to-left"
+            availableOption={[2020]}
+            itemName="Year"
+          />
         </Col>
         <Col className='to-center'>
-          <ComboBox btnStyle='btn-style' availableOption={["---Semester---"]} />
+          <ComboBox
+            aligned="to-center"
+            availableOption={["Fall"]}
+            itemName="Semester"
+          />
         </Col>
         <Col className='to-right'>
-          <ComboBox btnStyle='btn-style' availableOption={["---Instructor---"]} />
+          <ComboBox
+            aligned="to-right"
+            availableOption={[2020]}
+            itemName="Instructor"
+          />
         </Col>
       </Row>
     </div>

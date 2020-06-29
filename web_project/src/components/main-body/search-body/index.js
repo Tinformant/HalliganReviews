@@ -4,9 +4,8 @@ import Result from "./Result";
 
 const SearchBody = (props) => {
   console.log(props);
-  
   return (
-    <div className='search-body'>
+    <div  className='search-body'>
       <Header data={props.data} searchKeyword={props.searchKeyword} />
       <Result data={props.data} onUpdate={props.onUpdate} />
     </div>

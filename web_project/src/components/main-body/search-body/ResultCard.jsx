@@ -4,7 +4,15 @@ import "./ResultCard.css";
 
 const ResultCard = (props) => {
   console.log(props);
-  const { department, number, subnumber, title } = props.data.info;
+  const {
+    department,
+    number,
+    subnumber,
+    title,
+    instructor,
+    semester,
+    year,
+  } = props.data.info;
   const header =
     department.toUpperCase() +
     number.padStart(4, "0") +
@@ -20,11 +28,19 @@ const ResultCard = (props) => {
 
   return (
     <div className='search-body-result-item' onClick={handleClick}>
-      <p className='search-body-result-link' >
+      <p className='search-body-result-link'>
         <span className='search-body-result-item-header'>{header} </span>
         <span className='search-body-result-item-title'>{title}</span>
       </p>
-      <p className='search-body-result-content'>{props.detail}</p>
+      <p className='search-body-result-content'>
+        <span className='search-body-result-content-item'>Year: {year}</span>
+        <span className='search-body-result-content-item'>
+          Semester: {semester}
+        </span>
+        <span className='search-body-result-content-item'>
+          Instructor: {instructor}
+        </span>
+      </p>
     </div>
   );
 };

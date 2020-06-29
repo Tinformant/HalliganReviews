@@ -1,8 +1,8 @@
 .search-body-result-item {
-   margin-bottom: 40px; 
+   margin-bottom: 20px; 
    padding: 20px 30px;
-   border-radius: 20px;
-   /* border: 1px solid #c6c6c6; */
+   border-radius: 15px;
+   border: 1px solid #c7c7c7;
 
 }
 
@@ -17,6 +17,11 @@
 .search-body-result-link {
     font-size: 1.3rem;
 }
+
+.search-body-result-content-item {
+    margin-right: 30px;
+}
+
 
 
 

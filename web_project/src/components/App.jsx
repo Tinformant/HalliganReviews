@@ -6,7 +6,6 @@ import MainBody from "./main-body";
 import NavigationBar from './navigation/index';
 import rawData from "../data.js";
 
-// import'bootstrap/dist/css/bootstap.min.css';
 
 function App() {
   // const [state, setState]
@@ -31,6 +30,10 @@ function App() {
     </div>
   );
 }
+
+// const App = () => {
+//   return <p>App page</p>
+// }
 
 export default App;
 
