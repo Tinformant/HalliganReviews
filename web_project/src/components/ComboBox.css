@@ -18,7 +18,7 @@
 
 .combobox{
   width: 200px;
-  text-align: left;
+  text-align: left !important;
   /* margin-left:auto; */
   /* color:red;
   background-color: hotpink;
