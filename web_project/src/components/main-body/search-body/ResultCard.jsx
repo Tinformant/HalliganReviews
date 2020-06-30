@@ -1,8 +1,32 @@
 import React from "react";
-import { Accordion } from "react-bootstrap";
-import DetailButton from "../review-body/evaluations/items/DetailButton";
+import { Accordion, Button } from "react-bootstrap";
+// import DetailButton from "../review-body/evaluations/items/DetailButton";
 
 import "./ResultCard.css";
+
+
+function DetailButton(props) {
+  return (
+    <Accordion.Toggle className="search-result-detail-button" as={Button} variant='none' eventKey={props.eventKey}>
+      <i className='search-result-detail-button-icon far fa-caret-square-down'></i>
+    </Accordion.Toggle>
+  );
+}
+
+
+const ResultLink = (props) => {
+     return (
+     <div className='search-body-result-content'onClick={ props.onClick}>
+        <span className='search-body-result-content-item'>Year: {props.year}</span>
+        <span className='search-body-result-content-item'>
+          Semester: {props.semester}
+        </span>
+        <span className='search-body-result-content-item-instructor'>
+          Instructor: {props.instructor}
+        </span>
+      </div>
+     );
+};
 
 const ResultCard = (props) => {
   console.log(props);
@@ -29,25 +53,27 @@ const ResultCard = (props) => {
   };
 
   return (
-    <Accordion className="rev-content-wrap">
-    <div className='search-body-result-item' onClick={handleClick}>
-      <p className='search-body-result-link'>
+    <Accordion className='search-body-result-item'>
+      <div className='search-body-result-link'>
         <span className='search-body-result-item-header'>{header} </span>
         <span className='search-body-result-item-title'>{title}</span>
-      </p>
-      <p className='search-body-result-content'>
-        <span className='search-body-result-content-item'>Year: {year}</span>
-        <span className='search-body-result-content-item'>
-          Semester: {semester}
-        </span>
-        <span className='search-body-result-content-item'>
-          Instructor: {instructor}
-        </span>
-      </p>
-    </div>
-      <DetailButton eventKey='0'/>
+      </div>
+      <ResultLink
+        year={year}
+        semester={semester}
+        instructor={instructor}
+        onClick={handleClick}
+      />
+      <DetailButton eventKey='0' />
       <Accordion.Collapse eventKey='0'>
-        <p>some text as detail</p>
+        <div>
+          <ResultLink
+            year={year}
+            semester={semester}
+            instructor={instructor}
+            onClick={handleClick}
+          />
+        </div>
       </Accordion.Collapse>
     </Accordion>
   );

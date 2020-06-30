@@ -16,7 +16,7 @@
 
 -[x] change the combo box of review page to plain text
 -[ ] change the write review questionaire combo box to plain text
--[ ] add accordian for duplicated course with different year and semester
+-[x] add accordian for duplicated course with different year and semester
 
 
 ## Styling 
