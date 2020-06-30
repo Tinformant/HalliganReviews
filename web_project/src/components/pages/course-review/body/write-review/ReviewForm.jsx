@@ -8,6 +8,8 @@ function ReviewForm(props) {
   function handleClose() {
     props.setShow(!props.show);
   }
+
+  // console.log(props.info);
   return (
     <div className="write-background">
       <div className="write-form">
@@ -15,7 +17,7 @@ function ReviewForm(props) {
           <i className="fas fa-times"></i>
         </button>
         <div className="query-sheet">
-            <QuerySheet />
+            <QuerySheet info={props.info}/>
         </div>
       </div>
     </div>

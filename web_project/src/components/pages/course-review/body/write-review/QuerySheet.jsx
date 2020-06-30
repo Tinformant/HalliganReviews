@@ -5,9 +5,9 @@ import CourseEvaluation from "./CourseEvaluation";
 import WriteComment from "./WriteComment";
 import { Button } from "react-bootstrap";
 
-function QuerySheet() {
-  const [year, setYear] = React.useState("");
-  const [semester, setSemester] = React.useState("");
+function QuerySheet(props) {
+  // const [year, setYear] = React.useState("");
+  // const [semester, setSemester] = React.useState("");
   const [assessment, setAssessment] = React.useState("");
   const [comment, setComment] = React.useState("");
   const [status, setStatus] = React.useState("");
@@ -32,11 +32,13 @@ function QuerySheet() {
   return (
     <div>
       <BasicInfo
-        year={year}
-        semester={semester}
-        setYear={setYear}
-        setSemester={setSemester}
-        instructor='Tyrion'
+        department={props.info.department}
+        courseNumber={props.info.number}
+        subNumber={props.info.subnumber}
+        courseName={props.info.title}
+        year={props.info.year}
+        semester={props.info.semester}
+        instructor={props.info.instructor}
         assessment={assessment}
         setAssessment={setAssessment}
       />
