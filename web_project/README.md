@@ -3,12 +3,20 @@
 
 ## Functional
 
-* index page
-* routing
-* Log-in and sign-up function.
 * marking required field in red in the questionaire 
 * **[Talk to Mentor] Design the filter box of the review page**
-* search page sorting and filtering
+
+-[ ] index page
+-[ ] routing
+-[ ] Log-in and sign-up function
+
+-[ ] make a fake get/post function.
+-[ ] search page sorting and filtering
+-[ ] change the filter box at search page to check boxes
+
+-[x] change the combo box of review page to plain text
+-[ ] change the write review questionaire combo box to plain text
+-[ ] add accordian for duplicated course with different year and semester
 
 
 ## Styling 
@@ -23,6 +31,197 @@
 
 
 
+```
+function getDataFromBackEnd(cmd: object, response: object, timeout: integer) => void
+```
+
+eg1. cmd-response pair for updating review page without filter boxes.
+```
+cmd: object = {
+  type: "data",
+  query:{ 
+    department: "COMP",
+    number: "0160",
+    subnumber: "01",
+    semester: "Fall",
+    year: "2020",
+  }
+}
+response: object = {
+  info: {
+    title: "Introduction to Algorithm and its Happy Companions",
+    department: "COMP",
+    number: "0160",
+    subnumber: "01", //default subnumber
+    instructor: "Matias Korman",
+    semester: "Fall",
+    year: "2020",
+  },
+  course: [
+    {
+      name: "Course Overall",
+      description: "overall score for blablabla",
+      distribution: [0.1, 0.3, 0.4, 0.1, 0.1],
+      average: 2.7,
+      details: "some text"
+    },
+    {
+      name: "Material",
+      description: "overall score for blablabla",
+      distribution: [0.1, 0.3, 0.4, 0.1, 0.1]
+      average: 2.7
+      details: "some text"
+    },
+    {
+      name: "Work Load",
+      description: "overall score for blablabla",
+      distribution: [0.1, 0.3, 0.4, 0.1, 0.1] // one star to five stars
+      average: 12 // hours  per week
+      details: "some text"
+    },
+    /* still need to work on
+    {
+      name: "Difficulty or letter grade",
+      description: "overall score for blablabla",
+      distribution: [0.1, 0.3, 0.4, 0.1, 0.1]
+      average: "B-" 
+      details: "some text"
+    }, */
+  ],
+  instructor: [
+    {
+      name: "Instructor Overall",
+      description: "blablabla",
+      distribution: [0.1, 0.3, 0.4, 0.1, 0.1]
+      average: 2.7
+      details: "some text"
+    },
+    {
+      name: "Responsive",
+      description: "blablabla",
+      distribution: [0.1, 0.3, 0.4, 0.1, 0.1]
+      average: 2.7
+      details: "some text"
+    },
+    {
+      name: "Expressive",
+      description: "blablabla",
+      distribution: [0.1, 0.3, 0.4, 0.1, 0.1]
+      average: 2.7
+      details: "some text"
+    },
+  ],
+  comment: [
+    {
+      username: "Galadriel",
+      identity: "graduate",
+      date: "05-19-2021",
+      grades: "A-",
+      workLoad: 10
+      courseOverall: 3,
+      instructorOverall: 4,
+      assessment: "Five assigments + blablabla"
+      text:
+        "Lnsectetur adipiscing elitim. A diam sollicitudin tempor ideu nisl nunc mi ipsum",
+    },
+    ...
+  ]
+}
+```
+eg2. cmd-response pair for searchbar autocompleting and showing search results
+
+```
+cmd: object = {
+  type: "search",
+  query:{ 
+    queryString: "comp 160", // query string typed in the search bar
+    order: "relevant",  // sorting order
+  }
+}
+
+response: object = {
+  result: [
+    {
+      title: "Introduction to Machine Learning",
+      department: "COMP",
+      number: "0135",
+      subnumber: "01",
+      availOption: [
+        {
+          instructor: "Michael Claude Hughes",
+          semester: "Fall",
+          year: "2020",
+        },
+        {
+          instructor: "Michael Claude Hughes",
+          semester: "Fall",
+          year: "2019",
+        }
+        {
+          instructor: "Liping Liu",
+          semester: "Fall",
+          year: "2018",
+        }
+        ...
+      ]
+    },
+    {
+      title: "Numerical Analysis",
+      department: "COMP",
+      number: "0125",
+      subnumber: "01",
+      availOption: [
+        {
+          instructor: "Misha E Kilmer",
+          semester: "Fall",
+          year: "2020",
+        },
+        {
+          instructor: "Misha E Kilmer",
+          semester: "Fall",
+          year: "2019",
+        }
+      ]
+    },
+    ...
+  ]
+}
+```
+
+```
+function postDataToBackEnd(data: object, response: boolean) => void
+```
+eg. data from questionaire to backend:
+```
+data: object = {
+  username: "Galadriel",
+  identity: "graduate",
+  date: "05-19-2021",
+  info: {
+    title: "Introduction to Algorithm and its Happy Companions",
+    department: "COMP",
+    number: "0160",
+    subnumber: "01", //default subnumber
+    instructor: "Matias Korman",
+    semester: "Fall",
+    year: "2020",
+  },
+  course: {
+    overall: 4,
+    material:3,
+    workLoad: 13,
+    // difficulty(or grade): 'A',
+  }
+  instructor: {
+    overall: 4,
+    responsive:3,
+    expressive: 13,
+    // difficulty(or grade): 'A',
+  },
+  comment: "Lnsectetur adipiscing elitim. A diam sollicitudin tempor ideu nisl nunc mi ipsum",
+    ...
+}
+```
 
 
 

@@ -1,4 +1,6 @@
 import React from "react";
+import { Accordion } from "react-bootstrap";
+import DetailButton from "../review-body/evaluations/items/DetailButton";
 
 import "./ResultCard.css";
 
@@ -27,6 +29,7 @@ const ResultCard = (props) => {
   };
 
   return (
+    <Accordion className="rev-content-wrap">
     <div className='search-body-result-item' onClick={handleClick}>
       <p className='search-body-result-link'>
         <span className='search-body-result-item-header'>{header} </span>
@@ -42,6 +45,11 @@ const ResultCard = (props) => {
         </span>
       </p>
     </div>
+      <DetailButton eventKey='0'/>
+      <Accordion.Collapse eventKey='0'>
+        <p>some text as detail</p>
+      </Accordion.Collapse>
+    </Accordion>
   );
 };
 

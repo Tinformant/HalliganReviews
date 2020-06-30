@@ -13,6 +13,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './components/App';
 import "./styles.css";
 
+// import fakeDB from "./fakeDataBase";
+import fakeBackEnd from "./fackBackEnd"
+
 // ReactDOM.render( 
 //     <Router>
 //         <App/> 
@@ -23,3 +26,5 @@ ReactDOM.render(
         <App/> 
     , document.getElementById('root')
 );
+
+ console.log(fakeBackEnd.db)
