@@ -38,7 +38,11 @@ function ComboBox(props) {
         colors: {
           ...theme.colors,
           primary25: '#5191ce',
+          primary50: '#5191ce',
           primary: '#012f62',
+          // neutral20: '#e9ab14',
+          // neutral30: '#5191ce',
+          
         },
       })}
     />
