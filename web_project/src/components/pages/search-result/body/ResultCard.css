@@ -6,7 +6,7 @@
 }
 
 .search-body-result-link {
-    color: #012f62;
+    color: #012f62 ; 
     font-size: 1.3rem;
 }
 
@@ -16,6 +16,7 @@
 }
 
 .search-body-result-content {
+    color: #012f62; 
     display: inline-block;
     margin-right: 10px;
     border-bottom: #012f62 1px solid;

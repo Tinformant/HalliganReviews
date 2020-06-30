@@ -1,39 +1,41 @@
 import React from "react";
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import MainBody from "./mainBody/MainBody";
-import MainBody from "./main-body";
-
-import NavigationBar from './navigation/index';
-import rawData from "../data.js";
 
 
-function App() {
-  // const [state, setState]
+import CourseReviewPage from "./pages/course-review";
+import SearchResultPage from "./pages/search-result";
 
-  const [val, setVal] = React.useState({
-    searchKeyword: "",
-    isSearch: false,
-    data: rawData
-  });
-  // const [isSearch, setIsSearch] = React.useState(false);
-  // const [data, setData] = React.useState(rawData);
+import { Switch, Route } from "react-router-dom";
 
+
+//  export default function App() {
+//   return <SearchResultPage />
+//  }
+
+export default function App() {
   return (
-    <div>
-      <NavigationBar onUpdate={setVal} />
-      <MainBody
-        onUpdate={setVal}
-        isSearch={val.isSearch}
-        searchKeyword={val.searchKeyword}
-        data={val.data}
-      />
-    </div>
+        <Switch>
+          <Route path="/register">
+            <RegisterPage />
+          </Route>
+          <Route path="/course">
+            <CourseReviewPage />
+          </Route>
+          <Route path="/search">
+            <SearchResultPage />
+          </Route>
+          <Route path="/">
+            <IndexPage />
+          </Route>
+        </Switch>
   );
 }
 
-// const App = () => {
-//   return <p>App page</p>
-// }
+const RegisterPage = () => {
+  return <h1>Register Page</h1>;
+};
 
-export default App;
-
+const IndexPage = () => {
+  return (
+    <h1>index page</h1>
+  )
+};

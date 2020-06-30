@@ -20,7 +20,7 @@ function UserOption() {
 function NavigationBar(props) {
   return (
     <Navbar bg="none" expand="lg" variant="none" fixed="top">
-      <Navbar.Brand href="#">Halligan Reviews</Navbar.Brand>
+      <Navbar.Brand href="/">Halligan Reviews</Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
       <Navbar.Collapse id="responsive-navbar-nav">
         <SearchBar onUpdate={props.onUpdate} />

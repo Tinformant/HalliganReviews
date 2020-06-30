@@ -1,4 +1,5 @@
 import React from "react";
+
 import "./DropDownMenu.css";
 
 const DropDownItem = (props) => {
@@ -12,40 +13,38 @@ const DropDownItem = (props) => {
   };
   if (props.isText)
     return (
-      <div
+      <a
+        href={`/search/${props.attributes.queryStr}`.toLowerCase()}
         className='search-drop-down-text'
-        onClick={(e) => {
-          props.onUpdate((prev) => ({
-            ...prev,
-            searchKeyword: props.attributes.queryStr,
-            isSearch: true,
-            data: props.candidate,
-          }));
+        onClick={() => {
           resetAttribute();
         }}>
         Search for {props.attributes.queryStr}
-      </div>
+      </a>
     );
 
-  const info = props.data.info;
+  const {
+    department,
+    number,
+    subnumber,
+    title,
+    semester,
+    year,
+  } = props.data.info;
 
   return (
-    <div
+    <a
+      href={`/course/${department}/${number}/${subnumber}/${year}/${semester}`.toLowerCase()}
       className='search-drop-down-link'
       onClick={(e) => {
-        props.onUpdate((prev) => ({
-          ...prev,
-          isSearch: false,
-          data: props.data,
-        }));
         resetAttribute();
       }}>
       <span className='search-drop-down-link-header'>
-        {info.department}
-        {info.number}
+        {department}
+        {number}
       </span>
-      <span>{info.title}</span>
-    </div>
+      <span>{title}</span>
+    </a>
   );
 };
 
@@ -67,6 +66,7 @@ const DropDownMenu = (props) => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [props]);
+
   return (
     <div
       ref={wrapperRef}
