@@ -3,7 +3,7 @@ import "./Writer.css";
 import ReviewForm from "./ReviewForm";
 import {Nav} from "react-bootstrap";
 
-function Writer() {
+function Writer(props) {
   const [showForm, setShowForm] = React.useState(false);
 
   function handleClick() {
@@ -17,7 +17,7 @@ function Writer() {
         onClick={handleClick}>
         <i className='fas fa-plus'></i> REVIEW
       </Nav.Link>
-      {showForm && <ReviewForm show={showForm} setShow={setShowForm} />}
+      {showForm && <ReviewForm show={showForm} setShow={setShowForm} info={props.info}/>}
     </div>
   );
 }

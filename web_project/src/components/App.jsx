@@ -3,7 +3,7 @@ import React from "react";
 // import MainBody from "./mainBody/MainBody";
 import MainBody from "./main-body";
 
-import NavigationBar from './navigation/index';
+import NavigationBar from './navigation';
 import rawData from "../data.js";
 
 

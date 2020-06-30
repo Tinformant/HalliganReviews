@@ -16,42 +16,37 @@ function generateOption(value, index) {
 }
 
 function BasicInfo(props) {
-  const date = new Date();
-  const currentYear = date.getFullYear();
-  const yearLength = 5;
-  const yearRange = range(currentYear - yearLength, currentYear);
-  const semesters = ["--- Semester ---", "Spring", "Summer", "Fall"];
+  // const date = new Date();
+  // const currentYear = date.getFullYear();
+  // const yearLength = 5;
+  // const yearRange = range(currentYear - yearLength, currentYear);
+  // const semesters = ["--- Semester ---", "Spring", "Summer", "Fall"];
 
   return (
     <Form>
       <div>
         <Form.Label className="form-question">
-          When did you take the course?
+          When did you take the course {props.department}{props.courseNumber}-
+          {props.subNumber} {props.courseName}?
         </Form.Label>
       </div>
       <Row className="form-row">
         <Col controlid="year" className="form-group">
           <Form.Control
-            required
-            as="select"
-            value={props.year}
+            type="text"
             className="form-field"
-            onChange={(event) => props.setYear(event.target.value)}
-          >
-            {yearRange.map(generateOption)}
-          </Form.Control>
+            placeholder={props.year}
+            readOnly
+          />
         </Col>
 
         <Col controlid="semester" className="form-group">
           <Form.Control
-            required
-            as="select"
-            value={props.semester}
+            type="text"
             className="form-field"
-            onChange={(event) => props.setSemester(event.target.value)}
-          >
-            {semesters.map(generateOption)}
-          </Form.Control>
+            placeholder={props.semester}
+            readOnly
+          />
         </Col>
       </Row>
       <Row className="form-row">
@@ -73,7 +68,7 @@ function BasicInfo(props) {
             className="form-field"
             placeholder="e.g. 3 assignments + 4 quizzes + 2 tests"
             value={props.assessment}
-            onChange={(event) => (props.setAssessment(event.target.value))}
+            onChange={(event) => props.setAssessment(event.target.value)}
           />
         </Col>
       </Row>
