@@ -5,6 +5,7 @@ import MainBody from "./main-body";
 
 import NavigationBar from './navigation';
 import rawData from "../data.js";
+import IndexPage from "./index-page";
 
 
 function App() {
@@ -19,14 +20,17 @@ function App() {
   // const [data, setData] = React.useState(rawData);
 
   return (
+    // <div>
+    //   <NavigationBar onUpdate={setVal} />
+    //   <MainBody
+    //     onUpdate={setVal}
+    //     isSearch={val.isSearch}
+    //     searchKeyword={val.searchKeyword}
+    //     data={val.data}
+    //   />
+    // </div>
     <div>
-      <NavigationBar onUpdate={setVal} />
-      <MainBody
-        onUpdate={setVal}
-        isSearch={val.isSearch}
-        searchKeyword={val.searchKeyword}
-        data={val.data}
-      />
+      <IndexPage />
     </div>
   );
 }
