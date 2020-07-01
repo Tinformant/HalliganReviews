@@ -37,7 +37,7 @@ function Section() {
         <Col lg={6} className="col-two">
           <div className="intro-div">
             <h1 className="intro-title">
-              Share your insights about courses you have taken
+              Share your insights about your favorite courses
             </h1>
           </div>
         </Col>
