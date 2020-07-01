@@ -1,30 +1,97 @@
-.body-style{
-    margin-top: 62px;
+.body-style {
+  margin-top: 62px;
 }
 
-.picture-right{
-    width: auto;
-    height:auto;
-
+/* First Section */
+.pic-one {
+  width: 480px;
+  height: auto;
+  margin: 10% 10%;
+  transform: rotate(10deg);
+  border-radius: 8px;
+  box-shadow: 10px 10px 10px #070707;
 }
 
-.section-row{
-    height:auto;
+.section-one {
+  height: 700px;
+  width: 100%;
+  background-color: #012f62;
 }
 
-.intro-col{
-    background-color: #c2c1c1;
-/* background-color: #636363; */
-background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
-/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+.col-one {
+  color: #fcfcfc;
 }
 
-.intro-div{
-    margin:15% 5%;
+.intro-div {
+  margin: 15% 10%;
 }
 
-.intro-title{
-    margin:auto;
-    font-weight: bold;
-    font-size: 3rem ;
+.intro-title {
+  margin: auto;
+  font-weight: bold;
+  font-size: 4em;
+}
+
+/* Second Section*/
+
+.section-two {
+  height: 700px;
+  background-color: #ececec;
+}
+
+.pic-two {
+  width: 500px;
+  height: auto;
+  margin: 15% 20%;
+  transform: rotate(-10deg);
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px #070707;
+}
+
+.col-two {
+  color: #012f62;
+}
+
+/* Call for action */
+.call-for-action {
+  background-color: #ececec;
+  height: 150px;
+}
+
+.action-btn {
+  width: 350px;
+  height: 75px;
+  margin: auto;
+  background-color: transparent;
+  color: #012f62;
+  border-radius: 50px;
+  border: 3px solid #012f62;
+  outline: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: 0px 0px 10px #6e7693;
+}
+
+.action-btn:hover {
+  background-color: #012f62;
+  box-shadow: 7px 7px 7px #6e7693;
+  color: #e9ab14;
+  transition: 0.5s;
+}
+
+.action-btn:focus-within {
+  outline: none;
+}
+
+/* Footer */
+.footer-div {
+  background-color: #6e7693;
+  height: 150px;
+  position: relative;
+  text-align: center;
+}
+
+.copyright {
+  color: #ffffff;
+  line-height: 100px;
 }

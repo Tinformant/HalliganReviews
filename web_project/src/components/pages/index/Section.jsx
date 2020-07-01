@@ -16,23 +16,13 @@ function Section() {
           </div>
         </Col>
         <Col lg={6}>
-          <Image
-            src={background}
-            alt="pic1"
-            // className="picture-right"
-            className="pic-one"
-          />
+          <Image src={background} alt="pic1" className="pic-one" />
         </Col>
       </Row>
 
       <Row noGutters className="section-two">
         <Col lg={6}>
-          <Image
-            src={jumboPic}
-            alt="background"
-            // className="picture-right"
-            className="pic-right"
-          />
+          <Image src={jumboPic} alt="background" className="pic-two" />
         </Col>
         <Col lg={6} className="col-two">
           <div className="intro-div">
@@ -42,6 +32,12 @@ function Section() {
           </div>
         </Col>
       </Row>
+      <div className="call-for-action" align="center">
+          <button className="action-btn">Start Your Journey Now</button>
+      </div>
+      <div className="footer-div">
+          <p className="copyright">All Rights Reserved</p>
+      </div>
     </div>
   );
 }
