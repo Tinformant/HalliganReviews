@@ -3,7 +3,8 @@ import React from "react";
 
 import CourseReviewPage from "./pages/course-review";
 import SearchResultPage from "./pages/search-result";
-
+import IndexPage from "./pages/index";
+import UserAuthenticationPage from "./pages/user-authentication";
 import { Switch, Route } from "react-router-dom";
 
 
@@ -14,8 +15,8 @@ import { Switch, Route } from "react-router-dom";
 export default function App() {
   return (
         <Switch>
-          <Route path="/register">
-            <RegisterPage />
+          <Route path="/user">
+            <UserAuthenticationPage />
           </Route>
           <Route path="/course">
             <CourseReviewPage />
@@ -30,12 +31,3 @@ export default function App() {
   );
 }
 
-const RegisterPage = () => {
-  return <h1>Register Page</h1>;
-};
-
-const IndexPage = () => {
-  return (
-    <h1>index page</h1>
-  )
-};
