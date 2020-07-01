@@ -7,19 +7,37 @@ import { Row, Col, Image } from "react-bootstrap";
 function Section() {
   return (
     <div>
-      <Row noGutters className="section-row">
-        <Col lg={6} className="fill">
-          <Image
-            src={jumboPic}
-            alt="jumboPic"
-            // className="picture-right"
-            fluid
-          />
-        </Col>
-        <Col lg={6} className="intro-col">
+      <Row noGutters className="section-one">
+        <Col lg={6} className="col-one">
           <div className="intro-div">
             <h1 className="intro-title">
               Hear what others say about your ideal course
+            </h1>
+          </div>
+        </Col>
+        <Col lg={6}>
+          <Image
+            src={background}
+            alt="pic1"
+            // className="picture-right"
+            className="pic-one"
+          />
+        </Col>
+      </Row>
+
+      <Row noGutters className="section-two">
+        <Col lg={6}>
+          <Image
+            src={jumboPic}
+            alt="background"
+            // className="picture-right"
+            className="pic-right"
+          />
+        </Col>
+        <Col lg={6} className="col-two">
+          <div className="intro-div">
+            <h1 className="intro-title">
+              Share your insights about courses you have taken
             </h1>
           </div>
         </Col>
