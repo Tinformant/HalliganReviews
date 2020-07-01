@@ -1,5 +1,69 @@
-.search-result-page {
-  width: 1000px;
-  margin: 80px auto 0;
+.user-authentication-page {
+  margin: 100px auto;
+  width: 400px;
+  /* height: 500px; */
+  color: #012f62;
+  padding: 10px 10px;
+  border: 1px solid blue;
 }
 
+.user-form-link{
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  color: #012f62;
+  /* border: 1px solid #012f62; */
+  /* padding: 7px 15px; */
+}
+
+.user-form-link:hover {
+  /* color: #e9ab14; */
+  color: #012f62;
+  background-color: #EFEFEF;
+  /* border:#e9ab14 solid 1px; */
+}
+
+.user-form-link:focus {
+  color: #ffffff;
+  background-color: #012f62;
+  outline: none;
+}
+
+.user-form-link.active {
+  color: #ffffff;
+  background-color: #012f62;
+}
+
+
+.user-form-item {
+  width: 50%;
+  text-align: center;
+}
+
+.user-form-pane {
+  padding:20px 0px;
+}
+
+.login-email-row,  {
+  margin-bottom: 30px;
+}
+
+.login-forget-password-link {
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.login-domain-item, .signup-domain-item{
+  margin: auto 0;
+  width: 50px;
+}
+
+.login-domain-at, .signup-domain-at{
+  margin-left: 5px;
+  margin-right: 4px;
+}
+
+
+.signup-email-row, .signup-username-row, .signup-confirm-password-row, .signup-password-row {
+  margin-bottom: 20px;
+}
