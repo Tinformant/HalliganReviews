@@ -1,6 +1,5 @@
 import React from "react";
-import NavigationBar from "../navigation";
-import Section from "./Section";
+import NavigationBar from "../../navigation";
 import Body from "./Body";
 
 function IndexPage() {

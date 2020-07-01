@@ -1,0 +1,33 @@
+.search-body-result-item {
+   margin-bottom: 20px; 
+   padding: 20px 0px;
+   /* border-radius: 15px;
+   border: 1px solid #c7c7c7; */
+}
+
+.search-body-result-link {
+    color: #012f62 ; 
+    font-size: 1.3rem;
+}
+
+
+.search-body-result-content-item {
+    margin-right: 30px;
+}
+
+.search-body-result-content {
+    color: #012f62; 
+    display: inline-block;
+    margin-right: 10px;
+    border-bottom: #012f62 1px solid;
+}
+
+.search-body-result-content:hover {
+    cursor: pointer;
+    border-bottom: gold 1px solid;
+    color: gold;
+}
+
+
+
+

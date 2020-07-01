@@ -1,5 +1,8 @@
 import React from "react";
 import { FormControl } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
+
+
 import DropDownMenu from "./DropDownMenu";
 
 import "./SearchBar.css";
@@ -47,15 +50,14 @@ function SearchBar(props) {
     document.getElementById("search-bar").focus();
   }
 
+  const history = useHistory();
+
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
       e.preventDefault();
-      props.onUpdate((prev) => ({
-        ...prev,
-        isSearch: true,
-        searchKeyword: attributes.queryStr,
-        data: searchCandidate,
-      }));
+      let path = `/search/${attributes.queryStr}`; 
+      history.push(path);
+      
       setAttributes((prev) => ({
         ...prev,
         queryStr: "",

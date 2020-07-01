@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Tab } from "react-bootstrap";
-import { Nav } from "react-bootstrap";
+import { Tab, Nav } from "react-bootstrap";
 
 import Course from "./evaluations/Course";
 import Instructor from "./evaluations/Instructor";

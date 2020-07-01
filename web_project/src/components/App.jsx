@@ -1,43 +1,33 @@
 import React from "react";
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import MainBody from "./mainBody/MainBody";
-import MainBody from "./main-body";
-
-import NavigationBar from './navigation';
-import rawData from "../data.js";
-import IndexPage from "./index-page";
 
 
-function App() {
-  // const [state, setState]
+import CourseReviewPage from "./pages/course-review";
+import SearchResultPage from "./pages/search-result";
+import IndexPage from "./pages/index";
+import UserAuthenticationPage from "./pages/user-authentication";
+import { Switch, Route } from "react-router-dom";
 
-  const [val, setVal] = React.useState({
-    searchKeyword: "",
-    isSearch: false,
-    data: rawData
-  });
-  // const [isSearch, setIsSearch] = React.useState(false);
-  // const [data, setData] = React.useState(rawData);
 
+//  export default function App() {
+//   return <SearchResultPage />
+//  }
+
+export default function App() {
   return (
-    // <div>
-    //   <NavigationBar onUpdate={setVal} />
-    //   <MainBody
-    //     onUpdate={setVal}
-    //     isSearch={val.isSearch}
-    //     searchKeyword={val.searchKeyword}
-    //     data={val.data}
-    //   />
-    // </div>
-    <div>
-      <IndexPage />
-    </div>
+        <Switch>
+          <Route path="/user">
+            <UserAuthenticationPage />
+          </Route>
+          <Route path="/course">
+            <CourseReviewPage />
+          </Route>
+          <Route path="/search">
+            <SearchResultPage />
+          </Route>
+          <Route path="/">
+            <IndexPage />
+          </Route>
+        </Switch>
   );
 }
-
-// const App = () => {
-//   return <p>App page</p>
-// }
-
-export default App;
 

@@ -1,41 +1,6 @@
 import React from "react";
-import { Row, Col } from "react-bootstrap";
-import ComboBox from "../../ComboBox";
 
 import "./Header.css";
-
-function SelectBox(props) {
-  return (
-    <form className="review-header-form">
-      <Row className="review-header-form-row" noGutters={true}>
-        <Col className="to-left">
-          <ComboBox
-            aligned="to-left"
-            defaultValue={props.data.info.semester[0]}
-            availableOption={props.data.info.semester}
-            itemName="Semester"
-          />
-        </Col>
-        <Col className="to-center">
-          <ComboBox
-            aligned="to-center"
-            defaultValue={props.data.info.year[0]}
-            availableOption={props.data.info.year}
-            itemName="Year"
-          />
-        </Col>
-        <Col className="to-right">
-          <ComboBox
-            aligned="to-right"
-            defaultValue={props.data.info.instructor[0]}
-            availableOption={props.data.info.instructor}
-            itemName="Instructor"
-          />
-        </Col>
-      </Row>
-    </form>
-  );
-}
 
 function CourseDetailCard(props) {
   return (
@@ -78,7 +43,6 @@ function Header(props) {
   return (
     <div id="review-header">
       <CourseInfo data={props.data} />
-      {/* <SelectBox data={props.data} /> */}
     </div>
   );
 }

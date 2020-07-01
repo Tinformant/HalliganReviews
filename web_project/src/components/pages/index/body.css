@@ -1,0 +1,30 @@
+.body-style{
+    margin-top: 62px;
+}
+
+.picture-right{
+    width: auto;
+    height:auto;
+
+}
+
+.section-row{
+    height:auto;
+}
+
+.intro-col{
+    background-color: #c2c1c1;
+/* background-color: #636363; */
+background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+.intro-div{
+    margin:15% 5%;
+}
+
+.intro-title{
+    margin:auto;
+    font-weight: bold;
+    font-size: 3rem ;
+}
