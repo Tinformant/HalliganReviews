@@ -3,7 +3,6 @@ import { Switch, Route, useRouteMatch, useParams } from "react-router-dom";
 
 
 import "./styles.css";
-  const [key, setKey] = React.useState("");
 
 
 export default function UserAutenticationPage(props) {
