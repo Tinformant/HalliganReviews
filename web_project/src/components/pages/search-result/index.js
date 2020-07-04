@@ -6,7 +6,7 @@ import Body from "./body";
 
 import "./styles.css";
 
-import dataBase from "../../../dataBase";
+import serverBackEnd from "../../../fakeBackEnd";
 
 export default function SearchResultPage(props) {
   let match = useRouteMatch();
@@ -24,23 +24,17 @@ export default function SearchResultPage(props) {
 
 const SearchResult = (props) => {
   let { queryKeyword } = useParams();
-
-  const raw = dataBase.filter((x) => {
-    const keywordList = queryKeyword.toLowerCase().split(" ");
-    const keyword = new RegExp(keywordList.join("[A-za-z0–9_]*"));
-    const info = x.info;
-    return (info.department + info.number + info.title)
-      .toLowerCase()
-      .match(keyword);
-  });
-  const newData = raw.map((x) => {
-    return x.info;
-  });
-
+  const response = {};
+  const cmdSearch = {
+    type: "search",
+    query: { queryString: queryKeyword, order: "relevant" },
+  };
+  serverBackEnd.get(cmdSearch, response);
+  const data = response.result;
   return (
     <div className='search-result-page'>
       <NavBar />
-      <Body data={newData} searchKeyword={queryKeyword} />
+      <Body data={data} searchKeyword={queryKeyword} />
     </div>
   );
 };

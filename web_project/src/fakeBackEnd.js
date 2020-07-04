@@ -1,60 +1,54 @@
-import fakeDB from "./fakeDataBase";
+// import fakeDB from "./fakeDataBase";
 
-class fakeBackEnd {
-    constructor(db) {
-        this.db = db;
-    }
-    postDataToBackEnd(data) {
-        this.db.push(data);
-        // write the new data to the file fakeDataBase
-        return true;
-    }
-    getDataFromBackEnd(cmd) {
-        if (cmd.type === "data") {
-          const { department, number, subnumber, semester, year } = cmd.query;
-          const queryStr = (
-            department +
-            number +
-            subnumber +
-            year +
-            semester
-          ).toLowerCase();
-          const raw = this.db.filter((x) => {
-            const info = x.info;
-            return (
-              queryStr ===
-              (
-                info.department +
-                info.number +
-                info.subnumber +
-                info.year +
-                info.semester
-              ).toLowerCase()
-            );
-          });
+import {fakeReviewData as fRD , fakeSearchData as fSD } from "./fakeData";
 
-        } else if (cmd.type === "search") {
-          const raw = this.db.filter((x) => {
-            const keywordList = cmd.query.queryString.toLowerCase().split(" ");
-            const keyword = new RegExp(keywordList.join("[A-za-z0–9_]*"));
-            const info = x.info;
-            return (info.department + info.number + info.title)
-              .toLowerCase()
-              .match(keyword);
-          });
-          return raw.map((x) => {
-            return x.info;
-          })
-        }
-        else{
-            console.log("Wrong command type");
-        }
-    }
 
-}
+const getReviewResponse = (query, response) =>{
+  let {department, number, subnumber, year, semester} =  query;
+  
+  const queryStr = (department + number + subnumber + semester + year).toLowerCase();
 
-const fBE = new fakeBackEnd(fakeDB)
+  let data = fRD.filter((x) => {
+    const info = x.info
+    return (
+      queryStr === (info.department + info.number + info.subnumber + info.semester + info.year).toLowerCase()
+    );
+  });
+  if (data.length === 0) {
+    response['status'] = false;
+  }
+  response['status'] = true;
+  response["data"] = data[0]; 
+}; 
 
-export default fBE;
+const getSearchResponse = (query, response) => {
+  const queryStr = query.queryString;
+  const result = fSD.filter((x) => {
+    const keywordList = queryStr.toLowerCase().split(" ");
+    const keyword = new RegExp(keywordList.join(".*"));
+    return (x.department + x.number + x.title)
+      .toLowerCase()
+      .match(keyword);
+  });
+  if (result.length === 0) {
+    response['status'] = false;
+  }
+  response["result"] = result;
+  response["status"] = true;
+};
+  
+
+const getDataFromBackEnd = (cmd, response, timeout) => {
+  if (cmd.type === "data") {
+    getReviewResponse(cmd.query, response);
+  } else if (cmd.type === "search") {
+    getSearchResponse(cmd.query, response);
+  }
+};
+
+
+export default {
+  get: getDataFromBackEnd,
+};
 
 

@@ -4,9 +4,11 @@ import "./DetailContent.css";
 
 function DetailContent(props) {
   return (
-    <div className="detail-content-card">
-      <p> <span>Description</span> </p>
-      <p className="detail-cotent-p">Detail Content</p>
+    <div className='detail-content-card'>
+      <p>
+        <span>Details</span>
+      </p>
+      <p className='detail-cotent-p'>{props.content}</p>
     </div>
   );
 }

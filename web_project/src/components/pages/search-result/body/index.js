@@ -9,7 +9,7 @@ const SearchBody = (props) => {
   return (
     <div  className='search-body'>
       <Header data={props.data} searchKeyword={props.searchKeyword} />
-      <Result data={props.data} onUpdate={props.onUpdate} />
+      <Result data={props.data} />
     </div>
   );
 };

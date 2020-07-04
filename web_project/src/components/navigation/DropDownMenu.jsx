@@ -30,7 +30,7 @@ const DropDownItem = (props) => {
     title,
     semester,
     year,
-  } = props.data.info;
+  } = props.data;
 
   return (
     <a
