@@ -5,7 +5,7 @@ import Body from "./Body";
 function IndexPage() {
     return <div>
         <NavigationBar />
-        <Body/>
+        <Body />
     </div>
 }
 
