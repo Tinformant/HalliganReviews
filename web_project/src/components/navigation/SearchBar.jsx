@@ -27,6 +27,7 @@ export default function SearchBar(props) {
       showDropDown: value.length > 0 ? true : false,
       showCancelButton: value.length > 0 ? "visible" : "hidden",
     }));
+
     const response = {};
     const cmdSearch = {
       type: "search",
@@ -34,6 +35,8 @@ export default function SearchBar(props) {
     };
 
     serverBackEnd.get(cmdSearch, response);
+
+
     setSearchCandidate(response.result);
   }
 

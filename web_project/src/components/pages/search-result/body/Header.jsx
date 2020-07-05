@@ -25,10 +25,14 @@ const FilterItem = (props) => {
 };
 
 const FilterItemTag = (props) => {
-  // const [ , setactive]
+  const [isActive, setActive] = React.useState(true);
 
   return (
-    <span className="search-filter-item-tag">
+    <span
+      className={"search-filter-item-tag " + (isActive && "active")}
+      onClick={() => {
+        setActive(!isActive);
+      }}>
       {props.name}
     </span>
   );

@@ -47,7 +47,9 @@ cmd: object = {
     year: "2020",
   }
 }
-response: object = {
+response: object = 
+{
+data: {
   info: {
     title: "Introduction to Algorithm and its Happy Companions",
     department: "COMP",
@@ -126,6 +128,8 @@ response: object = {
     },
     ...
   ]
+}
+
 }
 ```
 eg2. cmd-response pair for searchbar autocompleting and showing search results

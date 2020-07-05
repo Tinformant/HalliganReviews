@@ -4,12 +4,25 @@ import Result from "./Result";
 
 
 
+// const filterData = (data, filter) => {
+//   if (filter.semester) {
+//     ["fall", "spring"]
+
+//     {...prev, fall: true}
+//   }
+// }
+
 const SearchBody = (props) => {
-  console.log(props);
+  const [filter, setFilter] = React.useState({});
+
   return (
-    <div  className='search-body'>
-      <Header data={props.data} searchKeyword={props.searchKeyword} />
-      <Result data={props.data} />
+    <div className='search-body'>
+      <Header
+        data={props.data}
+        searchKeyword={props.searchKeyword}
+        setFilter={setFilter}
+      />
+      <Result data={props.data} filter={filter}/>
     </div>
   );
 };

@@ -159,6 +159,8 @@ const fakeReviewData = [
   },
 ];
 
+// TODO: search drop down query
+
 const fakeSearchData = [
   {
     title: "Introduction to Machine Learning",
@@ -170,6 +172,7 @@ const fakeSearchData = [
         instructor: "M. Hughes",
         semester: "Fall",
         year: "2020",
+        reviews: 20,
       },
       {
         instructor: "L. Liu",

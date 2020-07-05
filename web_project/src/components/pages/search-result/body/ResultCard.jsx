@@ -52,13 +52,13 @@ const ResultCard = (props) => {
         department={department}
         number={number}
         subnumber={subnumber}
-        data={props.data.availOption.shift()}
+        data={props.data.availOption[0]}
       />
-      {props.data.availOption.length !== 0 && <DetailButton eventKey='0' />}
-      {props.data.availOption.length !== 0 && (
+      {props.data.availOption.length > 1 && <DetailButton eventKey='0' />}
+      {props.data.availOption.length > 1 && (
         <Accordion.Collapse eventKey='0'>
           <div className='search-body-result-dropdown'>
-            {props.data.availOption.map((x, i) => (
+            {props.data.availOption.slice(1).map((x, i) => (
               <ResultLink
                 key={i}
                 department={department}
