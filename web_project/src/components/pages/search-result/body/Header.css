@@ -1,3 +1,51 @@
 .search-body-header {
     margin: 3% 0;
 }
+
+.search-filter {
+    /* border: 1px solid #c6c6c6;
+    border-radius: 10px;
+    padding: 6px 20px; */
+    margin: 3px 0;
+}
+
+.search-filter-header {
+    margin: 13px 0 15px;
+}
+
+.search-filter-item {
+    margin-bottom: 15px;
+}
+
+.search-filter-item-header {
+    margin-right: 10px;
+}
+
+.search-filter-item-tag {
+    cursor: pointer;
+    margin: 0px 5px;
+    border-radius: 30px;
+    border: 1px solid #012f62;
+    box-shadow: 0 0 4px #6e7693;
+    color: #012f62;
+    padding: 3px 15px;
+}
+
+.search-filter-item-tag:hover {
+    border: 1px solid #6e7693;
+    background-color: #6e7693;
+    color: #ffffff;
+}
+
+.search-filter-item-tag:active {
+    border: 1px solid #012f62;
+    background-color: #012f62;
+    color: #ffffff;
+}
+
+
+
+
+
+
+

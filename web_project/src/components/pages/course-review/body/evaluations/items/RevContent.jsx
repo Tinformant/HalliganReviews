@@ -14,28 +14,35 @@ function Content(props) {
   // React.useEffect(() => {
   //   setPlotSize({height: ref.current.clientHeight, width: ref.current.clientWidth})
   // }, [plotSize.width]);
-
   const {
     name,
     description, 
-    data: { undergraduate, graduate, other },
+    distribution, 
+    // average,
+    details
   } = props.data;
 
-  const generalDist = [];
+  // const {
+  //   name,
+  //   description, 
+  //   data: { undergraduate, graduate, other },
+  // } = props.data;
 
-  for (let index = 0; index < undergraduate.length; index++) {
-    generalDist.push(undergraduate[index] + graduate[index] + other[index]);
-  }
+  // const generalDist = [];
 
-  const sumGeneralDist = generalDist.reduce((cur, acc) => {
-    return cur + acc;
-  });
+  // for (let index = 0; index < undergraduate.length; index++) {
+  //   generalDist.push(undergraduate[index] + graduate[index] + other[index]);
+  // }
 
-  const generalDistPercent = generalDist.map((x) => {
-    return x / sumGeneralDist;
-  });
+  // const sumGeneralDist = generalDist.reduce((cur, acc) => {
+  //   return cur + acc;
+  // });
 
-  const avgScore = generalDistPercent.reduce((acc, cur, i) => {
+  // const generalDistPercent = generalDist.map((x) => {
+  //   return x / sumGeneralDist;
+  // });
+
+  const avgScore = distribution.reduce((acc, cur, i) => {
     return cur * (i + 1) + acc;
   }).toFixed(1);
 
@@ -52,14 +59,14 @@ function Content(props) {
         </Col>
         <Col className={a2 + " rev-content-avg-score"} sm={c2}>{avgScore}</Col>
         <Col className={a3 + " rev-content-plot"} sm={c3}>
-            <SingleStackBarPlot width={500} height={40} dist={generalDistPercent} colorScheme={props.color}/>
+            <SingleStackBarPlot width={500} height={40} dist={distribution} colorScheme={props.color}/>
         </Col>
         <Col className={a4 + " rev-content-detail"} sm={c4}>
             <DetailButton eventKey='0'/>
         </Col>
       </Row>
       <Accordion.Collapse eventKey='0'>
-        <DetailContent />
+        <DetailContent content={details}/>
       </Accordion.Collapse>
     </Accordion>
   );

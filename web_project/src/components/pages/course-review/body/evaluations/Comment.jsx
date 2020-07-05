@@ -8,10 +8,15 @@ function Comment(props) {
     return (
       <CommentCard
         key={i}
-        userName={x.userName}
-        status={x.status}
+        userName={x.username}
+        status={x.identity}
         date={x.date}
-        comment={x.comment}
+        comment={x.text}
+        courseOverall={x.courseOverall}
+        instructorOverall={x.instructorOverall}
+        workLoad={x.workLoad}
+        grade={x.grade}
+        assessment={x.assessment}
       />
     );
   });

@@ -17,18 +17,11 @@ function DetailButton(props) {
 }
 
 const ResultLink = (props) => {
-  const {
-    department,
-    number,
-    subnumber,
-    instructor,
-    semester,
-    year,
-  } = props.data;
+  const { instructor, semester, year } = props.data;
 
   return (
     <Link
-      to={`/course/${department}/${number}/${subnumber}/${year}/${semester}`.toLowerCase()}
+      to={`/course/${props.department}/${props.number}/${props.subnumber}/${year}/${semester}`.toLowerCase()}
       className='search-body-result-content'>
       <span className='search-body-result-content-item'>Year: {year}</span>
       <span className='search-body-result-content-item'>
@@ -55,13 +48,28 @@ const ResultCard = (props) => {
         <span className='search-body-result-item-header'>{header} </span>
         <span className='search-body-result-item-title'>{title}</span>
       </div>
-      <ResultLink data={props.data} />
-      <DetailButton eventKey='0' />
-      <Accordion.Collapse eventKey='0'>
-        <div>
-          <ResultLink data={props.data} />
-        </div>
-      </Accordion.Collapse>
+      <ResultLink
+        department={department}
+        number={number}
+        subnumber={subnumber}
+        data={props.data.availOption.shift()}
+      />
+      {props.data.availOption.length !== 0 && <DetailButton eventKey='0' />}
+      {props.data.availOption.length !== 0 && (
+        <Accordion.Collapse eventKey='0'>
+          <div className='search-body-result-dropdown'>
+            {props.data.availOption.map((x, i) => (
+              <ResultLink
+                key={i}
+                department={department}
+                number={number}
+                subnumber={subnumber}
+                data={x}
+              />
+            ))}
+          </div>
+        </Accordion.Collapse>
+      )}
     </Accordion>
   );
 };

@@ -6,7 +6,7 @@ import { Switch, Route, useRouteMatch, useParams } from "react-router-dom";
 
 import "./styles.css";
 
-import dataBase from "../../../dataBase";
+import serverBackEnd from "../../../fakeBackEnd";
 
 export default function CourseReviewPage(porps) {
   let match = useRouteMatch();
@@ -27,22 +27,34 @@ export default function CourseReviewPage(porps) {
 const CourseReview = (props) => {
   // let info = useParams();
   // TODO html get function from the backend
-  let {department, number, subnumber,year, semester} =  useParams();
-  
-  const query = department + number + subnumber + semester + year;
+  const cmdData = {
+    type: "data",
+    query: useParams(),
+  };
+  const response = {};
+  serverBackEnd.get(cmdData, response);
+  // console.log(response);
 
-  let data = dataBase.filter((x) => {
-    const info = x.info
-    return (
-      query === (info.department + info.number + info.subnumber + info.semester + info.year).toLowerCase()
-    );
-  });
-  console.log(data);
-  
+  // let {department, number, subnumber,year, semester} =  useParams();
+
+  // const query = department + number + subnumber + semester + year;
+
+  // let data = dataBase.filter((x) => {
+  //   const info = x.info
+  //   return (
+  //     query === (info.department + info.number + info.subnumber + info.semester + info.year).toLowerCase()
+  //   );
+  // });
+  // console.log(data);
+
   return (
     <div className='course-review-page'>
       <NavBar />
-      {(data.length !== 0) ? <ReviwBody data={data[0]} /> : <p>No such data found</p>}
+      {response.status ? (
+        <ReviwBody data={response.data} />
+      ) : (
+        <p>No such data found</p>
+      )}
     </div>
   );
 };

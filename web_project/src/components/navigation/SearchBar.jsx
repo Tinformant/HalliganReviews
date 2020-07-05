@@ -7,20 +7,10 @@ import DropDownMenu from "./DropDownMenu";
 
 import "./SearchBar.css";
 
-import dataBase from "../../dataBase";
+import serverBackEnd from "../../fakeBackEnd";
 
-const getResultFromDB = (queryStr) => {
-  return dataBase.filter((x) => {
-    const keywordList = queryStr.toLowerCase().split(" ");
-    const keyword = new RegExp(keywordList.join("[A-za-z0–9_]*"));
-    const info = x.info;
-    return (info.department + info.number + info.title)
-      .toLowerCase()
-      .match(keyword);
-  });
-};
 
-function SearchBar(props) {
+export default function SearchBar(props) {
   const [attributes, setAttributes] = React.useState({
     queryStr: "",
     showDropDown: false,
@@ -37,7 +27,14 @@ function SearchBar(props) {
       showDropDown: value.length > 0 ? true : false,
       showCancelButton: value.length > 0 ? "visible" : "hidden",
     }));
-    setSearchCandidate(getResultFromDB(value));
+    const response = {};
+    const cmdSearch = {
+      type: "search",
+      query: { queryString: value, order: "relevant" },
+    };
+
+    serverBackEnd.get(cmdSearch, response);
+    setSearchCandidate(response.result);
   }
 
   function clearContent(event) {
@@ -139,5 +136,3 @@ function SearchBar(props) {
     </div>
   );
 }
-
-export default SearchBar;

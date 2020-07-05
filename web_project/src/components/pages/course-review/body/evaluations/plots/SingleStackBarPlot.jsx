@@ -15,7 +15,7 @@ function SingleStackBarPlot(props) {
       yaxis: "y",
       type: "bar",
       barmode: "stack",
-      texttemplate: "%{x:%}",
+      texttemplate: (x > 0.05)?"%{x:%}":"",
       textposition: "auto",
       hoverinfo: "none",
       orientation: "h",
