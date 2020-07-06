@@ -1,6 +1,6 @@
 .body-style {
-  margin-top: 62px;
-  background-color: #ececec;
+  padding-top: 62px;
+  background-color: #012f62;
 }
 
 /* introduction */
@@ -15,7 +15,7 @@
 .pic-one {
   width: 480px;
   height: auto;
-  margin: 10% 10%;
+  margin: 10% 15%;
   transform: rotate(10deg);
   border-radius: 8px;
   box-shadow: 10px 10px 10px #070707;
@@ -33,12 +33,13 @@
 
 .intro-div {
   cursor: default;
-  margin: 15% 10%;
+  margin: 10% 15%;
 }
 
 .intro-title {
-  margin-bottom: 50px;
+  margin-top: 10%;
   /* font-weight: bold; */
+  line-height: 1.5;
   font-size: 3rem;
 }
 
