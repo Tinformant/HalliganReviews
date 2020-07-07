@@ -71,8 +71,7 @@ const commentData = [
     courseOverall: 3,
     instructorOverall: 4,
     assessment: "Five assigments + blablabla",
-    text:
-      "Dolore magna aliqua.A scelerisque purus semper eget duis. ",
+    text: "Dolore magna aliqua.A scelerisque purus semper eget duis. ",
   },
   {
     username: "Galadriel",
@@ -109,6 +108,20 @@ const fakeReviewData = [
       subnumber: "01",
       instructor: "M. Korman",
       semester: "Fall",
+      year: "2020",
+    },
+    comment: commentData,
+    course: courseData,
+    instructor: instructorData,
+  },
+  {
+    info: {
+      title: "Introduction to Algorithm and its Happy Companions",
+      department: "COMP",
+      number: "0160",
+      subnumber: "01",
+      instructor: "M. Korman",
+      semester: "Spring",
       year: "2020",
     },
     comment: commentData,
@@ -157,6 +170,20 @@ const fakeReviewData = [
     course: courseData,
     instructor: instructorData,
   },
+  {
+    info: {
+      title: "Linear System",
+      department: "EE",
+      number: "0023",
+      subnumber: "01",
+      instructor: "E. Miller",
+      semester: "Fall",
+      year: "2020",
+    },
+    comment: commentData,
+    course: courseData,
+    instructor: instructorData,
+  },
 ];
 
 // TODO: search drop down query
@@ -172,12 +199,13 @@ const fakeSearchData = [
         instructor: "M. Hughes",
         semester: "Fall",
         year: "2020",
-        reviews: 20,
+        reviews: 0,
       },
       {
         instructor: "L. Liu",
         semester: "Fall",
         year: "2019",
+        reviews: 20,
       },
     ],
   },
@@ -191,6 +219,13 @@ const fakeSearchData = [
         instructor: "M. Korman",
         semester: "Fall",
         year: "2020",
+        reviews: 20,
+      },
+      {
+        instructor: "M. Korman",
+        semester: "Spring",
+        year: "2020",
+        reviews: 20,
       },
     ],
   },
@@ -204,14 +239,25 @@ const fakeSearchData = [
         instructor: "M. Kilmer",
         semester: "Fall",
         year: "2020",
+        reviews: 20,
+      },
+    ],
+  },
+  {
+    title: "Linear System",
+    department: "EE",
+    number: "0023",
+    subnumber: "01",
+    availOption: [
+      {
+        instructor: "E. Miller",
+        semester: "Fall",
+        year: "2020",
+        reviews: 20,
       },
     ],
   },
 ];
 
-
 // export default dataBase;
-export {
-    fakeReviewData,
-    fakeSearchData
-};
+export { fakeReviewData, fakeSearchData };

@@ -2,6 +2,7 @@ import React from "react";
 
 import ResultCard from "./ResultCard";
 
+
 const Result = (props) => {
   return (
    <div className='search-body-result'>
