@@ -1,14 +1,26 @@
 import React from "react";
+import { Row, Col } from "react-bootstrap";
 
 import "./Header.css";
 
 const Filter = (props) => {
-  return(
-    <div className="search-filter">
-      <p className="search-filter-header">Filter Options</p>
-      {props.filterOption.map((x,i)=>{
-        return <FilterItem key={i} title={x.title} tagList={x.tagList} setFilter={props.setFilter} />;
-      })}
+  return (
+    <div className='search-filter'>
+      {/* <p className='search-filter-header'>Filter Options</p> */}
+      <Row noGutters>
+        {props.filterOption.map((x, i) => {
+          return (
+            <Col sm={6}>
+              <FilterItem
+                key={i}
+                title={x.title}
+                tagList={x.tagList}
+                setFilter={props.setFilter}
+              />
+            </Col>
+          );
+        })}
+      </Row>
     </div>
   );
 };

@@ -46,19 +46,27 @@ const ResultLink = (props) => {
       }>
       <Row noGutters className='search-body-result-content-item-row'>
         <Col sm={2} className='search-body-result-content-item-first'>
-          Year: {year}
+          <span className='search-body-result-content-item-header'>Year: </span>
+          <span className='search-body-result-content-item-content'>
+            {year}
+          </span>
         </Col>
         <Col sm={3} className='search-body-result-content-item'>
-          Semester: {semester}
+          <span className='search-body-result-content-item-header'>Semester: </span>
+          <span className='search-body-result-content-item-content'>
+            {semester}
+          </span>
         </Col>
         <Col sm={5} className='search-body-result-content-item'>
-          Instructor: {instructor}
+          <span className='search-body-result-content-item-header'>Instructor: </span>
+          <span className='search-body-result-content-item-content'>
+            {instructor}
+          </span>
         </Col>
         <Col sm={2} className='search-body-result-content-item-last'>
           Reviews: {reviews}
         </Col>
       </Row>
-
     </Link>
   );
 };
@@ -78,8 +86,11 @@ const ResultCard = (props) => {
         <hr className='search-body-result-item-hr' />
       </div>
       <div className='search-body-result-first-container'>
-        {props.data.availOption.length > 1 ? <DetailButton eventKey='0' />
-        : <DetailButton disable eventKey='0' />}
+        {props.data.availOption.length > 1 ? (
+          <DetailButton eventKey='0' />
+        ) : (
+          <DetailButton disable eventKey='0' />
+        )}
         <ResultLink
           isFirst
           department={department}

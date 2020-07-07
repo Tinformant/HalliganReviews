@@ -1,13 +1,13 @@
 .search-drop-down-menu {
     position: absolute;
-    top: 43px;
+    top: 42px;
     width: 100%;
     background-color: #ffffff;
     padding-bottom: 20px;
     border-radius: 0 0 19px 19px;
     left: 0px;
-    border: 1px solid #012f62;
-    /* box-shadow: 0px 0px 1px 1px #012f62; */
+    border: 1px solid #c6c6c6;
+    box-shadow: 3px 3px 6px #c6c6c6;
 }
 
 a.search-drop-down-link, a.search-drop-down-text {
@@ -26,7 +26,7 @@ a.search-drop-down-link:hover, a.search-drop-down-text:hover {
 .search-drop-down-link-header {
     border-radius: 1.5rem;
     border: 1px solid #012f62;
-    /* box-shadow: 0 0 1px 1px  #c6c6c6; */
+    box-shadow: 0 0 2px  #06274d;
     padding: 2px 6px;
     margin-right: 4px;
 }
