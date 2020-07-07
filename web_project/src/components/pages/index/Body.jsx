@@ -22,8 +22,7 @@ function Body() {
         "responsive teacher",
         "joyful classes",
         "too much homework",
-        "difficult exams",
-        "cute TA",
+        "difficult exams"
       ],
     },
     {
