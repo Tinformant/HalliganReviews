@@ -13,7 +13,7 @@ function Body() {
       department: "COMP",
       courseNumber: "0160",
       subnumber: "00",
-      courseName: "Algorithms",
+      courseName: "Introduction to Algorithms and its Happy Companions",
       year: 2020,
       semester: "Fall",
       instructor: "M. Korman",
@@ -24,6 +24,21 @@ function Body() {
         "too much homework",
         "difficult exams",
         "cute TA",
+      ],
+    },
+    {
+      department: "COMP",
+      courseNumber: "0135",
+      subnumber: "01",
+      courseName: "Introduction to Machine Learning",
+      year: 2020,
+      semester: "Fall",
+      instructor: "J. Foster",
+      url: "/course/comp/0135/01/2020/fall",
+      tags: [
+        "detailed materials",
+        "crowede classes",
+        "thoughtful projects",
       ],
     },
   ];
@@ -80,7 +95,7 @@ function Body() {
             </ScrollAnimation>
           </div>
         </Col>
-        <Col lg={6}>
+        <Col lg={6} className="image-col">
           <ScrollAnimation animateIn="fadeInRight">
             <Image src={jumboPic} alt="pic1" className="pic-one" />
           </ScrollAnimation>
@@ -92,7 +107,24 @@ function Body() {
       </Carousel>
 
       <footer className="main-footer">
-          
+        <Row className="link-container">
+          <Col className="align-center-vertical">
+            <a href="/about" className="footer-link">
+              About
+            </a>
+          </Col>
+          <Col className="align-center-vertical">
+            <a href="/contact" className="footer-link">
+              Contact us
+            </a>
+          </Col>
+          <Col className="align-center-vertical">
+            {" "}
+            <a href="http://www.tufts.edu" className="footer-link">
+              Tufts University
+            </a>
+          </Col>
+        </Row>
       </footer>
     </div>
   );

@@ -5,6 +5,10 @@
 
 /* introduction */
 
+.image-col {
+  text-align: center;
+}
+
 .index-page-style {
   cursor: default;
   background-color: #ececec;
@@ -15,8 +19,9 @@
 .pic-one {
   width: 480px;
   height: auto;
-  margin: 10% 15%;
-  transform: rotate(10deg);
+  margin: 11% auto auto;
+  align-items: center;
+  transform: rotate(7deg);
   border-radius: 8px;
   box-shadow: 10px 10px 10px #070707;
 }
@@ -33,7 +38,7 @@
 
 .intro-div {
   cursor: default;
-  margin: 10% 15%;
+  margin: 10% 7% 10% 17%;
 }
 
 .intro-title {
@@ -56,7 +61,7 @@
   height: 550px;
   background-color: #dcdcdc;
   text-align: center;
-  padding-top: 10%;
+  padding-top: 5.7%;
   color: #012f62;
 }
 
@@ -65,9 +70,9 @@
   transition: 0.3s;
 }
 
-.popular-course-container:hover{
-    text-shadow: 3px 3px 5px #a0a0a0;
-    transition: 0.3s;
+.popular-course-container:hover {
+  text-shadow: 3px 3px 5px #909090;
+  transition: 0.3s;
 }
 
 .popular-course-name {
@@ -77,6 +82,7 @@
 
 .popular-course-details {
   display: block;
+  line-height: 1.5;
 }
 
 .popular-course-ins {
@@ -85,29 +91,30 @@
 
 .tag-container {
   cursor: default;
-  margin-top: 50px;
+  margin-top: 4.5%;
   /* height: 60px; */
-  padding: 20px;
+  padding: 10px;
   /* padding: auto; */
 }
 
 .tag-style {
   display: inline-block;
   margin: 10px;
-  padding: 12px 15px;
+  padding: 11px 15px;
   line-height: 1;
   font-size: 1rem;
   background-color: #012f62;
   color: #ffffff;
   border-radius: 22px;
+  border: 1px solid #dcdcdc;
   transition: 0.3s;
 }
 
 .tag-style:hover {
   box-shadow: 0 0 10px #417dc1;
-  padding: 12px 15px;
+  padding: 11px 15px;
   line-height: 1;
-  border: none;
+  border: 1px solid #012f62;
   /* font-size: 1.5rem; */
   transition: 0.3s;
 }
@@ -116,4 +123,24 @@
 .main-footer {
   height: 150px;
   background-color: #6e7693;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.link-container {
+  width: 50%;
+  height: 50%;
+  left: 50%;
+  margin: 0 auto;
+}
+
+.footer-link {
+  /* padding: 10px 17px; */
+  margin: auto;
+  color: #ffffff;
+}
+
+.footer-link:hover {
+  color: #012f62;
+  text-decoration: none;
 }
