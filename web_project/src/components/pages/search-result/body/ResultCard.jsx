@@ -10,15 +10,27 @@ function DetailButton(props) {
 // TODO : change to minus sign of the detailed button when expanding the drop down menu. 
 // TODO : add the disable props rendered as grey 
 
-
+  const [isActive, setActive] = React.useState(false);
   return (
     <Accordion.Toggle
-      className='search-result-detail-button'
+      className={
+        "search-result-detail-button" + (props.disable
+          ? " disable"
+          : "")+ (isActive
+          ? " active"
+          : "")
+      }
       as={Button}
       variant='none'
-      disable
+      onClick={()=>{
+        setActive(!isActive);
+      }}
       eventKey={props.eventKey}>
-      <i className='search-result-detail-button-icon fas fa-plus'></i>
+      {(isActive && !props.disable) ? (
+        <i className='search-result-detail-button-icon fas fa-minus'></i>
+      ) : (
+        <i className='search-result-detail-button-icon fas fa-plus'></i>
+      )}
     </Accordion.Toggle>
   );
 }
