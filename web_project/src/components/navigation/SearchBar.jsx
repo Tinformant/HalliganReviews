@@ -41,13 +41,13 @@ export default function SearchBar(props) {
   }
 
   function clearContent(event) {
+    document.getElementById("search-bar").focus();
     setAttributes((prev) => ({
       ...prev,
       queryStr: "",
       showCancelButton: "hidden",
+      showDropDown: false,
     }));
-
-    document.getElementById("search-bar").focus();
   }
 
   const history = useHistory();
