@@ -23,12 +23,14 @@
 
 .search-filter-item-tag {
     cursor: pointer;
+    /* font-size: 0.9rem; */
     margin: 0px 5px;
-    border-radius: 30px;
-    border: 1px solid #012f62;
-    box-shadow: 0 0 4px #6e7693;
-    color: #012f62;
     padding: 3px 15px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 2px #6e7693;
+    border: 1px solid #c6c6c6;
+    color: #c6c6c6;
+    background-color: #ffffff;
 }
 
 .search-filter-item-tag:hover {
@@ -37,11 +39,20 @@
     color: #ffffff;
 }
 
-.search-filter-item-tag:active {
+.search-filter-item-tag.active {
     border: 1px solid #012f62;
     background-color: #012f62;
     color: #ffffff;
 }
+
+.search-filter-item-tag.active:hover {
+    border: 1px solid #6e7693;
+    background-color: #6e7693;
+    color: #ffffff;
+}
+
+
+
 
 
 

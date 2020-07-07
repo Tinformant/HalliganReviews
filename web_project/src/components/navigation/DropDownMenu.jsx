@@ -28,9 +28,9 @@ const DropDownItem = (props) => {
     number,
     subnumber,
     title,
-    semester,
-    year,
   } = props.data;
+    
+  const { semester, year } = props.data.availOption[0];
 
   return (
     <a
@@ -71,13 +71,10 @@ const DropDownMenu = (props) => {
     <div
       ref={wrapperRef}
       className='search-drop-down-menu'
-      onClick={(e) => {
-        console.log("load");
-      }}>
+      >
       <DropDownItem
         isText
         candidate={props.candidate}
-        onUpdate={props.onUpdate}
         attributes={props.attributes}
         setAttributes={props.setAttributes}
       />
@@ -86,7 +83,6 @@ const DropDownMenu = (props) => {
           <DropDownItem
             key={i}
             data={x}
-            onUpdate={props.onUpdate}
             attributes={props.attributes}
             setAttributes={props.setAttributes}
           />
