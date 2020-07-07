@@ -10,15 +10,27 @@ function DetailButton(props) {
 // TODO : change to minus sign of the detailed button when expanding the drop down menu. 
 // TODO : add the disable props rendered as grey 
 
-
+  const [isActive, setActive] = React.useState(false);
   return (
     <Accordion.Toggle
-      className='search-result-detail-button'
+      className={
+        "search-result-detail-button" + (props.disable
+          ? " disable"
+          : "")+ (isActive
+          ? " active"
+          : "")
+      }
       as={Button}
       variant='none'
-      disable
+      onClick={()=>{
+        setActive(!isActive);
+      }}
       eventKey={props.eventKey}>
-      <i className='search-result-detail-button-icon fas fa-plus'></i>
+      {(isActive && !props.disable) ? (
+        <i className='search-result-detail-button-icon fas fa-minus'></i>
+      ) : (
+        <i className='search-result-detail-button-icon fas fa-plus'></i>
+      )}
     </Accordion.Toggle>
   );
 }
@@ -34,19 +46,27 @@ const ResultLink = (props) => {
       }>
       <Row noGutters className='search-body-result-content-item-row'>
         <Col sm={2} className='search-body-result-content-item-first'>
-          Year: {year}
+          <span className='search-body-result-content-item-header'>Year: </span>
+          <span className='search-body-result-content-item-content'>
+            {year}
+          </span>
         </Col>
         <Col sm={3} className='search-body-result-content-item'>
-          Semester: {semester}
+          <span className='search-body-result-content-item-header'>Semester: </span>
+          <span className='search-body-result-content-item-content'>
+            {semester}
+          </span>
         </Col>
         <Col sm={5} className='search-body-result-content-item'>
-          Instructor: {instructor}
+          <span className='search-body-result-content-item-header'>Instructor: </span>
+          <span className='search-body-result-content-item-content'>
+            {instructor}
+          </span>
         </Col>
         <Col sm={2} className='search-body-result-content-item-last'>
           Reviews: {reviews}
         </Col>
       </Row>
-
     </Link>
   );
 };
@@ -66,8 +86,11 @@ const ResultCard = (props) => {
         <hr className='search-body-result-item-hr' />
       </div>
       <div className='search-body-result-first-container'>
-        {props.data.availOption.length > 1 ? <DetailButton eventKey='0' />
-        : <DetailButton disable eventKey='0' />}
+        {props.data.availOption.length > 1 ? (
+          <DetailButton eventKey='0' />
+        ) : (
+          <DetailButton disable eventKey='0' />
+        )}
         <ResultLink
           isFirst
           department={department}
