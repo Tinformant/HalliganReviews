@@ -1,6 +1,9 @@
 
 # TODO List:
 
+from search dropdown to the review pages
+
+
 ## Functional
 
 * marking required field in red in the questionaire 
