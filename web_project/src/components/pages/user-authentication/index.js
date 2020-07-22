@@ -2,7 +2,7 @@ import React from "react";
 import { Switch, Route, useRouteMatch, useParams } from "react-router-dom";
 
 import UserForm from "./UserForm";
-import bgPicture from "./picture/tufts-logo1.jpg";
+// import bgPicture from "./picture/tufts-logo1.jpg";
 
 
 import "./styles.css";
