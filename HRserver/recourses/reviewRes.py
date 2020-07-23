@@ -30,6 +30,7 @@ class reviewRes(Resource):
                         )
 
     def get(self):
+        """get is ..."""
         data = reviewRes.parser.parse_args()
         course = CourseModel.find_specific(data['department'], data['number'], data['year'], data['semester'])
         wholeCourse = CourseModel.find_whole_course(data['department'], data['number'], data['year'], data['semester'])

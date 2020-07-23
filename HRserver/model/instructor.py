@@ -1,4 +1,4 @@
-from code.db import instructors
+from db import instructors
 from bson.objectid import ObjectId
 
 
@@ -15,5 +15,4 @@ class InstructorModel:
     def find_by_id(cls, idStr):
         instructor = instructors.find_one({"_id": ObjectId(idStr)})
         if instructor:
-            return {'name': instructor['name'], 'description': instructor['description'], 'distribution': instructor['distribution'],
-                            'average': instructor['average'], 'detail': instructor['detail']}
+            return {"instructorData": instructor["instructorData"]}

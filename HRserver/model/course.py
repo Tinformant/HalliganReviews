@@ -1,5 +1,5 @@
 from flask import jsonify
-from code.db import courses
+from db import courses
 import re
 
 
@@ -32,15 +32,13 @@ class CourseModel:
     @classmethod
     def find_specific(cls, department, number, year, semester):
         course = courses.find_one({"department": re.compile(department, re.IGNORECASE), "number": number, "year": year, "semester": re.compile(semester, re.IGNORECASE)})
-        return {'name': course['name'], 'description': course['description'],
-                        'distribution': course['distribution'], 'average': course['average']}
+        return {"courseData": course["courseData"]}
 
     @classmethod
     def find_whole_course(cls, department, number, year, semester):
         course = courses.find_one({"department": re.compile(department, re.IGNORECASE), "number": number, "year": year,
                                    "semester": re.compile(semester, re.IGNORECASE)})
-        return {'name': course['name'], 'description': course['description'],
-                'distribution': course['distribution'], 'average': course['average'], 'department': course['department'],
+        return {'name': course['name'], 'department': course['department'],
                 'number': course['number'], 'subnumber': course['subnumber'], 'instructor': course['instructor'],
                 'semester': course['semester'], 'year': course['year']
                 }
