@@ -14,5 +14,5 @@ class searchRes(Resource):
         data = searchRes.parser.parse_args()
         courses = CourseModel.search_res(data['name'])
         if courses:
-            return courses
+            return courses, 200
         return {'message': 'Course not found'}, 404

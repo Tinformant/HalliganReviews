@@ -1,4 +1,4 @@
-from db import comments
+from db import comments, courses
 from bson.objectid import ObjectId
 from model.course import CourseModel
 
@@ -29,3 +29,22 @@ class CommentModel:
                                   'instructorOverall': x['instructorAll'], 'assessment': x['assessment'],
                                   'text': x['text']})
                 return {'result': container}
+
+    def save_to_db(self):
+        comment = {
+            "username": self.username,
+            "identity": self.identity,
+            "date": self.date,
+            "grade": self.grade,
+            "workload": self.workload,
+            "courseAll": self.courseAll,
+            "instructorAll": self.instructorAll,
+            "assessment": self.assessment,
+            "text": self.text,
+            "course": ObjectId(self.course)
+        }
+        comments.insert_one(comment)
+
+    def update_course(self):
+        courses.update_one({"_id": ObjectId(self.course)}, {"$push": {"comments": ObjectId(self.course)}})
+
