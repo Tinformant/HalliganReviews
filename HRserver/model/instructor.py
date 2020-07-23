@@ -1,4 +1,5 @@
-from code.db import instructors
+# from code.db import instructors
+from db import instructors
 from bson.objectid import ObjectId
 
 

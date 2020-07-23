@@ -1,4 +1,5 @@
-from code.db import comments
+# from code.db import comments
+from db import comments
 from bson.objectid import ObjectId
 from model.course import CourseModel
 

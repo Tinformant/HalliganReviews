@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_restful import Api
-from resourses.searchRes import searchRes
-from resourses.reviewRes import reviewRes
+from resources.searchRes import searchRes
+from resources.reviewRes import reviewRes
 
 app = Flask(__name__)
 api = Api(app)

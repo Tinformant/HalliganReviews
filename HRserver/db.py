@@ -16,9 +16,9 @@ comment2 = {"username": "Jack", "identity": "grad", "date": "2019-6-7", "grade":
 comment3 = {"username": "Jack", "identity": "grad", "date": "2019-6-7", "grade": "A", "workload": "huge", "courseAll": "courseOverall", "instructorAll": "blabla", "assessment": "1 quiz", "text": "blabla", "course": ""}
 
 instructor1 = {"name": "Jeff", "description": "blabla", "average": 3.3, "detail": "he is a good pro", "courseids": []}
-courses.update_one({"instructor": "Jeff"}, {"$push": {"comments": ObjectId('5f06d43b853ba1e4ad2fa81d')}})
+# courses.update_one({"instructor": "Jeff"}, {"$push": {"comments": ObjectId('5f06d43b853ba1e4ad2fa81d')}})
 # courses.update_one({"instructor": "Richard"}, {"$push": {"comments": ObjectId('5f06d43c853ba1e4ad2fa81e')}})
-courses.update_one({"instructor": "Jeff"}, {"$push": {"instructorids": ObjectId('5f06d29179ce16dd3efefffa')}})
+# courses.update_one({"instructor": "Jeff"}, {"$push": {"instructorids": ObjectId('5f06d29179ce16dd3efefffa')}})
 # comments.update_one({"_id": ObjectId('5f06d29179ce16dd3efefff9')}, {"$set": {"course": ObjectId('5f06d1f6c206034c62fc1006')}})
 # comments.update_one({"_id": ObjectId('5f06d43b853ba1e4ad2fa81d')}, {"$set": {"course": ObjectId('5f06d1f6c206034c62fc1007')}})
 # comments.update_one({"_id": ObjectId('5f06d43c853ba1e4ad2fa81e')}, {"$set": {"course": ObjectId('5f06d1f6c206034c62fc1008')}})

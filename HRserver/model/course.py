@@ -1,5 +1,6 @@
 from flask import jsonify
-from code.db import courses
+# from code.db import courses
+from db import courses
 import re
 
 
