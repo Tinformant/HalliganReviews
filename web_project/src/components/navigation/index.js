@@ -1,21 +1,22 @@
 import React from "react";
-import { Navbar, Nav } from "react-bootstrap";
+// import { Navbar, Nav } from "react-bootstrap";
+import { Navbar } from "react-bootstrap";
 import SearchBar from "./SearchBar";
 import './styles.css';
 
 
-function UserOption() {
-  return (
-    <Nav className="ml-auto">
-      <Nav.Link href="/user/login" className="log-in-link navbar-link">
-        LOG IN
-      </Nav.Link>
-      <Nav.Link href="/user/signup" className="sign-up-link navbar-link">
-        SIGN UP
-      </Nav.Link>
-    </Nav>
-  );
-}
+// function UserOption() {
+//   return (
+//     <Nav className="ml-auto">
+//       <Nav.Link href="/user/login" className="log-in-link navbar-link">
+//         LOG IN
+//       </Nav.Link>
+//       <Nav.Link href="/user/signup" className="sign-up-link navbar-link">
+//         SIGN UP
+//       </Nav.Link>
+//     </Nav>
+//   );
+// }
 
 function NavigationBar(props) {
   return (
@@ -24,7 +25,7 @@ function NavigationBar(props) {
       <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
       <Navbar.Collapse id="responsive-navbar-nav">
         <SearchBar onUpdate={props.onUpdate} />
-        <UserOption/>
+        {/* <UserOption/> */}
       </Navbar.Collapse>
     </Navbar>
   );
