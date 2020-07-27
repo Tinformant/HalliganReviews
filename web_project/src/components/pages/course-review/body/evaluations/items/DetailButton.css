@@ -18,3 +18,10 @@
   padding: 0;
   margin: 0;
 }
+
+.rev-detail-button.disable {
+  color: #e6e6e6;
+}
+.rev-detail-button.disable:hover {
+  color: #e6e6e6;
+}
