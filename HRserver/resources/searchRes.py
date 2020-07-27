@@ -10,9 +10,8 @@ class searchRes(Resource):
                         help="What's the name of the class?"
                         )
 
-    def get(self):
-        data = searchRes.parser.parse_args()
-        courses = CourseModel.search_res(data['name'])
+    def get(self, name):
+        courses = CourseModel.search_res(name)
         if courses:
-            return courses, 200
+            return courses
         return {'message': 'Course not found'}, 404

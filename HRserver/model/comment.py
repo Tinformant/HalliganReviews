@@ -30,6 +30,10 @@ class CommentModel:
                                   'text': x['text']})
                 return {'result': container}
 
+    @classmethod
+    def update_course_db(cls):
+        
+
     def save_to_db(self):
         comment = {
             "username": self.username,
