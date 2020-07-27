@@ -18,8 +18,8 @@ class CommentModel:
         self.course = courseid
 
     @classmethod
-    def find_comments(cls, department, number, year, semester):
-        idStr = CourseModel.find_id(department, number, year, semester)
+    def find_comments(cls, department, number, subnumber, year, semester):
+        idStr = CourseModel.find_id(department, number, subnumber, year, semester)
         cursor = comments.find({'course': ObjectId(idStr)})
         container = []
         if cursor:
@@ -28,11 +28,11 @@ class CommentModel:
                                   'grade': x['grade'], 'workload': x['workload'], 'courseOverall': x['courseAll'],
                                   'instructorOverall': x['instructorAll'], 'assessment': x['assessment'],
                                   'text': x['text']})
-                return {'result': container}
+                return {'Data': container}
 
     @classmethod
     def update_course_db(cls):
-        
+        pass
 
     def save_to_db(self):
         comment = {

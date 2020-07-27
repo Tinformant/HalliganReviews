@@ -42,6 +42,7 @@ class reviewRes(Resource):
 
 
     def post(self):
+        # todo: security
         data = request.get_json()
         courseid = CourseModel.find_id(data['department'], data['number'], data['year'], data['semester'])
         comment = CommentModel(data['username'], data['identity'], data['date'], data['grade'], data['course']['workload'],

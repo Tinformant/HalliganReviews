@@ -30,13 +30,13 @@ class CourseModel:
                 return jsonify({'result': container})
 
     @classmethod
-    def find_specific(cls, department, number, year, semester):
-        course = courses.find_one({"department": re.compile(department, re.IGNORECASE), "number": number, "year": year, "semester": re.compile(semester, re.IGNORECASE)})
-        return {"courseData": course["courseData"]}
+    def find_specific(cls, department, number, subnumber, year, semester):
+        course = courses.find_one({"department": re.compile(department, re.IGNORECASE), "number": number, "subnumber": subnumber, "year": year, "semester": re.compile(semester, re.IGNORECASE)})
+        return {"Data": course["courseData"]}
 
     @classmethod
-    def find_whole_course(cls, department, number, year, semester):
-        course = courses.find_one({"department": re.compile(department, re.IGNORECASE), "number": number, "year": year,
+    def find_whole_course(cls, department, number, subnumber,  year, semester):
+        course = courses.find_one({"department": re.compile(department, re.IGNORECASE), "number": number, "subnumber": subnumber, "year": year,
                                    "semester": re.compile(semester, re.IGNORECASE)})
         return {'name': course['name'], 'department': course['department'],
                 'number': course['number'], 'subnumber': course['subnumber'], 'instructor': course['instructor'],
@@ -44,13 +44,13 @@ class CourseModel:
                 }
 
     @classmethod
-    def find_id(cls, department, number, year, semester):
-        course = courses.find_one({"department": re.compile(department, re.IGNORECASE), "number": number, "year": year, "semester": re.compile(semester, re.IGNORECASE)})
+    def find_id(cls, department, number, subnumber, year, semester):
+        course = courses.find_one({"department": re.compile(department, re.IGNORECASE), "number": number, "subnumber": subnumber, "year": year, "semester": re.compile(semester, re.IGNORECASE)})
         return course['_id']
 
     @classmethod
-    def find_instructor(cls, department, number, year, semester):
-        course = courses.find_one({"department": re.compile(department, re.IGNORECASE), "number": number, "year": year,
+    def find_instructor(cls, department, number, subnumber, year, semester):
+        course = courses.find_one({"department": re.compile(department, re.IGNORECASE), "number": number, "subnumber": subnumber, "year": year,
                                    "semester": re.compile(semester, re.IGNORECASE)})
         return course['instructorids']
 

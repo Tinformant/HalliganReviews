@@ -15,4 +15,4 @@ class InstructorModel:
     def find_by_id(cls, idStr):
         instructor = instructors.find_one({"_id": ObjectId(idStr)})
         if instructor:
-            return {"instructorData": instructor["instructorData"]}
+            return {"Data": instructor["instructorData"]}
