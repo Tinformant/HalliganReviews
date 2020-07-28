@@ -2,18 +2,18 @@ import React from "react";
 import "./QuerySheet.css";
 import { Form, Col, Row } from "react-bootstrap";
 
-function range(start, end) {
-  var ans = [];
-  ans.push("--- Year ---");
-  for (let i = end; i >= start; i--) {
-    ans.push(i);
-  }
-  return ans;
-}
+// function range(start, end) {
+//   var ans = [];
+//   ans.push("--- Year ---");
+//   for (let i = end; i >= start; i--) {
+//     ans.push(i);
+//   }
+//   return ans;
+// }
 
-function generateOption(value, index) {
-  return <option key={index}>{value}</option>;
-}
+// function generateOption(value, index) {
+//   return <option key={index}>{value}</option>;
+// }
 
 function BasicInfo(props) {
   // const date = new Date();

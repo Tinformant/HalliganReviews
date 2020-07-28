@@ -64,12 +64,12 @@ const instructorData = [
 const commentData = [
   {
     username: "Galadriel",
-    identity: "graduate",
-    date: "05-19-2021",
+    identity: "Graduate",
+    date: "May-19-2021",
     grade: "A-",
-    workLoad: 10,
-    courseOverall: 3,
-    instructorOverall: 4,
+    workLoad: "10",
+    courseOverall: "3",
+    instructorOverall: "4",
     assessment: "Five assigments + blablabla",
     text: "Dolore magna aliqua.A scelerisque purus semper eget duis. ",
   },

@@ -9,8 +9,10 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "animate.css": "^4.1.0",
+    "axios": "^0.19.2",
     "boostrap": "^2.0.0",
     "bootstrap": "^4.5.0",
+    "cors": "^2.8.5",
     "mime": "^2.4.6",
     "minimatch": "^3.0.4",
     "pinkie-promise": "^2.0.1",
@@ -32,6 +34,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "proxy": "http://localhost:5000",
   "eslintConfig": {
     "extends": "react-app"
   },

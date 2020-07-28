@@ -7,6 +7,29 @@
   border-radius: 10px;
   /* border: 1px solid #012f62; */
   box-shadow: 0 0 10px #012f62;
+  background-color: #ffffff;
+  z-index: 100;
+}
+
+.user-authentication-page-background {
+  /* background-image: url("./picture/tufts-logo.jpg"); */
+  background-image: url("./picture/tufts-logo1.jpg");
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+  /* Resize the background image to cover the entire container */
+  background-color: #cccccc;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+.user-authentication-page-background-img {
+  position: absolute;
+  height: 100vh;
+  z-index: 0;
 }
 
 /* navbar */
