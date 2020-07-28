@@ -21,9 +21,9 @@ pipeline {
         // }
         stage('Deliver') { 
             steps {
-                sh './scripts/deliver.sh' 
+                sh '${WORKSPACE}/web_project/jenkins/scripts/deliver.sh' 
                 input message: 'Finished using the web site? (Click "Proceed" to continue)' 
-                sh './scripts/kill.sh' 
+                sh '${WORKSPACE}/web_project/jenkins/scripts/kill.sh' 
             }
         }
     }
