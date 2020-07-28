@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'npm --prefix web_project/ install'
+                sh 'cd web_project/ && npm install'
             }
         }
         stage('Test') {
