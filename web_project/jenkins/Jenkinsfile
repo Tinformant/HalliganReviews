@@ -14,11 +14,11 @@ pipeline {
                 sh 'cd web_project/ && npm install'
             }
         }
-        stage('Test') {
-            steps {
-                sh '${WORKSPACE}/web_project/jenkins/scripts/test.sh'
-            }
-        }
+        // stage('Test') {
+        //     steps {
+        //         sh '${WORKSPACE}/web_project/jenkins/scripts/test.sh'
+        //     }
+        // }
         stage('Deliver') { 
             steps {
                 sh './scripts/deliver.sh' 
