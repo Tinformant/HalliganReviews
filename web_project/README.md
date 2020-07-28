@@ -3,6 +3,32 @@
 
 from search dropdown to the review pages
 
+deployment in github
+
+cicd pipeline
+
+docker application 
+
+docker run 
+
+short document on how to run in docker
+
+in different environment
+
+enhancement
+
+authentication 
+
+authorization
+
+username & email address
+
+
+test
+
+cookie based method
+
+
 
 ## Functional
 
