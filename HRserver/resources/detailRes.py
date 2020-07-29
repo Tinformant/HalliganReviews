@@ -39,8 +39,8 @@ class detailRes(Resource):
         course = CourseModel.find_specific(data['department'], data['number'], data['subnumber'], data['year'], data['semester'])
         wholeCourse = CourseModel.find_whole_course(data['department'], data['number'], data['subnumber'], data['year'], data['semester'])
         comments = CommentModel.find_comments(data['department'], data['number'], data['subnumber'], data['year'], data['semester'])
-        if not comments:
-            return jsonify({"message": "Course --> comments not found."}), 404
+        if comments is None:
+            return jsonify({"message": "Course --> comments not found."})
         instructorid = CourseModel.find_instructor(data['department'], data['number'], data['subnumber'], data['year'], data['semester'])
         instructor = InstructorModel.find_by_id(ObjectId(instructorid[0]))
         if course and comments and instructor:
@@ -57,4 +57,4 @@ class detailRes(Resource):
                 "course": course,
                 "instructor": instructor
             })
-        return jsonify({"message": "data not found."}), 404
+        return jsonify({"message": "data not found."})
