@@ -5,6 +5,10 @@ from flask import jsonify
 import math
 
 
+class MyException(Exception):
+    pass
+
+
 class CommentModel:
     def __init__(self, username, identity, date, grade, workload, courseOverall, instructorOverall, material,
                  difficulty, accessible, effectiveness, feedback, assessment, text,
@@ -27,6 +31,7 @@ class CommentModel:
         self.course = courseid
         self.courseSet = [courseOverall, material, workload, difficulty]
         self.instructorSet = [instructorOverall, accessible, effectiveness, feedback]
+
 
     @classmethod
     def find_comments(cls, department, number, subnumber, year, semester):
@@ -91,6 +96,8 @@ class CommentModel:
         total = average * (commentNum - 1) + float(self.courseSet[index])
         average = '%.2f' % (total / commentNum)
         heads = headcount.find_one({"courseid": ObjectId(self.course)})[tag]
+        if commentNum != sum(heads):
+            raise MyException("course and headcount data inconsistency.")
         for i in range(5):
             heads[i] = float('%.2f' % (float(heads[i]) / commentNum))
         courses.update_one({"_id": ObjectId(self.course)}, {
@@ -112,6 +119,8 @@ class CommentModel:
         total = average * (commentNum - 1) + float(self.instructorSet[index])
         average = '%.2f' % (total / commentNum)
         heads = instrHeadcount.find_one({"instructorid": ObjectId(profid)})[tag]
+        if commentNum != sum(heads):
+            raise MyException("instructor and instrHeadcount data inconsistency.")
         for i in range(5):
             heads[i] = float('%.2f' % (float(heads[i]) / commentNum))
         instructors.update_one({"_id": ObjectId(profid)}, {

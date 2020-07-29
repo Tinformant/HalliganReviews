@@ -53,28 +53,29 @@ class reviewRes(Resource):
                                data['comment'], courseid)
 
         comment.save_to_db()
-        comment.update_course_headcount("general", 0)
-        comment.update_course("general", 0)
-        comment.update_course_headcount("material", 1)
-        comment.update_course("material", 1)
-        comment.update_course_headcount("workload", 2)
-        comment.update_course("workload", 2)
-        comment.update_course_headcount("difficulty", 3)
-        comment.update_course("difficulty", 3)
+        try:
+            comment.update_course_headcount("general", 0)
+            comment.update_course("general", 0)
+            comment.update_course_headcount("material", 1)
+            comment.update_course("material", 1)
+            comment.update_course_headcount("workload", 2)
+            comment.update_course("workload", 2)
+            comment.update_course_headcount("difficulty", 3)
+            comment.update_course("difficulty", 3)
 
-        comment.update_instructor_headcount("general", 0)
-        comment.update_instructor("general", 0)
-        comment.update_instructor_headcount("accessible", 1)
-        comment.update_instructor("accessible", 1)
-        comment.update_instructor_headcount("effectiveness", 2)
-        comment.update_instructor("effectiveness", 2)
-        comment.update_instructor_headcount("feedback", 3)
-        comment.update_instructor("feedback", 3)
+            comment.update_instructor_headcount("general", 0)
+            comment.update_instructor("general", 0)
+            comment.update_instructor_headcount("accessible", 1)
+            comment.update_instructor("accessible", 1)
+            comment.update_instructor_headcount("effectiveness", 2)
+            comment.update_instructor("effectiveness", 2)
+            comment.update_instructor_headcount("feedback", 3)
+            comment.update_instructor("feedback", 3)
 
-        return {'message': "Success!"}, 200
+            return {'message': "Success!"}, 200
 
-        # except Exception as e:
-        #     print(e)
-        #     return {'message': "An error occurred while creating the comment."}, 500
+        except Exception as e:
+            print(e)
+            return {'message': "An error occurred while creating the comment."}, 500
 
 
