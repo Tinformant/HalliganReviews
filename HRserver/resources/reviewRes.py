@@ -44,15 +44,37 @@ class reviewRes(Resource):
     def post(self):
         # todo: security
         data = request.get_json()
-        courseid = CourseModel.find_id(data['department'], data['number'], data['year'], data['semester'])
+        courseid = CourseModel.find_id(data['info']['department'], data['info']['number'], data['info']['subnumber'],
+                                       data['info']['year'], data['info']['semester'])
         comment = CommentModel(data['username'], data['identity'], data['date'], data['grade'], data['course']['workload'],
-                              data['course']['overall'], data['instructor']['overall'], data['assessment'], data['comment'],
-                              courseid)
-        try:
-            comment.save_to_db()
-            comment.update_course()
-            return {'message': "Success!"}, 200
-        except:
-            return {'message': "An error occurred while creating the comment."}, 500
+                              data['course']['overall'], data['instructor']['overall'], data['course']['material'],
+                               data['course']['difficulty'], data['instructor']['accessible'],
+                               data['instructor']['effectiveness'], data['instructor']['feedback'], data['assessment'],
+                               data['comment'], courseid)
+
+        comment.save_to_db()
+        comment.update_course_headcount("general", 0)
+        comment.update_course("general", 0)
+        comment.update_course_headcount("material", 1)
+        comment.update_course("material", 1)
+        comment.update_course_headcount("workload", 2)
+        comment.update_course("workload", 2)
+        comment.update_course_headcount("difficulty", 3)
+        comment.update_course("difficulty", 3)
+
+        comment.update_instructor_headcount("general", 0)
+        comment.update_instructor("general", 0)
+        comment.update_instructor_headcount("accessible", 1)
+        comment.update_instructor("accessible", 1)
+        comment.update_instructor_headcount("effectiveness", 2)
+        comment.update_instructor("effectiveness", 2)
+        comment.update_instructor_headcount("feedback", 3)
+        comment.update_instructor("feedback", 3)
+
+        return {'message': "Success!"}, 200
+
+        # except Exception as e:
+        #     print(e)
+        #     return {'message': "An error occurred while creating the comment."}, 500
 
 

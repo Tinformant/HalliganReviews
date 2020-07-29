@@ -7,13 +7,9 @@ db = cluster["HRdb"]
 courses = db["courses"]
 instructors = db["instructors"]
 comments = db["comments"]
-post1 = {"name": "Parallel Computing", "department": "COMP", "number": 112, "subnumber": 1, "instructor": "Tom", "semester": "Fall", "year": "2020", "comments": [], "instructorids": []}
-post2 = {"name": "Parallel Computing", "department": "EE", "number": 150, "subnumber": 1, "instructor": "Jeff", "semester": "Spring", "year": "2020","comments": [], "instructorids": []}
-post3 = {"name": "Parallel Computing", "department": "COMP", "number": 112, "subnumber": 1, "instructor": "Richard", "semester": "Fall", "year": "2019", "comments": [], "instructorids": []}
-post4 = {"name": "Barfdsafdsa", "department": "ME", "number": 213, "subnumber": 1, "instructor": "Reee", "semester": "Fall", "year": "2019"}
-comment1 = {"username": "Jack", "identity": "grad", "date": "2019-6-7", "grade": "A", "workload": "huge", "courseAll": "courseOverall", "instructorAll": "blabla", "assessment": "1 quiz", "text": "blabla", "course": ""}
-comment2 = {"username": "Jack", "identity": "grad", "date": "2019-6-7", "grade": "A", "workload": "huge", "courseAll": "courseOverall", "instructorAll": "blabla", "assessment": "1 quiz", "text": "blabla", "course": ""}
-comment3 = {"username": "Jack", "identity": "grad", "date": "2019-6-7", "grade": "A", "workload": "huge", "courseAll": "courseOverall", "instructorAll": "blabla", "assessment": "1 quiz", "text": "blabla", "course": ""}
+headcount = db["headcount"]
+instrHeadcount = db["instrHeadcount"]
+
 
 # instructor1 = {"name": "Jeff", "description": "blabla", "average": 3.3, "detail": "he is a good pro", "courseids": []}
 # courses.update_one({"instructor": "Jeff"}, {"$push": {"comments": ObjectId('5f06d43b853ba1e4ad2fa81d')}})

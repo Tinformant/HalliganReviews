@@ -4,15 +4,13 @@ import re
 
 
 class CourseModel:
-    def __init__(self, name, description, department, number, subnumber, distribution, average, commentids, instructorids, instructor, semester,
+    def __init__(self, name, description, department, number, subnumber, commentids, instructorids, instructor, semester,
                  year):
         self.name = name
         self.department = department
         self.number = number
         self.subnumber = subnumber
         self.description = description
-        self.distribution = distribution
-        self.average = average
         self.instructorName = instructor
         self.instructorids = instructorids
         self.semester = semester
@@ -46,7 +44,9 @@ class CourseModel:
     @classmethod
     def find_id(cls, department, number, subnumber, year, semester):
         course = courses.find_one({"department": re.compile(department, re.IGNORECASE), "number": number, "subnumber": subnumber, "year": year, "semester": re.compile(semester, re.IGNORECASE)})
-        return course['_id']
+        if course:
+            return course['_id']
+        return None
 
     @classmethod
     def find_instructor(cls, department, number, subnumber, year, semester):
