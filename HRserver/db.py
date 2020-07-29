@@ -10,7 +10,7 @@ comments = db["comments"]
 headcount = db["headcount"]
 instrHeadcount = db["instrHeadcount"]
 
-
+comments.delete_many({})
 # instructor1 = {"name": "Jeff", "description": "blabla", "average": 3.3, "detail": "he is a good pro", "courseids": []}
 # courses.update_one({"instructor": "Jeff"}, {"$push": {"comments": ObjectId('5f06d43b853ba1e4ad2fa81d')}})
 # # courses.update_one({"instructor": "Richard"}, {"$push": {"comments": ObjectId('5f06d43c853ba1e4ad2fa81e')}})

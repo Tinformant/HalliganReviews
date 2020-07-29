@@ -63,6 +63,8 @@ class CommentModel:
         }
         self.uuid = ObjectId(comments.insert(comment))
         courses.update_one({"_id": ObjectId(self.course)}, {"$push": {"comments": self.uuid}})
+        profid = courses.find_one({"_id": ObjectId(self.course)})["instructorids"][0]
+        instructors.update_one({"_id": profid}, {"$push": {"comments": self.uuid}})
 
     def update_course_headcount(self, tag, index):
         def setworkload(work):
@@ -90,7 +92,7 @@ class CommentModel:
         average = '%.2f' % (total / commentNum)
         heads = headcount.find_one({"courseid": ObjectId(self.course)})[tag]
         for i in range(5):
-            heads[i] = '%.2f' % (float(heads[i]) / commentNum)
+            heads[i] = float('%.2f' % (float(heads[i]) / commentNum))
         courses.update_one({"_id": ObjectId(self.course)}, {
             "$set": {"courseData." + str(index) + ".distribution": heads,
                      "courseData." + str(index) + ".average": str(average)}})
@@ -111,8 +113,9 @@ class CommentModel:
         average = '%.2f' % (total / commentNum)
         heads = instrHeadcount.find_one({"instructorid": ObjectId(profid)})[tag]
         for i in range(5):
-            heads[i] = '%.2f' % (float(heads[i]) / commentNum)
+            heads[i] = float('%.2f' % (float(heads[i]) / commentNum))
         instructors.update_one({"_id": ObjectId(profid)}, {
             "$set": {
                 "instructorData." + str(index) + ".distribution": heads,
                 "instructorData." + str(index) + ".average": str(average)}})
+
