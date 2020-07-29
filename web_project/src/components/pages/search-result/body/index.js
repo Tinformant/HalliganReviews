@@ -55,7 +55,7 @@ const SearchBody = (props) => {
   });
 
   const data = getFilteredResult(props.data, filter);
-  console.log(data);
+  console.log("data = ", data);
 
   return (
     <div className='search-body'>

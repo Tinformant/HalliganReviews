@@ -36,7 +36,21 @@ const getSearchResponse = (query, response) => {
   response["result"] = result;
   response["status"] = true;
 };
-  
+ 
+// const getSearchResponse = async (cmd, response) => {
+//   let res = await fetch("/courses/parallel computing")
+//     .then((res) => {
+//       return res.json();
+//     })
+//     .then((data) => {
+//       return data;
+//     });
+//   console.log(res);
+//   response["result"] = res["result"]
+//   // setItems({ ...items, h2: response.result[0].department });
+// };
+
+
 
 const getDataFromBackEnd = (cmd, response, timeout) => {
   if (cmd.type === "data") {

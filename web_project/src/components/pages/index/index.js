@@ -1,22 +1,23 @@
 import React from "react";
 import NavigationBar from "../../navigation";
 import Body from "./Body";
-import { useState } from "react";
-import {Button} from "react-bootstrap";
+// import { useState } from "react";
+// import {Button} from "react-bootstrap";
 
 
 
 function IndexPage() {
   //   const [error, setError] = useState(null);
   //   const [isLoaded, setIsLoaded] = useState(false);
-  const [items, setItems] = useState({h1: "None", h2: "no"});
+  // const [items, setItems] = useState({h1: "None", h2: "no"});
 
-  const data = {
-    department: "EE",
-    number: "0150",
-    semester: "Spring",
-    year: "2020",
-  };
+  // const data = {
+  //   department: "EE",
+  //   number: "0150",
+  //   subnumber: "01",
+  //   semester: "Spring",
+  //   year: "2020"
+  // };
 
   // const data = { "name": "parallel computing" };
 
@@ -24,7 +25,7 @@ function IndexPage() {
     <div>
       <NavigationBar />
       <Body />
-      <h1>{items.h1}</h1>
+      {/* <h1>{items.h1}</h1>
       <Button
         onClick={async () => {
           let response = await fetch("/detail", {
@@ -58,7 +59,7 @@ function IndexPage() {
           console.log(response);
           setItems({...items, h2: response.result[0].department});
         }}
-      >Change no</Button>
+      >Change no</Button> */}
     </div>
   );
 }

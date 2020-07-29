@@ -116,6 +116,20 @@ const fakeReviewData = [
   },
   {
     info: {
+      title: "Parallel Computing",
+      department: "EE",
+      number: "0150",
+      subnumber: "01",
+      instructor: "J. Foster",
+      semester: "Spring",
+      year: "2020",
+    },
+    comment: commentData,
+    course: courseData,
+    instructor: instructorData,
+  },
+  {
+    info: {
       title: "Introduction to Algorithm and its Happy Companions",
       department: "COMP",
       number: "0160",

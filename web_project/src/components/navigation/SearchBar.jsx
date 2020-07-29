@@ -7,7 +7,7 @@ import DropDownMenu from "./DropDownMenu";
 
 import "./SearchBar.css";
 
-import serverBackEnd from "../../fakeBackEnd";
+// import serverBackEnd from "../../fakeBackEnd";
 
 
 export default function SearchBar(props) {
@@ -19,6 +19,34 @@ export default function SearchBar(props) {
 
   const [searchCandidate, setSearchCandidate] = React.useState([]);
 
+  const [error, setError] = React.useState(null);
+  const [isLoaded, setIsLoaded] = React.useState(false);
+  // const [data, setData] = React.useState([]);
+  
+  console.log("Search dropdown message: error", error);
+  console.log("Search dropdown message: isLoad", isLoaded);
+
+  React.useEffect(() => {
+    if (attributes.queryStr) 
+    fetch(`/courses/${attributes.queryStr}`)
+      .then(res => res.json())
+      .then(
+        (result) => {
+          setIsLoaded(true);
+          console.log(result);
+          // setData(result.result);
+          setSearchCandidate(result.result);
+        },
+        // Note: it's important to handle errors here
+        // instead of a catch() block so that we don't swallow
+        // exceptions from actual bugs in components.
+        (error) => {
+          setIsLoaded(true);
+          setError(error);
+        }
+      )
+  }, [attributes.queryStr]);
+
   function handleSearchText(event) {
     var value = event.target.value;
     setAttributes((prev) => ({
@@ -28,16 +56,13 @@ export default function SearchBar(props) {
       showCancelButton: value.length > 0 ? "visible" : "hidden",
     }));
 
-    const response = {};
-    const cmdSearch = {
-      type: "search",
-      query: { queryString: value, order: "relevant" },
-    };
+    // const cmdSearch = {
+    //   type: "search",
+    //   query: { queryString: value, order: "relevant" },
+    // };
 
-    serverBackEnd.get(cmdSearch, response);
-
-
-    setSearchCandidate(response.result);
+    // const response = {};
+    // serverBackEnd.get(cmdSearch, response);
   }
 
   function clearContent(event) {
@@ -80,7 +105,6 @@ export default function SearchBar(props) {
 
   React.useEffect(() => {
     document.addEventListener("keydown", escFunction, false);
-
     return () => {
       document.removeEventListener("keydown", escFunction, false);
     };
