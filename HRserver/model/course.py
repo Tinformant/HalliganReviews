@@ -4,7 +4,8 @@ import re
 
 
 class CourseModel:
-    def __init__(self, name, description, department, number, subnumber, commentids, instructorids, instructor, semester,
+    def __init__(self, name, description, department, number, subnumber, commentids, instructorids, instructor,
+                 semester,
                  year):
         self.name = name
         self.department = department
@@ -29,13 +30,17 @@ class CourseModel:
 
     @classmethod
     def find_specific(cls, department, number, subnumber, year, semester):
-        course = courses.find_one({"department": re.compile(department, re.IGNORECASE), "number": number, "subnumber": subnumber, "year": year, "semester": re.compile(semester, re.IGNORECASE)})
+        course = courses.find_one(
+            {"department": re.compile(department, re.IGNORECASE), "number": number, "subnumber": subnumber,
+             "year": year, "semester": re.compile(semester, re.IGNORECASE)})
         return {"Data": course["courseData"]}
 
     @classmethod
-    def find_whole_course(cls, department, number, subnumber,  year, semester):
-        course = courses.find_one({"department": re.compile(department, re.IGNORECASE), "number": number, "subnumber": subnumber, "year": year,
-                                   "semester": re.compile(semester, re.IGNORECASE)})
+    def find_whole_course(cls, department, number, subnumber, year, semester):
+        course = courses.find_one(
+            {"department": re.compile(department, re.IGNORECASE), "number": number, "subnumber": subnumber,
+             "year": year,
+             "semester": re.compile(semester, re.IGNORECASE)})
         return {'name': course['name'], 'department': course['department'],
                 'number': course['number'], 'subnumber': course['subnumber'], 'instructor': course['instructor'],
                 'semester': course['semester'], 'year': course['year']
@@ -43,22 +48,29 @@ class CourseModel:
 
     @classmethod
     def find_id(cls, department, number, subnumber, year, semester):
-        course = courses.find_one({"department": re.compile(department, re.IGNORECASE), "number": number, "subnumber": subnumber, "year": year, "semester": re.compile(semester, re.IGNORECASE)})
+        course = courses.find_one(
+            {"department": re.compile(department, re.IGNORECASE), "number": number, "subnumber": subnumber,
+             "year": year, "semester": re.compile(semester, re.IGNORECASE)})
         if course:
             return course['_id']
         return None
 
     @classmethod
     def find_instructor(cls, department, number, subnumber, year, semester):
-        course = courses.find_one({"department": re.compile(department, re.IGNORECASE), "number": number, "subnumber": subnumber, "year": year,
-                                   "semester": re.compile(semester, re.IGNORECASE)})
+        course = courses.find_one(
+            {"department": re.compile(department, re.IGNORECASE), "number": number, "subnumber": subnumber,
+             "year": year,
+             "semester": re.compile(semester, re.IGNORECASE)})
         return course['instructorids']
 
     @classmethod
     def search_res(cls, name):
         pipeline = [
             {
-                "$match": {"name": re.compile(name, re.IGNORECASE)}
+                "$match": {"$text": {"$search": name}}
+            },
+            {
+                "$sort": {"score": {"$meta": "textScore"}}
             },
             {
                 "$group": {
