@@ -19,10 +19,10 @@ function Course(props) {
   };
 
   const generalData = props.data.filter((x)=>{
-    return (x.name !== "Work Load" && x.name !== "Difficulty");
+    return (x.name !== "WorkLoad" && x.name !== "Difficulty");
   });
   const workLoadData = props.data.filter((x)=>{
-    return (x.name === "Work Load");
+    return (x.name === "WorkLoad");
   });
   const difficultyData = props.data.filter((x)=>{
     return (x.name === "Difficulty");

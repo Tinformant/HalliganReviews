@@ -35,13 +35,13 @@ function Reveiw(props) {
       </Nav>
       <Tab.Content>
         <Tab.Pane eventKey="course">
-          <Course data={props.data.course} />
+          <Course data={props.data.course.Data} />
         </Tab.Pane>
         <Tab.Pane eventKey="instructor">
-          <Instructor data={props.data.instructor} />
+          <Instructor data={props.data.instructor.Data} />
         </Tab.Pane>
         <Tab.Pane eventKey="comment">
-          <Comment data={props.data.comment} />
+          <Comment data={props.data.comments.Data} />
         </Tab.Pane>
       </Tab.Content>
     </Tab.Container>

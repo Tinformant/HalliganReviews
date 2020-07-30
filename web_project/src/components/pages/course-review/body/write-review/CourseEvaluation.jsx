@@ -104,21 +104,21 @@ function CourseEvaluation(props) {
           setRatingItems={props.setRatingItems}
           question="How do you rate the instructor's effectiveness in replying to
           questions outside the class and returning assignment?"
-          name="instructorResponsive"
+          name="instructorEffectiveness"
           label={basic}
         />
         <RatingItem
           ratingItems={props.ratingItems}
           setRatingItems={props.setRatingItems}
-          question="How do you rate the class management of the instructor?"
-          name="instructorClass"
+          question="How do you rate the feedback of the instructor?"
+          name="instructorFeedback"
           label={basic}
         />
         <RatingItem
           ratingItems={props.ratingItems}
           setRatingItems={props.setRatingItems}
-          question="How do you rate the delivery of the instructor?"
-          name="instructorDelivery"
+          question="How do you rate the accessible of the instructor?"
+          name="instructorAccessible"
           label={basic}
         />
       </div>
