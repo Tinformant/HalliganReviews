@@ -1,5 +1,6 @@
 from flask_restful import Resource, reqparse
 from model.course import CourseModel
+from model.comment import MyException
 
 
 class searchRes(Resource):
@@ -14,4 +15,4 @@ class searchRes(Resource):
         courses = CourseModel.search_res(name)
         if courses:
             return courses
-        return {'message': 'Course not found'}, 404
+        raise MyException("The input did not match any course.")

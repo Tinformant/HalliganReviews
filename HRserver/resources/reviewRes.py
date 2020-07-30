@@ -4,7 +4,7 @@ from flask_restful import Resource, reqparse
 from flask_restful.representations import json
 
 from model.course import CourseModel
-from model.comment import CommentModel
+from model.comment import CommentModel, MyException
 from flask import jsonify, request
 
 
@@ -76,6 +76,6 @@ class reviewRes(Resource):
 
         except Exception as e:
             print(e)
-            return {'message': "An error occurred while creating the comment."}, 500
+            raise MyException("An error occurred while creating the comment.")
 
 

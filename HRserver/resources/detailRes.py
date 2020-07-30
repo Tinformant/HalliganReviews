@@ -1,6 +1,6 @@
 from flask_restful import Resource, reqparse
 from model.course import CourseModel
-from model.comment import CommentModel
+from model.comment import CommentModel, MyException
 from model.instructor import InstructorModel
 from bson.objectid import ObjectId
 from flask import jsonify, request
@@ -40,7 +40,7 @@ class detailRes(Resource):
         wholeCourse = CourseModel.find_whole_course(data['department'], data['number'], data['subnumber'], data['year'], data['semester'])
         comments = CommentModel.find_comments(data['department'], data['number'], data['subnumber'], data['year'], data['semester'])
         if comments is None:
-            return {"message": "Course --> comments not found."}, 404
+            raise MyException("Course --> comments not found.")
         instructorid = CourseModel.find_instructor(data['department'], data['number'], data['subnumber'], data['year'], data['semester'])
         instructor = InstructorModel.find_by_id(ObjectId(instructorid[0]))
         if course and comments and instructor:
@@ -57,4 +57,4 @@ class detailRes(Resource):
                 "course": course,
                 "instructor": instructor
             })
-        return {"message": "data not found."}, 404
+        raise MyException("Course not found")
