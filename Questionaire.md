@@ -40,10 +40,10 @@
     How interesting, useful and/or intellectually stimulating are the course materials.
 ## Instructor Evaluation
 ### Overall
-    Overall rating for this course
+    Overall rating for this instructor
 ### Effectiveness 
-    Instructor's effectiveness in delivering Lecture and/or leading discussion
+    Instructor's effectiveness in delivering lecture and/or leading discussion
 ### Feedback 
-    Instructor's timeliness and helpfulness in terms of giving feedback?
+    Instructor's timeliness and helpfulness in terms of giving feedback
 ### Accessibility 
     Instructor's accessibility outside of class
