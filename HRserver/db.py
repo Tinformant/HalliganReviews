@@ -7,7 +7,7 @@ instructors = db["instructors"]
 comments = db["comments"]
 headcount = db["headcount"]
 instrHeadcount = db["instrHeadcount"]
-courses.create_index([("name", "text"), ("department", "text"), ("number", "text")])
+# courses.create_index([("name", "text"), ("department", "text"), ("number", "text")])
 
 # comments.delete_many({})
 # instructor1 = {"name": "Jeff", "description": "blabla", "average": 3.3, "detail": "he is a good pro", "courseids": []}

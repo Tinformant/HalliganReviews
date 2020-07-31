@@ -63,14 +63,15 @@ class CourseModel:
              "semester": re.compile(semester, re.IGNORECASE)})
         return course['instructorids']
 
+
     @classmethod
     def search_res(cls, name):
         pipeline = [
             {
-                "$match": {"$text": {"$search": name}}
+                "$match": {"searchString": re.compile(name, re.IGNORECASE)}
             },
             {
-                "$sort": {"score": {"$meta": "textScore"}}
+                "$sort": {"reviews": -1}
             },
             {
                 "$group": {
