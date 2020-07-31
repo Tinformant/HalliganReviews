@@ -35,12 +35,25 @@ class detailRes(Resource):
                         )
 
     def post(self):
+        emptyResult = jsonify({"info": {
+                "title": "",
+                "department": "",
+                "number": "",
+                "subnumber": "",
+                "instructor": "",
+                "semester": "",
+                "year": ""
+            },
+                "comments": "",
+                "course": "",
+                "instructor": ""
+            })
         data = detailRes.parser.parse_args()
         course = CourseModel.find_specific(data['department'], data['number'], data['subnumber'], data['year'], data['semester'])
         wholeCourse = CourseModel.find_whole_course(data['department'], data['number'], data['subnumber'], data['year'], data['semester'])
         comments = CommentModel.find_comments(data['department'], data['number'], data['subnumber'], data['year'], data['semester'])
         if comments is None:
-            raise MyException("Course --> comments not found.")
+            return emptyResult
         instructorid = CourseModel.find_instructor(data['department'], data['number'], data['subnumber'], data['year'], data['semester'])
         instructor = InstructorModel.find_by_id(ObjectId(instructorid[0]))
         if course and comments and instructor:
@@ -57,4 +70,5 @@ class detailRes(Resource):
                 "course": course,
                 "instructor": instructor
             })
-        raise MyException("Course not found")
+        else:
+            return emptyResult
