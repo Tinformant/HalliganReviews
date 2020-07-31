@@ -28,3 +28,22 @@
 * Student identity (chosen from undergraduate, graduate, prefer not to answer or other)
 * Date (not shown in the form but saved in the database)
 
+# For Site Display
+## Course Evaluation
+### Overall
+   Overall rating for this course
+### Workload
+   Average time spent on this course per wekk
+### Difficulty
+   How challenging are the course materials, homework and exams.
+### Materials
+   How interesting, useful and/or intellectually stimulating are the course materials.
+## Instructor Evaluation
+### Overall
+   Overall rating for this course
+### Effectiveness 
+   Instructor's effectiveness in delivering Lecture and/or leading discussion
+### Feedback 
+   Instructor's timeliness and helpfulness in terms of giving feedback?
+### Accessibility 
+   Instructor's accessibility outside of class
