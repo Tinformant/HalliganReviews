@@ -18,7 +18,7 @@
 ## Instructor Evaluation
 * What's your overall rating for the instructor?
 * How's the instructor's effectiveness in delivering Lecture and/or leading discussion?
-* How timely and helper is instructor's feedbak?
+* How timely and helpful is instructor's feedbak?
 * How accessible is the instructor outside of class?
 
 ## Comments
