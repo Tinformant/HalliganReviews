@@ -35,22 +35,22 @@ class detailRes(Resource):
                         )
 
     def post(self):
-        emptyResult = jsonify({"info": {
-                "title": "",
-                "department": "",
-                "number": "",
-                "subnumber": "",
-                "instructor": "",
-                "semester": "",
-                "year": ""
-            },
-                "comments": {"Data": []},
-                "course": {"Data": []},
-                "instructor": {"Data": []}
-            })
         data = detailRes.parser.parse_args()
         course = CourseModel.find_specific(data['department'], data['number'], data['subnumber'], data['year'], data['semester'])
         wholeCourse = CourseModel.find_whole_course(data['department'], data['number'], data['subnumber'], data['year'], data['semester'])
+        emptyResult = jsonify({"info": {
+            "title": wholeCourse['name'],
+            "department": data['department'],
+            "number": data['number'],
+            "subnumber": data['subnumber'],
+            "instructor": wholeCourse['instructor'],
+            "semester": data['semester'],
+            "year": data['year']
+        },
+            "comments": {"Data": []},
+            "course": {"Data": []},
+            "instructor": {"Data": []}
+        })
         comments = CommentModel.find_comments(data['department'], data['number'], data['subnumber'], data['year'], data['semester'])
         if comments is None:
             return emptyResult
