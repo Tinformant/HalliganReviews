@@ -39,12 +39,12 @@ class detailRes(Resource):
         course = CourseModel.find_specific(data['department'], data['number'], data['subnumber'], data['year'], data['semester'])
         wholeCourse = CourseModel.find_whole_course(data['department'], data['number'], data['subnumber'], data['year'], data['semester'])
         emptyResult = jsonify({"info": {
-            "title": wholeCourse['name'],
-            "department": data['department'],
+            "title": wholeCourse['name'].title(),
+            "department": (data['department']).upper(),
             "number": data['number'],
             "subnumber": data['subnumber'],
             "instructor": wholeCourse['instructor'],
-            "semester": data['semester'],
+            "semester": data['semester'].title(),
             "year": data['year']
         },
             "comments": {"Data": []},
