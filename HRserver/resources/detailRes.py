@@ -44,9 +44,9 @@ class detailRes(Resource):
                 "semester": "",
                 "year": ""
             },
-                "comments": jsonify({"Data": []}),
-                "course": jsonify({"Data": []}),
-                "instructor": jsonify({"Data": []})
+                "comments": {"Data": []},
+                "course": {"Data": []},
+                "instructor": {"Data": []}
             })
         data = detailRes.parser.parse_args()
         course = CourseModel.find_specific(data['department'], data['number'], data['subnumber'], data['year'], data['semester'])
