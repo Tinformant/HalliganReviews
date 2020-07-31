@@ -48,6 +48,7 @@ class CommentModel:
                                   'text': x['text']})
                 return {'Data': container}
 
+
     def save_to_db(self):
         comment = {
             "username": self.username,
