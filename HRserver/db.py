@@ -1,5 +1,3 @@
-import pymongo
-from bson.objectid import ObjectId
 from pymongo import MongoClient
 
 cluster = MongoClient("mongodb+srv://user_sjk:XKihpv1poA24Y9N5@firstmongo.5jqky.mongodb.net/HRdb?retryWrites=true&w=majority")
@@ -10,6 +8,7 @@ comments = db["comments"]
 headcount = db["headcount"]
 instrHeadcount = db["instrHeadcount"]
 courses.create_index([("name", "text"), ("department", "text"), ("number", "text")])
+
 # comments.delete_many({})
 # instructor1 = {"name": "Jeff", "description": "blabla", "average": 3.3, "detail": "he is a good pro", "courseids": []}
 # courses.update_one({"instructor": "Jeff"}, {"$push": {"comments": ObjectId('5f06d43b853ba1e4ad2fa81d')}})

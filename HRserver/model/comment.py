@@ -46,7 +46,7 @@ class CommentModel:
                                   'grade': x['grade'], 'workload': x['workload'], 'courseOverall': x['courseAll'],
                                   'instructorOverall': x['instructorAll'], 'assessment': x['assessment'],
                                   'text': x['text']})
-                return {'Data': container}
+            return {'Data': container}
 
 
     def save_to_db(self):
@@ -129,3 +129,19 @@ class CommentModel:
                 "instructorData." + str(index) + ".distribution": heads,
                 "instructorData." + str(index) + ".average": str(average)}})
 
+    @classmethod
+    def clearData(cls):
+        comments.delete_many({})
+        emptyDist = [0, 0, 0, 0, 0]
+        instrHeadcount.update_many({}, {"$set": {
+            "general": emptyDist,
+            "accessible": emptyDist,
+            "effectiveness": emptyDist,
+            "feedback": emptyDist
+        }})
+        headcount.update_many({}, {"$set": {
+            "general": emptyDist,
+            "material": emptyDist,
+            "workload": emptyDist,
+            "difficulty": emptyDist
+        }})

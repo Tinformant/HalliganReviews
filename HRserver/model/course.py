@@ -103,3 +103,18 @@ class CourseModel:
         ]
         classes = list(courses.aggregate(pipeline))
         return jsonify({'result': classes})
+
+    @classmethod
+    def clearData(cls):
+        emptyDist = [0, 0, 0, 0, 0]
+        courses.update_many({}, {"$set": {
+            "comments": [],
+            "courseData.0.distribution": emptyDist,
+            "courseData.0.average": "0",
+            "courseData.1.distribution": emptyDist,
+            "courseData.1.average": "0",
+            "courseData.2.distribution": emptyDist,
+            "courseData.2.average": "0",
+            "courseData.3.distribution": emptyDist,
+            "courseData.3.average": "0",
+        }})
