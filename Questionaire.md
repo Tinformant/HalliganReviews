@@ -5,11 +5,10 @@
     * year (select from options `<select>`)
     * semester (select from options `<select>`)
 * Who was your instructor (selected automatically after the previous two options are selected)
-* What letter grade did you receive? (We will keep this anaoms???) -> calculates median grade
+* On a rating from 1 to 5, with 1 being very easy and 5 being very difficult, how would you rate this course's level of difficulty?
 * (optional) Assessment methods of the course, e.g. project/assignments/quizzes/exams
 
 ## Course Evaluation
-
 * How would you rate the course materials? 
 * On average, how many hours did you spend on this course every week?
 * How difficult do you think the course is? (TODO: needs discussion)
