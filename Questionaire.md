@@ -11,8 +11,8 @@
 ## Course Evaluation
 * How would you rate the course materials? 
 * On average, how many hours did you spend on this course every week?
-* How difficult do you think the course is? (TODO: needs discussion)
-* What's your overall rating of this course? (Would you recommend this course?)
+* How would you rate the level of difficulty of this course
+* What's your overall rating of this course? 
 
 ## Instructor Evaluation
 * What's your overall rating for the instructor?
