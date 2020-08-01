@@ -12,36 +12,48 @@ function Reveiw(props) {
   const [key, setKey] = useState("course");
 
   return (
-    <Tab.Container id="rev-tab" activeKey={key} onSelect={(k) => setKey(k)}>
-      <Nav variant="none" bg="none" className="rev-nav">
-        <Nav.Item className="rev-nav-item">
-          <Nav.Link className="rev-nav-link" eventKey="course">
+    <Tab.Container id='rev-tab' activeKey={key} onSelect={(k) => setKey(k)}>
+      <Nav variant='none' bg='none' className='rev-nav'>
+        <Nav.Item className='rev-nav-item'>
+          <Nav.Link className='rev-nav-link' eventKey='course'>
             Course
           </Nav.Link>
         </Nav.Item>
-        <Nav.Item className="rev-nav-item">
-          <Nav.Link className="rev-nav-link" eventKey="instructor">
+        <Nav.Item className='rev-nav-item'>
+          <Nav.Link className='rev-nav-link' eventKey='instructor'>
             Instructor
           </Nav.Link>
         </Nav.Item>
-        <Nav.Item className="rev-nav-item">
-          <Nav.Link className="rev-nav-link" eventKey="comment">
+        <Nav.Item className='rev-nav-item'>
+          <Nav.Link className='rev-nav-link' eventKey='comment'>
             Comment
           </Nav.Link>
         </Nav.Item>
-        <Nav.Item className="rev-nav-item write-a-review-nav-item">
+        <Nav.Item className='rev-nav-item write-a-review-nav-item'>
           <Writer info={props.data.info} />
         </Nav.Item>
       </Nav>
       <Tab.Content>
-        <Tab.Pane eventKey="course">
-          <Course data={props.data.course.Data} />
+        <Tab.Pane eventKey='course'>
+          {props.data.comments.Data.length === 0 ? (
+            <p>No Comments Found! Be the first one the write the review</p>
+          ) : (
+            <Course data={props.data.course.Data} />
+          )}
         </Tab.Pane>
-        <Tab.Pane eventKey="instructor">
-          <Instructor data={props.data.instructor.Data} />
+        <Tab.Pane eventKey='instructor'>
+          {props.data.comments.Data.length === 0 ? (
+            <p>No Comments Found! Be the first one the write the review</p>
+          ) : (
+            <Instructor data={props.data.instructor.Data} />
+          )}
         </Tab.Pane>
-        <Tab.Pane eventKey="comment">
-          <Comment data={props.data.comments.Data} />
+        <Tab.Pane eventKey='comment'>
+          {props.data.comments.Data.length === 0 ? (
+            <p>No Comments Found! Be the first one the write the review</p>
+          ) : (
+            <Comment data={props.data.comments.Data} />
+          )}
         </Tab.Pane>
       </Tab.Content>
     </Tab.Container>
