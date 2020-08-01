@@ -32,7 +32,6 @@ class CommentModel:
         self.courseSet = [courseOverall, material, workload, difficulty]
         self.instructorSet = [instructorOverall, accessible, effectiveness, feedback]
 
-
     @classmethod
     def find_comments(cls, department, number, subnumber, year, semester):
         idStr = CourseModel.find_id(department, number, subnumber, year, semester)
@@ -42,12 +41,11 @@ class CommentModel:
         container = []
         if cursor:
             for x in cursor:
-                container.append({'username': x['username'], 'identity': x['identity'], 'date': x['date'],
+                container.insert(0, {'username': x['username'], 'identity': x['identity'], 'date': x['date'],
                                   'grade': x['grade'], 'workload': x['workload'], 'courseOverall': x['courseAll'],
                                   'instructorOverall': x['instructorAll'], 'assessment': x['assessment'],
                                   'text': x['text']})
             return {'Data': container}
-
 
     def save_to_db(self):
         comment = {
