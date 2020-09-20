@@ -1,0 +1,47 @@
+/* combobox style */
+.select-style {
+  background-color: #ffffff;
+  border: 1px solid #012f62;
+}
+
+/* rating stars */
+.MuiRating-label {
+  padding: 5px;
+  margin: 0;
+}
+
+/* form style */
+.form-group {
+  margin: 0;
+}
+
+.form-field {
+  border: 1px solid #aaaaaa;
+  resize: none;
+}
+.form-field:focus-within {
+  border: 1px solid #e9ab14;
+  box-shadow: 0 0 4px #e9ab14;
+}
+
+.form-row {
+  margin: 0 0 10px;
+}
+
+.div-form {
+  margin: 0 5px 10px;
+}
+
+.form-label {
+  margin-bottom: 0;
+  padding:2px 0;
+}
+
+.form-question{
+    margin: 0 5px 0;
+}
+
+.div-ratings {
+  margin-bottom: 8px;
+}
+

@@ -1,0 +1,86 @@
+/* ======= NAVBAR ========*/
+
+
+.navbar {
+    background-color: #012f62;
+    font-family: 'Montserrat', sans-serif;
+    /* height: 60px; */
+    /* background: radial-gradient(circle, rgba(1,47,98,1) 50%, rgba(78,97,133,1) 100%); */
+    /* box-shadow: 0 1px 2px #e9ab14 ; */
+}
+
+/* NAVBAR BRAND */
+
+/* TODO: Adding logo picture */
+.logo-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  /* margin-top: 0; */
+  margin-bottom: 0.3rem;
+}
+
+.navbar-brand {
+  color: #e9ab14;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.navbar-brand:hover {
+  color: #ffffff;
+  transition: color 0.17s;
+}
+
+
+
+
+/* NAVBAR-LINKS */
+
+.navbar-link {
+  /* color: #fff; */
+  /* text-shadow: 0 0 5pt #ffffff; */
+  border-radius: 4px;
+  padding: 5px 0px 3px;
+  text-align: center;
+  width: 100px;
+  font-weight: 700;
+}
+
+.log-in-link {
+  color: #e9ab14;
+  border: 1px solid transparent;
+  /* text-shadow: 0 0 5pt #5191CE; */
+}
+
+.log-in-link:hover {
+  color: #DCDCDC;
+  border: 1px solid transparent;
+  transition: color 0.2s;
+}
+
+.sign-up-link {
+  color: #fff;
+  color: #e9ab14;
+  border: 1px solid #e9ab14;
+}
+.sign-up-link:hover {
+  color: #012f62;
+  background-color: #e9ab14;
+  border: 1px solid #dfb879;
+  transition: color 0.2s;
+}
+
+/* responsive */
+
+.navbar-toggler-icon{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(219,219,219, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.show .search-group{
+    margin: 0;
+}
+
+.collapsing .search-group{
+    margin: 0;
+}

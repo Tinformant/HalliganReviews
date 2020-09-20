@@ -1,0 +1,122 @@
+.user-authentication-page {
+  margin: 100px auto;
+  width: 400px;
+  /* height: 500px; */
+  color: #012f62;
+  padding: 20px 30px 30px;
+  border-radius: 10px;
+  /* border: 1px solid #012f62; */
+  box-shadow: 0 0 10px #012f62;
+  background-color: #ffffff;
+  z-index: 100;
+}
+
+.user-authentication-page-background {
+  /* background-image: url("./picture/tufts-logo.jpg"); */
+  background-image: url("./picture/tufts-logo1.jpg");
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+  /* Resize the background image to cover the entire container */
+  background-color: #cccccc;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+.user-authentication-page-background-img {
+  position: absolute;
+  height: 100vh;
+  z-index: 0;
+}
+
+/* navbar */
+.user-form-link {
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  color: #012f62;
+  /* border: 1px solid #012f62; */
+  /* padding: 7px 15px; */
+}
+
+.user-form-link:hover {
+  /* color: #e9ab14; */
+  color: #012f62;
+  background-color: #efefef;
+  /* border:#e9ab14 solid 1px; */
+}
+
+.user-form-link:focus {
+  color: #ffffff;
+  background-color: #012f62;
+  outline: none;
+}
+
+.user-form-link.active {
+  color: #ffffff;
+  background-color: #012f62;
+}
+
+.user-form-item {
+  width: 50%;
+  text-align: center;
+}
+
+.user-form-pane {
+  padding-top: 30px;
+}
+
+/* log in */
+
+.login-email-row {
+  margin-bottom: 30px;
+}
+
+.forget-password-link-container {
+  margin: 5px 0 20px;
+}
+
+.login-submit-button,
+.signup-submit-button {
+  background-color: #012f62;
+  color: #ffffff;
+  border: none;
+  outline: none;
+}
+
+.login-submit-button:hover,
+.signup-submit-button:hover {
+  background-color: #417dc1;
+  color: #ffffff;
+  border: none;
+}
+
+.login-submit-button.active,
+.login-submit-button:focus-within,
+.signup-submit-button.active,
+.signup-submit-button:focus-within{
+  background-color: #417dc1 !important;
+  box-shadow: 0 0 0 0.2rem lightblue;
+}
+
+.login-domain-item,
+.signup-domain-item {
+  margin: auto 0;
+  width: 50px;
+}
+
+.login-domain-at,
+.signup-domain-at {
+  margin-left: 5px;
+  margin-right: 4px;
+}
+
+.signup-email-row,
+.signup-username-row,
+.signup-confirm-password-row,
+.signup-password-row {
+  margin-bottom: 20px;
+}

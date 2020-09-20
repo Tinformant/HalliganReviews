@@ -1,0 +1,78 @@
+.search-body-header {
+    margin: 3% 0;
+}
+
+.search-filter {
+    /* border: 1px solid #c6c6c6;
+    border-radius: 10px;
+    padding: 6px 20px; */
+    margin: 3px 0;
+}
+
+.search-filter-header {
+    margin: 13px 0 15px;
+}
+
+/* .search-filter-item {
+    margin-bottom: 15px;
+} */
+
+.search-filter-item-header {
+    margin-right: 10px;
+}
+
+.search-filter-item-tag {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+    cursor: pointer;
+    /* font-size: 0.9rem; */
+    margin: 0px 5px;
+    padding: 3px 15px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 2px #c6c6c6;
+    border: 1px solid #c6c6c6;
+    color: #c6c6c6;
+    background-color: #ffffff;
+}
+
+.search-filter-item-tag:hover {
+    /* border: 1px solid #6e7693;
+    background-color: #6e7693; */
+    box-shadow: 3px 3px 6px #aaaaaa, -3px -3px 6px #ffffff;
+    /* color: #ffffff; */
+}
+
+.search-filter-item-tag.active {
+    border: 1px solid #012f62;
+    /* background-color: #c6c6c6; */
+    box-shadow: 0px 0px 2px #012f62;
+    color: #012f62;
+}
+
+.search-filter-item-tag.active:hover {
+    /* border: 1px solid #6e7693;
+    background-color: #6e7693;
+    color: #ffffff; */
+    box-shadow: 3px 3px 6px #aaaaaa, -3px -3px 6px #ffffff;
+}
+
+
+
+
+
+
+
+
+
+

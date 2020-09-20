@@ -1,0 +1,59 @@
+
+
+.write-a-review-nav-link {
+  margin-left: auto;
+  /* font-weight: normal; */
+  /* background-color:#012f62;
+  box-shadow:inset 0px 0px 6px #e9ab14;
+	background-color:transparent;
+	border-radius:40px;
+	border:1px solid #e9ab14;
+	cursor:pointer;
+  color: #e9ab14;
+	font-size:19px;
+	padding:6px 13px;
+	text-decoration:none;
+  padding: 6px 20px; */
+  font-weight: bold;
+  background: #f3f0f1;
+  color: #012f62;
+  /* margin-bottom: 25px; */
+  border-radius: 32px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.8),
+    5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.write-a-review-nav-link:hover {
+  /* color: #012f62;
+  background-color: #e9ab14; */
+  opacity: 0.5;
+  color: #cf980b;
+  box-shadow: -6px -6px 8px rgba(255, 255, 255, 0.8),
+    6px 6px 8px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+.write-a-review-nav-link:focus {
+  /* color: #012f62;
+  background-color: #e9ab14;
+  outline: none; */
+  background-color: #f3f0f1;
+  opacity: 1;
+  box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5),
+    inset 8px 8px 16px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.write-a-review-nav-link.active {
+  /* color: #012f62;
+  background-color: #e9ab14;
+  outline: none; */
+  background-color: #f3f0f1;
+  opacity: 1;
+  box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5),
+    inset 8px 8px 16px rgba(0, 0, 0, 0.1);
+  color: #e9ab14;
+}

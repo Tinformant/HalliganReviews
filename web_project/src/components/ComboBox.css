@@ -1,0 +1,39 @@
+.option-color:focus {
+  background-color: #5191ce !important;
+  outline: none;
+}
+
+.option-color {
+  background-color: white !important;
+  color: black !important;
+  outline: none;
+}
+
+.option-color:hover {
+  background-color: #5191ce !important;
+  outline: none;
+}
+
+
+
+.combobox{
+  width: 250px;
+  text-align: left !important;
+  /* margin-left:auto; */
+  /* color:red;
+  background-color: hotpink;
+  border: 4px solid green;
+  outline: 2px solid gold; */
+}
+
+
+/* .MuiSelect-outlined {
+  border: 1px solid #e9ab14 !important;
+  border-radius: 4px !important;
+}
+
+.MuiSelect-outlined:hover{
+  border: 1px solid red !important;
+  border-radius: 4px !important;
+}
+ */

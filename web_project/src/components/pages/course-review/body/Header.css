@@ -1,0 +1,61 @@
+
+#review-header {
+  background-color: #ffffff;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+
+.course-name {
+  color:#012f62 ;
+  font-size: 2rem;
+    margin: 0 0px 20px;
+  text-align: left;
+  font-weight: bold;
+  /* font-family: "Montserrat", sans-serif; */
+}
+
+.course-name-header {
+  /* border: #012f62 1px solid; */
+  display: inline-block;
+  margin-right: 20px;
+  /* padding: 3px 13px; */
+}
+
+.course-detail {
+  text-align: left;
+  margin: 0 auto 4%;
+  font-size: 1.2rem;
+  color:#012f62 ;
+}
+
+.course-detail-card {
+  display: inline-block;
+  padding: 0 5px 0 2px;
+  margin: 0 40px 0 0;
+  /* border-bottom: 1px solid #012f62; */
+}
+
+.course-detail-card-title {
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+
+.btn-style {
+  background-color: #fff;
+  border: 1px solid #e9ab14;
+  /* outline: auto; */
+}
+
+.review-header-form-row {
+  padding: 0;
+  margin: 3% 0;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+pipeline {
+    agent {
+        docker {
+            image 'node:14.5.0-alpine3.10'
+            args '-p 3000:3000'
+        }
+    }
+    environment { 
+        CI = 'true'
+    }
+    stages {
+        stage('Build') {
+            steps {
+                sh 'cd web_project/ && npm install'
+            }
+        }
+        // stage('Test') {
+        //     steps {
+        //         sh '${WORKSPACE}/web_project/jenkins/scripts/test.sh'
+        //     }
+        // }
+        stage('Deliver') { 
+            steps {
+                sh '${WORKSPACE}/web_project/jenkins/scripts/deliver.sh' 
+                input message: 'Finished using the web site? (Click "Proceed" to continue)' 
+                sh '${WORKSPACE}/web_project/jenkins/scripts/kill.sh' 
+            }
+        }
+    }
+}

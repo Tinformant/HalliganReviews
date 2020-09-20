@@ -1,0 +1,40 @@
+.comment-card {
+    margin: 30px 0 10px;
+    padding: 20px 40px 20px;
+    border: none;
+    background-color: #ececec;
+    border-radius: 1rem;
+}
+
+.comment-card-assessment {
+    margin: 0 0 10px;
+}
+.comment-card-comment {
+    min-height: 60px;
+    margin: 0 0 10px;
+}
+
+.comment-card-title {
+    font-weight: bold;
+    color: #012f62;
+}
+
+.comment-footer {
+    font-size: 0.85rem;
+    color: gray;
+}
+
+
+.comment-card-eval {
+    display: flexbox;
+}
+
+.comment-card-eval-item {
+    margin-bottom: 10px;
+}
+
+
+.comment-card-eval-title{
+    margin-right: 15px;
+}
+

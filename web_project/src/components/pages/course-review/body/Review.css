@@ -1,0 +1,30 @@
+
+.rev-nav-link{
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  color: #012f62;
+  /* padding: 7px 15px; */
+}
+
+.rev-nav-link:hover {
+  /* color: #e9ab14; */
+  color: #012f62;
+  background-color: #EFEFEF;
+  /* border:#e9ab14 solid 1px; */
+}
+
+.rev-nav-link:focus {
+  color: #ffffff;
+  background-color: #012f62;
+  outline: none;
+}
+
+.rev-nav-link.active {
+  color: #ffffff;
+  background-color: #012f62;
+}
+
+.write-a-review-nav-item {
+  margin-left: auto;
+}

@@ -1,0 +1,24 @@
+.rev-content-name, .rev-content-avg-score, .rev-content-detail{
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #012f62;
+}
+
+.rev-content-name, .rev-content-description {
+    margin: 0;
+    padding: 0;
+}
+
+.rev-content-description {
+    font-size: 0.8rem;
+}
+
+.rev-content-avg-score {
+    font-weight: normal;
+    font-size: 1.1rem;
+}
+
+.rev-content-header {
+    margin: 15px 0 30px;
+}
+

@@ -1,0 +1,146 @@
+.body-style {
+  padding-top: 62px;
+  background-color: #012f62;
+}
+
+/* introduction */
+
+.image-col {
+  text-align: center;
+}
+
+.index-page-style {
+  cursor: default;
+  background-color: #ececec;
+  height: 800px;
+  padding-top: 5%;
+}
+
+.pic-one {
+  width: 480px;
+  height: auto;
+  margin: 11% auto auto;
+  align-items: center;
+  transform: rotate(7deg);
+  border-radius: 8px;
+  box-shadow: 10px 10px 10px #070707;
+}
+
+.section-one {
+  height: 600px;
+  width: 100%;
+  background-color: #012f62;
+}
+
+.col-one {
+  color: #fcfcfc;
+}
+
+.intro-div {
+  cursor: default;
+  margin: 10% 7% 10% 17%;
+}
+
+.intro-title {
+  margin-top: 10%;
+  /* font-weight: bold; */
+  line-height: 1.5;
+  font-size: 3rem;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+/* carousel */
+
+.slides-style {
+  color: #012f62;
+}
+
+.occupied {
+  height: 550px;
+  background-color: #dcdcdc;
+  text-align: center;
+  padding-top: 5.7%;
+  color: #012f62;
+}
+
+.popular-course-container {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.popular-course-container:hover {
+  text-shadow: 3px 3px 5px #909090;
+  transition: 0.3s;
+}
+
+.popular-course-name {
+  display: block;
+  padding: 20px;
+}
+
+.popular-course-details {
+  display: block;
+  line-height: 1.5;
+}
+
+.popular-course-ins {
+  margin-left: 20px;
+}
+
+.tag-container {
+  cursor: default;
+  margin-top: 4.5%;
+  /* height: 60px; */
+  padding: 10px;
+  /* padding: auto; */
+}
+
+.tag-style {
+  display: inline-block;
+  margin: 10px;
+  padding: 11px 15px;
+  line-height: 1;
+  font-size: 1rem;
+  background-color: #012f62;
+  color: #ffffff;
+  border-radius: 22px;
+  border: 1px solid #dcdcdc;
+  transition: 0.3s;
+}
+
+.tag-style:hover {
+  box-shadow: 0 0 10px #417dc1;
+  padding: 11px 15px;
+  line-height: 1;
+  border: 1px solid #012f62;
+  /* font-size: 1.5rem; */
+  transition: 0.3s;
+}
+
+/* footer */
+.main-footer {
+  height: 150px;
+  background-color: #6e7693;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.link-container {
+  width: 30%;
+  height: 50%;
+  left: 50%;
+  margin: 0 auto;
+}
+
+.footer-link {
+  /* padding: 10px 17px; */
+  margin: auto;
+  color: #ffffff;
+}
+
+.footer-link:hover {
+  color: #012f62;
+  text-decoration: none;
+}

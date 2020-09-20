@@ -1,0 +1,30 @@
+.rev-title {
+    margin-top: 50px;
+}
+
+.rev-title-hr {
+    margin-top: 0;
+    border: none;
+    border-bottom:1px solid #c6c6c6;
+    color: #c6c6c6;
+}
+
+.rev-title-avg-score, .rev-title-detail {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #012f62;
+}
+
+.rev-title-legend-text {
+    margin-left: 5px;
+    font-size: 0.85rem;
+}
+
+.rev-title-legend-score {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: bold;
+    position: relative;
+    bottom: 7px;
+    left: 1px;
+}
