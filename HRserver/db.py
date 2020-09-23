@@ -1,6 +1,7 @@
 from pymongo import MongoClient
+from app import dburl
 
-cluster = MongoClient("mongodb+srv://user_sjk:XKihpv1poA24Y9N5@firstmongo.5jqky.mongodb.net/HRdb?retryWrites=true&w=majority")
+cluster = MongoClient(dburl)
 db = cluster["HRdb"]
 courses = db["courses"]
 instructors = db["instructors"]

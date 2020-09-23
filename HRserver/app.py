@@ -1,3 +1,4 @@
+import os
 from flask import Flask
 from flask_restful import Api
 from resources.searchRes import searchRes
@@ -6,6 +7,7 @@ from resources.detailRes import detailRes
 from resources.manage import manageRes
 
 app = Flask(__name__)
+dburl = os.environ.get('DATABASE_URL', 'mongodb+srv://user_sjk:XKihpv1poA24Y9N5@firstmongo.5jqky.mongodb.net/HRdb?retryWrites=true&w=majority')
 api = Api(app)
 
 
