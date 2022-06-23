@@ -32,7 +32,7 @@
     "react-scripts": "3.4.1",
     "react-select": "^3.1.0",
     "sass": "^1.26.10",
-    "shell-quote": "^1.7.2",
+    "shell-quote": "^1.7.3",
     "typescript": "^3.9.7"
   },
   "scripts": {
