@@ -17,7 +17,7 @@
     "fibers": "^5.0.0",
     "jquery": "^3.5.1",
     "mime": "^2.4.6",
-    "minimatch": "^3.0.4",
+    "minimatch": "^3.0.5",
     "node-sass": "^4.14.1",
     "pinkie-promise": "^2.0.1",
     "plotly.js": "^1.54.7",
